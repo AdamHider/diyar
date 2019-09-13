@@ -1,0 +1,14 @@
+<?php
+return [
+    '_type' => 'Gantry\\Component\\Content\\Block\\HtmlBlock',
+    '_version' => 1,
+    'id' => '5d7b77f6122bc2.44041083',
+    'content' => '<!-- START PARTICLE totop-5261 -->
+            <div id="totop-5261-particle" class="g-content g-particle">            <div class="">
+    <div class="g-totop">
+        <a href="#" id="g-totop" rel="nofollow">
+            Back to top            <i class="fa fa-chevron-up fa-fw"></i>                    </a>
+    </div>
+</div>
+            </div>            <!-- END PARTICLE totop-5261 -->'
+];

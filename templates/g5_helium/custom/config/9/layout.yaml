@@ -1,0 +1,204 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1563522857
+layout:
+  /navigation/:
+    -
+      - system-messages-8776
+    -
+      - 'logo-9531 25'
+      - 'menu-4597 36'
+      - 'social-6902 15'
+      - 'position-module-5240 24'
+  /header/:
+    -
+      - custom-7115
+  intro: {  }
+  features: {  }
+  utility: {  }
+  above: {  }
+  testimonials: {  }
+  expanded: {  }
+  /container-main/:
+    -
+      -
+        'aside 25':
+          -
+            - position-position-4734
+      -
+        'mainbar 50': {  }
+      -
+        'sidebar 25': {  }
+  /footer/:
+    -
+      - 'logo-1144 16'
+      - 'custom-3748 37'
+      - 'horizontalmenu-5487 29'
+      - 'totop-3746 18'
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  header:
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  intro:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  features:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  utility:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  above:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  testimonials:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  expanded:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  aside:
+    attributes:
+      class: ''
+    block:
+      fixed: '1'
+  mainbar:
+    type: section
+    subtype: main
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  sidebar:
+    type: section
+    subtype: aside
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+    block:
+      fixed: '1'
+  container-main:
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+content:
+  system-messages-8776:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: system-messages-4409
+  logo-9531:
+    title: 'Logo / Image'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: logo-8554
+  menu-4597:
+    attributes:
+      menu: enter-englismenu
+  social-6902:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: social-5236
+  position-module-5240:
+    title: 'Module Instance'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: position-module-5422
+  custom-7115:
+    title: 'Custom HTML'
+    attributes:
+      html: "<div class=\"benefit-content revealOnScroll\" data-animation=\"fadeIn\" data-timeout=\"100\">\n        <h1>Configure anything and everything</h1>\n<p>When we started the Gantry 5 project, we wanted to think past the concept of Gantry as a framework.</p>\n<p>We wanted to create something so <strong>versatile</strong> and <strong>powerful</strong>, that it could stand on its own as a platform, virtually independent of a CMS in concept and implementation.</p>\n</div>"
+  position-position-4734:
+    title: Aside
+    attributes:
+      key: aside
+  logo-1144:
+    title: 'Logo / Image'
+    inherit:
+      outline: default
+      particle: logo-7150
+      include:
+        - attributes
+        - block
+  custom-3748:
+    title: 'Custom HTML'
+    attributes:
+      html: '<p>Developed by Adam Hider and Diyar Team</p>'
+  horizontalmenu-5487:
+    title: 'Horizontal Menu'
+    attributes:
+      items:
+        -
+          text: Dictionary
+          link: 'http://localhost:888/joomla/index.php/dictionary'
+          name: Dictionary
+  totop-3746:
+    title: 'To Top'

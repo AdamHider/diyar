@@ -1,0 +1,228 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/b6031a8/
+AbstractExtension	Extension/JApplication.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JArray.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JDocument.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JHtml.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JLanguage.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JLayout.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JPage.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JPosition.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JProfiler.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JRoute.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JSession.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JText.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JUri.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/JUser.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+AbstractExtension	Extension/Unserialize.php	/^use Twig\\Extension\\AbstractExtension;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\Extension\\AbstractExtension
+BaseEnvironment	Environment.php	/^use Twig\\Environment as BaseEnvironment;$/;"	a	namespace:Phproberto\\Joomla\\Twig	typeref:unknown:Twig\\Environment
+BasePlugin	Plugin/BasePlugin.php	/^abstract class BasePlugin extends CMSPlugin$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Plugin
+CMSApplication	Extension/JApplication.php	/^use Joomla\\CMS\\Application\\CMSApplication;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Application\\CMSApplication
+CMSPlugin	Plugin/BasePlugin.php	/^use Joomla\\CMS\\Plugin\\CMSPlugin;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Plugin	typeref:unknown:Joomla\\CMS\\Plugin\\CMSPlugin
+ChainLoader	Twig.php	/^use Twig\\Loader\\ChainLoader;$/;"	a	namespace:Phproberto\\Joomla\\Twig	typeref:unknown:Twig\\Loader\\ChainLoader
+ComponentLoader	Loader/ComponentLoader.php	/^final class ComponentLoader extends ExtensionLoader$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Loader
+Document	Extension/JDocument.php	/^use Joomla\\CMS\\Document\\Document;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Document\\Document
+Environment	Environment.php	/^final class Environment extends BaseEnvironment$/;"	c	namespace:Phproberto\\Joomla\\Twig
+ExtensionLoader	Loader/ExtensionLoader.php	/^abstract class ExtensionLoader extends \\Twig_Loader_Filesystem$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Loader
+Factory	Extension/JPosition.php	/^use Joomla\\CMS\\Factory;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Factory
+Factory	Extension/JSession.php	/^use Joomla\\CMS\\Factory;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Factory
+Factory	Extension/JUser.php	/^use Joomla\\CMS\\Factory;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Factory
+Factory	Field/LayoutSelector.php	/^use Joomla\\CMS\\Factory;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Field	typeref:unknown:Joomla\\CMS\\Factory
+Factory	Loader/ComponentLoader.php	/^use Joomla\\CMS\\Factory;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Loader	typeref:unknown:Joomla\\CMS\\Factory
+Factory	Loader/ExtensionLoader.php	/^use Joomla\\CMS\\Factory;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Loader	typeref:unknown:Joomla\\CMS\\Factory
+Factory	Loader/LibraryLoader.php	/^use Joomla\\CMS\\Factory;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Loader	typeref:unknown:Joomla\\CMS\\Factory
+Factory	Loader/ModuleLoader.php	/^use Joomla\\CMS\\Factory;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Loader	typeref:unknown:Joomla\\CMS\\Factory
+Factory	Loader/PluginLoader.php	/^use Joomla\\CMS\\Factory;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Loader	typeref:unknown:Joomla\\CMS\\Factory
+Factory	Loader/TemplateLoader.php	/^use Joomla\\CMS\\Factory;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Loader	typeref:unknown:Joomla\\CMS\\Factory
+FileLayout	Extension/JLayout.php	/^use Joomla\\CMS\\Layout\\FileLayout;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Layout\\FileLayout
+FormHelper	Field/LayoutSelector.php	/^use Joomla\\CMS\\Form\\FormHelper;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Field	typeref:unknown:Joomla\\CMS\\Form\\FormHelper
+HTMLHelper	Extension/JHtml.php	/^use Joomla\\CMS\\HTML\\HTMLHelper;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\HTML\\HTMLHelper
+HTMLHelper	Field/LayoutSelector.php	/^use Joomla\\CMS\\HTML\\HTMLHelper;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Field	typeref:unknown:Joomla\\CMS\\HTML\\HTMLHelper
+JApplication	Extension/JApplication.php	/^final class JApplication extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JArray	Extension/JArray.php	/^final class JArray extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JDocument	Extension/JDocument.php	/^final class JDocument extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JHtml	Extension/JHtml.php	/^final class JHtml extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JLanguage	Extension/JLanguage.php	/^final class JLanguage extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JLayout	Extension/JLayout.php	/^final class JLayout extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JPage	Extension/JPage.php	/^class JPage extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JPosition	Extension/JPosition.php	/^final class JPosition extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JProfiler	Extension/JProfiler.php	/^final class JProfiler extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JRoute	Extension/JRoute.php	/^final class JRoute extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JSession	Extension/JSession.php	/^final class JSession extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JText	Extension/JText.php	/^final class JText extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JUri	Extension/JUri.php	/^final class JUri extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+JUser	Extension/JUser.php	/^final class JUser extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+Language	Extension/JLanguage.php	/^use Joomla\\CMS\\Language\\Language;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Language\\Language
+LayoutHelper	Extension/JLayout.php	/^use Joomla\\CMS\\Layout\\LayoutHelper;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Layout\\LayoutHelper
+LayoutSelector	Field/LayoutSelector.php	/^abstract class LayoutSelector extends \\JFormFieldGroupedList$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Field
+LibraryLoader	Loader/LibraryLoader.php	/^final class LibraryLoader extends ExtensionLoader$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Loader
+LoaderInterface	Environment.php	/^use Twig\\Loader\\LoaderInterface;$/;"	a	namespace:Phproberto\\Joomla\\Twig	typeref:unknown:Twig\\Loader\\LoaderInterface
+ModuleHelper	Extension/JPosition.php	/^use Joomla\\CMS\\Helper\\ModuleHelper;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Helper\\ModuleHelper
+ModuleLayout	Field/ModuleLayout.php	/^final class ModuleLayout extends LayoutSelector$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Field
+ModuleLoader	Loader/ModuleLoader.php	/^final class ModuleLoader extends ExtensionLoader$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Loader
+ModuleRenderer	Extension/JPosition.php	/^use Joomla\\CMS\\Document\\Renderer\\Html\\ModuleRenderer;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Document\\Renderer\\Html\\ModuleRenderer
+Phproberto\\Joomla\\Twig	Environment.php	/^namespace Phproberto\\Joomla\\Twig;$/;"	n
+Phproberto\\Joomla\\Twig	Twig.php	/^namespace Phproberto\\Joomla\\Twig;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JApplication.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JArray.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JDocument.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JHtml.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JLanguage.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JLayout.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JPage.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JPosition.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JProfiler.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JRoute.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JSession.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JText.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JUri.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/JUser.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Extension	Extension/Unserialize.php	/^namespace Phproberto\\Joomla\\Twig\\Extension;$/;"	n
+Phproberto\\Joomla\\Twig\\Field	Field/LayoutSelector.php	/^namespace Phproberto\\Joomla\\Twig\\Field;$/;"	n
+Phproberto\\Joomla\\Twig\\Field	Field/ModuleLayout.php	/^namespace Phproberto\\Joomla\\Twig\\Field;$/;"	n
+Phproberto\\Joomla\\Twig\\Field	Field/PluginLayout.php	/^namespace Phproberto\\Joomla\\Twig\\Field;$/;"	n
+Phproberto\\Joomla\\Twig\\Field	Field/ViewLayout.php	/^namespace Phproberto\\Joomla\\Twig\\Field;$/;"	n
+Phproberto\\Joomla\\Twig\\Helper	Helper/ViewHelper.php	/^namespace Phproberto\\Joomla\\Twig\\Helper;$/;"	n
+Phproberto\\Joomla\\Twig\\Loader	Loader/ComponentLoader.php	/^namespace Phproberto\\Joomla\\Twig\\Loader;$/;"	n
+Phproberto\\Joomla\\Twig\\Loader	Loader/ExtensionLoader.php	/^namespace Phproberto\\Joomla\\Twig\\Loader;$/;"	n
+Phproberto\\Joomla\\Twig\\Loader	Loader/LibraryLoader.php	/^namespace Phproberto\\Joomla\\Twig\\Loader;$/;"	n
+Phproberto\\Joomla\\Twig\\Loader	Loader/ModuleLoader.php	/^namespace Phproberto\\Joomla\\Twig\\Loader;$/;"	n
+Phproberto\\Joomla\\Twig\\Loader	Loader/PluginLoader.php	/^namespace Phproberto\\Joomla\\Twig\\Loader;$/;"	n
+Phproberto\\Joomla\\Twig\\Loader	Loader/TemplateLoader.php	/^namespace Phproberto\\Joomla\\Twig\\Loader;$/;"	n
+Phproberto\\Joomla\\Twig\\Plugin	Plugin/BasePlugin.php	/^namespace Phproberto\\Joomla\\Twig\\Plugin;$/;"	n
+PluginHelper	Environment.php	/^use Joomla\\CMS\\Plugin\\PluginHelper;$/;"	a	namespace:Phproberto\\Joomla\\Twig	typeref:unknown:Joomla\\CMS\\Plugin\\PluginHelper
+PluginLayout	Field/PluginLayout.php	/^final class PluginLayout extends LayoutSelector$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Field
+PluginLoader	Loader/PluginLoader.php	/^final class PluginLoader extends ExtensionLoader$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Loader
+Profiler	Extension/JProfiler.php	/^use Joomla\\CMS\\Profiler\\Profiler;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Profiler\\Profiler
+Route	Extension/JRoute.php	/^use Joomla\\CMS\\Router\\Route;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Router\\Route
+TemplateLoader	Loader/TemplateLoader.php	/^final class TemplateLoader extends ExtensionLoader$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Loader
+Text	Extension/JText.php	/^use Joomla\\CMS\\Language\\Text;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Language\\Text
+Text	Field/ModuleLayout.php	/^use Joomla\\CMS\\Language\\Text;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Field	typeref:unknown:Joomla\\CMS\\Language\\Text
+Text	Field/PluginLayout.php	/^use Joomla\\CMS\\Language\\Text;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Field	typeref:unknown:Joomla\\CMS\\Language\\Text
+Text	Field/ViewLayout.php	/^use Joomla\\CMS\\Language\\Text;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Field	typeref:unknown:Joomla\\CMS\\Language\\Text
+Twig	Twig.php	/^final class Twig$/;"	c	namespace:Phproberto\\Joomla\\Twig
+TwigFilter	Extension/JArray.php	/^use Twig\\TwigFilter;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFilter
+TwigFilter	Extension/Unserialize.php	/^use Twig\\TwigFilter;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFilter
+TwigFunction	Extension/JApplication.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JDocument.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JHtml.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JLanguage.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JLayout.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JPage.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JPosition.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JProfiler.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JRoute.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JSession.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JText.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JUri.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+TwigFunction	Extension/JUser.php	/^use Twig\\TwigFunction;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Twig\\TwigFunction
+Unserialize	Extension/Unserialize.php	/^final class Unserialize extends AbstractExtension$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Extension
+Uri	Extension/JUri.php	/^use Joomla\\CMS\\Uri\\Uri;$/;"	a	namespace:Phproberto\\Joomla\\Twig\\Extension	typeref:unknown:Joomla\\CMS\\Uri\\Uri
+ViewHelper	Helper/ViewHelper.php	/^final class ViewHelper$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Helper
+ViewLayout	Field/ViewLayout.php	/^final class ViewLayout extends LayoutSelector$/;"	c	namespace:Phproberto\\Joomla\\Twig\\Field
+__construct	Environment.php	/^	public function __construct(LoaderInterface $loader, $options = [])$/;"	f	class:Phproberto\\Joomla\\Twig\\Environment
+__construct	Helper/ViewHelper.php	/^	private function __construct()$/;"	f	class:Phproberto\\Joomla\\Twig\\Helper\\ViewHelper
+__construct	Loader/ExtensionLoader.php	/^	public function __construct($paths = [])$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Loader
+__construct	Twig.php	/^	private function __construct()$/;"	f	class:Phproberto\\Joomla\\Twig\\Twig
+activeTemplate	Field/LayoutSelector.php	/^	protected function activeTemplate()$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Field
+activeTemplates	Field/LayoutSelector.php	/^	protected static $activeTemplates = [];$/;"	v	namespace:Phproberto\\Joomla\\Twig\\Field
+cacheHash	Field/LayoutSelector.php	/^	protected function cacheHash()$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Field
+cacheHash	Field/ModuleLayout.php	/^	protected function cacheHash()$/;"	f	class:Phproberto\\Joomla\\Twig\\Field\\ModuleLayout
+cacheHash	Field/PluginLayout.php	/^	protected function cacheHash()$/;"	f	class:Phproberto\\Joomla\\Twig\\Field\\PluginLayout
+cacheHash	Field/ViewLayout.php	/^	protected function cacheHash()$/;"	f	class:Phproberto\\Joomla\\Twig\\Field\\ViewLayout
+cachedGroups	Field/LayoutSelector.php	/^	protected static $cachedGroups = [];$/;"	v	namespace:Phproberto\\Joomla\\Twig\\Field
+checkIsHomePage	Helper/ViewHelper.php	/^	private function checkIsHomePage()$/;"	f	class:Phproberto\\Joomla\\Twig\\Helper\\ViewHelper
+clear	Helper/ViewHelper.php	/^	public static function clear()$/;"	f	class:Phproberto\\Joomla\\Twig\\Helper\\ViewHelper
+clear	Twig.php	/^	public static function clear()$/;"	f	class:Phproberto\\Joomla\\Twig\\Twig
+component	Field/ViewLayout.php	/^	protected $component;$/;"	v	class:Phproberto\\Joomla\\Twig\\Field\\ViewLayout
+environment	Twig.php	/^	private $environment;$/;"	v	class:Phproberto\\Joomla\\Twig\\Twig
+environment	Twig.php	/^	public function environment()$/;"	f	class:Phproberto\\Joomla\\Twig\\Twig
+extensionNamespace	Loader/ComponentLoader.php	/^	protected $extensionNamespace = 'component';$/;"	v	class:Phproberto\\Joomla\\Twig\\Loader\\ComponentLoader
+extensionNamespace	Loader/LibraryLoader.php	/^	protected $extensionNamespace = 'library';$/;"	v	class:Phproberto\\Joomla\\Twig\\Loader\\LibraryLoader
+extensionNamespace	Loader/ModuleLoader.php	/^	protected $extensionNamespace = 'module';$/;"	v	class:Phproberto\\Joomla\\Twig\\Loader\\ModuleLoader
+extensionNamespace	Loader/PluginLoader.php	/^	protected $extensionNamespace = 'plugin';$/;"	v	class:Phproberto\\Joomla\\Twig\\Loader\\PluginLoader
+extensionNamespace	Loader/TemplateLoader.php	/^	protected $extensionNamespace = 'template';$/;"	v	class:Phproberto\\Joomla\\Twig\\Loader\\TemplateLoader
+findParsedNameTemplate	Loader/ExtensionLoader.php	/^	protected function findParsedNameTemplate($name)$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Loader
+findTemplate	Loader/ExtensionLoader.php	/^	protected function findTemplate($name, $throw = true)$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Loader
+folderLayouts	Field/LayoutSelector.php	/^	protected function folderLayouts($folder)$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Field
+getBaseAppPath	Loader/ExtensionLoader.php	/^	protected function getBaseAppPath()$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Loader
+getFileLayout	Extension/JLayout.php	/^	public function getFileLayout()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JLayout
+getFilters	Extension/JArray.php	/^	public function getFilters()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JArray
+getFilters	Extension/Unserialize.php	/^	public function getFilters()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\Unserialize
+getFunctions	Extension/JApplication.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JApplication
+getFunctions	Extension/JDocument.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JDocument
+getFunctions	Extension/JHtml.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JHtml
+getFunctions	Extension/JLanguage.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JLanguage
+getFunctions	Extension/JLayout.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JLayout
+getFunctions	Extension/JPage.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JPage
+getFunctions	Extension/JPosition.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JPosition
+getFunctions	Extension/JProfiler.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JProfiler
+getFunctions	Extension/JRoute.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JRoute
+getFunctions	Extension/JSession.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JSession
+getFunctions	Extension/JText.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JText
+getFunctions	Extension/JUri.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JUri
+getFunctions	Extension/JUser.php	/^	public function getFunctions()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JUser
+getGroups	Field/LayoutSelector.php	/^	protected function getGroups()$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Field
+getModuleRenderer	Extension/JPosition.php	/^	protected function getModuleRenderer()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JPosition
+getModules	Extension/JPosition.php	/^	protected function getModules($position)$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JPosition
+getName	Extension/JApplication.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JApplication
+getName	Extension/JArray.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JArray
+getName	Extension/JDocument.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JDocument
+getName	Extension/JHtml.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JHtml
+getName	Extension/JLanguage.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JLanguage
+getName	Extension/JLayout.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JLayout
+getName	Extension/JPosition.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JPosition
+getName	Extension/JProfiler.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JProfiler
+getName	Extension/JRoute.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JRoute
+getName	Extension/JSession.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JSession
+getName	Extension/JText.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JText
+getName	Extension/JUri.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JUri
+getName	Extension/JUser.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JUser
+getName	Extension/Unserialize.php	/^	public function getName()$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\Unserialize
+getTemplatePaths	Loader/ComponentLoader.php	/^	protected function getTemplatePaths()$/;"	f	class:Phproberto\\Joomla\\Twig\\Loader\\ComponentLoader
+getTemplatePaths	Loader/ExtensionLoader.php	/^	abstract protected function getTemplatePaths();$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Loader
+getTemplatePaths	Loader/LibraryLoader.php	/^	protected function getTemplatePaths()$/;"	f	class:Phproberto\\Joomla\\Twig\\Loader\\LibraryLoader
+getTemplatePaths	Loader/ModuleLoader.php	/^	protected function getTemplatePaths()$/;"	f	class:Phproberto\\Joomla\\Twig\\Loader\\ModuleLoader
+getTemplatePaths	Loader/PluginLoader.php	/^	protected function getTemplatePaths()$/;"	f	class:Phproberto\\Joomla\\Twig\\Loader\\PluginLoader
+getTemplatePaths	Loader/TemplateLoader.php	/^	protected function getTemplatePaths()$/;"	f	class:Phproberto\\Joomla\\Twig\\Loader\\TemplateLoader
+importPlugins	Environment.php	/^	private function importPlugins()$/;"	f	class:Phproberto\\Joomla\\Twig\\Environment
+importedPluginTypes	Environment.php	/^	private $importedPluginTypes = [$/;"	v	class:Phproberto\\Joomla\\Twig\\Environment
+instance	Helper/ViewHelper.php	/^	private static $instance;$/;"	v	class:Phproberto\\Joomla\\Twig\\Helper\\ViewHelper
+instance	Helper/ViewHelper.php	/^	public static function instance()$/;"	f	class:Phproberto\\Joomla\\Twig\\Helper\\ViewHelper
+instance	Twig.php	/^	private static $instance;$/;"	v	class:Phproberto\\Joomla\\Twig\\Twig
+instance	Twig.php	/^	public static function instance()$/;"	f	class:Phproberto\\Joomla\\Twig\\Twig
+isHomePage	Helper/ViewHelper.php	/^	private static $isHomePage;$/;"	v	class:Phproberto\\Joomla\\Twig\\Helper\\ViewHelper
+isHomePage	Helper/ViewHelper.php	/^	public function isHomePage()$/;"	f	class:Phproberto\\Joomla\\Twig\\Helper\\ViewHelper
+layoutFolders	Field/LayoutSelector.php	/^	abstract public function layoutFolders();$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Field
+layoutFolders	Field/ModuleLayout.php	/^	public function layoutFolders()$/;"	f	class:Phproberto\\Joomla\\Twig\\Field\\ModuleLayout
+layoutFolders	Field/PluginLayout.php	/^	public function layoutFolders()$/;"	f	class:Phproberto\\Joomla\\Twig\\Field\\PluginLayout
+layoutFolders	Field/ViewLayout.php	/^	public function layoutFolders()$/;"	f	class:Phproberto\\Joomla\\Twig\\Field\\ViewLayout
+loadGroups	Field/LayoutSelector.php	/^	protected function loadGroups()$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Field
+module	Field/ModuleLayout.php	/^	protected $module;$/;"	v	class:Phproberto\\Joomla\\Twig\\Field\\ModuleLayout
+nameInExtensionNamespace	Loader/ExtensionLoader.php	/^	protected function nameInExtensionNamespace($name)$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Loader
+parseExtensionName	Loader/ComponentLoader.php	/^	protected function parseExtensionName($name)$/;"	f	class:Phproberto\\Joomla\\Twig\\Loader\\ComponentLoader
+parseExtensionName	Loader/ExtensionLoader.php	/^	protected function parseExtensionName($name)$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Loader
+parseExtensionName	Loader/LibraryLoader.php	/^	protected function parseExtensionName($name)$/;"	f	class:Phproberto\\Joomla\\Twig\\Loader\\LibraryLoader
+parseExtensionName	Loader/ModuleLoader.php	/^	protected function parseExtensionName($name)$/;"	f	class:Phproberto\\Joomla\\Twig\\Loader\\ModuleLoader
+parseExtensionName	Loader/PluginLoader.php	/^	protected function parseExtensionName($name)$/;"	f	class:Phproberto\\Joomla\\Twig\\Loader\\PluginLoader
+pluginGroup	Field/PluginLayout.php	/^	protected $pluginGroup;$/;"	v	class:Phproberto\\Joomla\\Twig\\Field\\PluginLayout
+pluginName	Field/PluginLayout.php	/^	protected $pluginName;$/;"	v	class:Phproberto\\Joomla\\Twig\\Field\\PluginLayout
+pluginPath	Plugin/BasePlugin.php	/^	protected $pluginPath;$/;"	v	class:Phproberto\\Joomla\\Twig\\Plugin\\BasePlugin
+pluginPath	Plugin/BasePlugin.php	/^	protected function pluginPath()$/;"	f	class:Phproberto\\Joomla\\Twig\\Plugin\\BasePlugin
+render	Extension/JPosition.php	/^	public function render($position, $attribs = [])$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JPosition
+render	Twig.php	/^	public static function render($layout, $data = [])$/;"	f	class:Phproberto\\Joomla\\Twig\\Twig
+setup	Field/LayoutSelector.php	/^	public function setup(\\SimpleXMLElement $element, $value, $group = null)$/;"	f	namespace:Phproberto\\Joomla\\Twig\\Field
+setup	Field/ModuleLayout.php	/^	public function setup(\\SimpleXMLElement $element, $value, $group = null)$/;"	f	class:Phproberto\\Joomla\\Twig\\Field\\ModuleLayout
+setup	Field/PluginLayout.php	/^	public function setup(\\SimpleXMLElement $element, $value, $group = null)$/;"	f	class:Phproberto\\Joomla\\Twig\\Field\\PluginLayout
+setup	Field/ViewLayout.php	/^	public function setup(\\SimpleXMLElement $element, $value, $group = null)$/;"	f	class:Phproberto\\Joomla\\Twig\\Field\\ViewLayout
+toArray	Extension/JArray.php	/^	public function toArray($var)$/;"	f	class:Phproberto\\Joomla\\Twig\\Extension\\JArray
+trigger	Environment.php	/^	public function trigger($event, $params = [])$/;"	f	class:Phproberto\\Joomla\\Twig\\Environment
+type	Field/ModuleLayout.php	/^	protected $type = 'Modulelayout';$/;"	v	class:Phproberto\\Joomla\\Twig\\Field\\ModuleLayout
+type	Field/PluginLayout.php	/^	protected $type = 'Pluginlayout';$/;"	v	class:Phproberto\\Joomla\\Twig\\Field\\PluginLayout
+type	Field/ViewLayout.php	/^	protected $type = 'Viewlayout';$/;"	v	class:Phproberto\\Joomla\\Twig\\Field\\ViewLayout
+view	Field/ViewLayout.php	/^	protected $view;$/;"	v	class:Phproberto\\Joomla\\Twig\\Field\\ViewLayout

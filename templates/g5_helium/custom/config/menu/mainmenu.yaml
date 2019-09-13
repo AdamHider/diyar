@@ -1,0 +1,19 @@
+ordering:
+  home: ''
+  __module-H7nZF: ''
+items:
+  home:
+    id: 101
+  __module-H7nZF:
+    type: particle
+    particle: module
+    title: 'Gantry 5 Particle'
+    options:
+      particle:
+        enabled: '1'
+        module_id: '90'
+        chrome: ''
+      block:
+        extra: {  }
+    enabled: true
+    anchor_class: ''
