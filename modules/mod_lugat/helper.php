@@ -21,10 +21,33 @@
           * @access public
         */
 
-        public static function getHello($params) {
+        public static function init($params) {
             
+            $input_word = JFactory::getApplication()->input->get('word', '', 'string');
+            // Return the Hello
+            $param = [
+                'header' => 'Lugat',
+                'input_type' => 'text',
+                'input_value' => $input_word,
+                'input_placeholder' => 'Type your text...'
+
+            ];
+            
+            if(!empty($input_word)){
+                $param['result'] = [
+                    'output_result' => $input_word,
+                    'output_description' => $input_word,
+                    'output_meaning' => $input_word,
+                    'output_suggest' => $input_word
+                ];
+            }
+             return $param;
+        }
         
-         
+        
+        public static function getHelloAjax() {
+            $input_word = JRequest::getVar('data', '', 'get');
+            
             $db = JFactory::getDbo();
             // Retrieve the shout
             $query = "
@@ -33,27 +56,13 @@
                FROM 
                    joom_helloworld
                WHERE 
-                   lang = 'fr-FR'
+                   lang LIKE '$input_word'
                ";
-            // Prepare the query
             $db->setQuery($query);
-            // Load the row.
+            
             $result = $db->loadResult();
-            // Return the Hello
-            $param = [
-                'header' => 'Lugat',
-                'input_type' => 'text',
-                'input_placeholder' => 'Type your text...',
-                'result' => JText::_('MOD_LUGAT')
-
-            ];
-             return $param;
-        }
-        
-        
-        public static function getHelloAjax() {
-            $input = JRequest::getVar('data', '', 'post');
-            echo $input;
+            
+            return $result;
         }
         
    }

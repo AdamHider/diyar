@@ -1,5 +1,5 @@
-name: '17'
-timestamp: 1568372954
+name: 17
+timestamp: 1568406039
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -23,6 +23,14 @@ sections:
   footer: Footer
   offcanvas: Offcanvas
 particles:
+  module:
+    position-module-2635: 'Module Instance'
+    position-module-5220: 'Module Instance'
+  position:
+    position-position-4734: Aside
+    position-position-3949: Sidebar
+  content:
+    system-content-1587: 'Page Content'
   messages:
     system-messages-7444: 'System Messages'
   logo:
@@ -32,14 +40,6 @@ particles:
     menu-9312: Menu
   social:
     social-9457: Social
-  module:
-    position-module-5220: 'Module Instance'
-    position-module-2635: 'Module Instance'
-  position:
-    position-position-4734: Aside
-    position-position-3949: Sidebar
-  content:
-    system-content-1587: 'Page Content'
   custom:
     custom-9538: 'Custom HTML'
   horizontalmenu:
@@ -51,12 +51,12 @@ particles:
 inherit:
   9:
     navigation: navigation
+    footer: footer
     system-messages-7444: system-messages-8776
     logo-2290: logo-9531
     menu-9312: menu-4597
     social-9457: social-6902
     position-module-5220: position-module-5240
-    footer: footer
     logo-5017: logo-1144
     custom-9538: custom-3748
     horizontalmenu-5881: horizontalmenu-5487

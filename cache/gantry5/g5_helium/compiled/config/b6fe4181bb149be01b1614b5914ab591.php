@@ -1,61 +1,61 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1568379060,
-    'checksum' => '93f1bed1cbc5a1ba34adf0ba9a3b7549',
+    'timestamp' => 1568406064,
+    'checksum' => '7cd074ad36e7eff62867ee3ef4c007cc',
     'files' => [
         'templates/g5_helium/custom/config/18' => [
             'assignments' => [
                 'file' => 'templates/g5_helium/custom/config/18/assignments.yaml',
-                'modified' => 1568209991
+                'modified' => 1568398046
             ],
             'index' => [
                 'file' => 'templates/g5_helium/custom/config/18/index.yaml',
-                'modified' => 1568379058
+                'modified' => 1568406039
             ],
             'layout' => [
                 'file' => 'templates/g5_helium/custom/config/18/layout.yaml',
-                'modified' => 1568379058
+                'modified' => 1568406039
             ]
         ],
         'templates/g5_helium/custom/config/default' => [
             'index' => [
                 'file' => 'templates/g5_helium/custom/config/default/index.yaml',
-                'modified' => 1568362021
+                'modified' => 1568406040
             ],
             'layout' => [
                 'file' => 'templates/g5_helium/custom/config/default/layout.yaml',
-                'modified' => 1568362021
+                'modified' => 1568406040
             ],
             'styles' => [
                 'file' => 'templates/g5_helium/custom/config/default/styles.yaml',
-                'modified' => 1568011348
+                'modified' => 1568398046
             ]
         ],
         'templates/g5_helium/config/default' => [
             'page/body' => [
                 'file' => 'templates/g5_helium/config/default/page/body.yaml',
-                'modified' => 1563522857
+                'modified' => 1568398045
             ],
             'particles/branding' => [
                 'file' => 'templates/g5_helium/config/default/particles/branding.yaml',
-                'modified' => 1563522857
+                'modified' => 1568398045
             ],
             'particles/copyright' => [
                 'file' => 'templates/g5_helium/config/default/particles/copyright.yaml',
-                'modified' => 1563522857
+                'modified' => 1568398045
             ],
             'particles/logo' => [
                 'file' => 'templates/g5_helium/config/default/particles/logo.yaml',
-                'modified' => 1563522857
+                'modified' => 1568398046
             ],
             'particles/social' => [
                 'file' => 'templates/g5_helium/config/default/particles/social.yaml',
-                'modified' => 1563522857
+                'modified' => 1568398046
             ],
             'particles/totop' => [
                 'file' => 'templates/g5_helium/config/default/particles/totop.yaml',
-                'modified' => 1563522857
+                'modified' => 1568398046
             ]
         ]
     ],
@@ -412,8 +412,8 @@ return [
             ]
         ],
         'index' => [
-            'name' => '18',
-            'timestamp' => 1568379058,
+            'name' => 18,
+            'timestamp' => 1568406039,
             'version' => 7,
             'preset' => [
                 'image' => 'gantry-admin://images/layouts/default.png',
@@ -440,6 +440,10 @@ return [
                 'offcanvas' => 'Offcanvas'
             ],
             'particles' => [
+                'module' => [
+                    'position-module-2671' => 'Module Instance',
+                    'position-module-7524' => 'Module Instance'
+                ],
                 'messages' => [
                     'system-messages-7611' => 'System Messages'
                 ],
@@ -453,17 +457,6 @@ return [
                 'social' => [
                     'social-9867' => 'Social'
                 ],
-                'module' => [
-                    'position-module-7524' => 'Module Instance',
-                    'position-module-2671' => 'Module Instance'
-                ],
-                'position' => [
-                    'position-position-2726' => 'Aside',
-                    'position-position-2457' => 'Sidebar'
-                ],
-                'content' => [
-                    'system-content-8360' => 'Page Content'
-                ],
                 'custom' => [
                     'custom-9547' => 'Custom HTML'
                 ],
@@ -473,6 +466,13 @@ return [
                 'totop' => [
                     'totop-3095' => 'To Top'
                 ],
+                'position' => [
+                    'position-position-2726' => 'Aside',
+                    'position-position-2457' => 'Sidebar'
+                ],
+                'content' => [
+                    'system-content-8360' => 'Page Content'
+                ],
                 'mobile-menu' => [
                     'mobile-menu-2243' => 'Mobile-menu'
                 ]
@@ -480,12 +480,12 @@ return [
             'inherit' => [
                 14 => [
                     'navigation' => 'navigation',
+                    'footer' => 'footer',
                     'system-messages-7611' => 'system-messages-1962',
                     'logo-5979' => 'logo-5571',
                     'menu-9340' => 'menu-6097',
                     'social-9867' => 'social-2035',
                     'position-module-7524' => 'position-module-6835',
-                    'footer' => 'footer',
                     'logo-1710' => 'logo-1144',
                     'custom-9547' => 'custom-3748',
                     'horizontalmenu-4161' => 'horizontalmenu-5487',
@@ -493,10 +493,10 @@ return [
                 ],
                 17 => [
                     'aside' => 'aside',
-                    'position-position-2726' => 'position-position-4734',
                     'mainbar' => 'mainbar',
-                    'system-content-8360' => 'system-content-1587',
                     'sidebar' => 'sidebar',
+                    'position-position-2726' => 'position-position-4734',
+                    'system-content-8360' => 'system-content-1587',
                     'position-position-2457' => 'position-position-3949'
                 ],
                 'default' => [

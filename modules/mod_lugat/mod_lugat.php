@@ -15,12 +15,13 @@
     // No direct access
     defined('_JEXEC') or die;
 
-
+    
     $lang = JFactory::getLanguage();
     // Include the syndicate functions only once
     require_once dirname(__FILE__) . '/helper.php';
     
     
-    $lugat = modLugatHelper::getHello($params);
+    
+    $lugat = modLugatHelper::init($params);
     
     require JModuleHelper::getLayoutPath('mod_lugat');
