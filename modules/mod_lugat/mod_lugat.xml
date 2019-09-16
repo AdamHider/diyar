@@ -19,6 +19,7 @@
         <filename>tmpl/index.html</filename>
 	<folder>language</folder>
         <folder>mysql</folder>
+        <folder>assets</folder>
     </files>
    
     <config>

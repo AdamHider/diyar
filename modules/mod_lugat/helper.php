@@ -65,5 +65,25 @@
             return $result;
         }
         
+        public static function autocompleteAjax() {
+            $input = JRequest::getVar('word', '', 'post');
+            $db = JFactory::getDbo();
+            // Retrieve the shout
+            $query = "
+                SELECT 
+                   word 
+                FROM 
+                   word_list
+                WHERE 
+                   word LIKE '$input%'
+                LIMIT 7
+               ";
+            $db->setQuery($query);
+            
+            $result = $db->loadObjectList();
+            
+            return $result;
+        }
+        
    }
 	

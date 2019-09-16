@@ -15,6 +15,9 @@
     // No direct access
     defined('_JEXEC') or die;
 
+    $document = JFactory::getDocument();
+    
+    $document->addStyleSheet('modules/mod_lugat/assets/mod_lugat.css');
     
     $lang = JFactory::getLanguage();
     // Include the syndicate functions only once
