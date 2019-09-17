@@ -23,8 +23,9 @@
     // Include the syndicate functions only once
     require_once dirname(__FILE__) . '/helper.php';
     
-    
-    
     $lugat = modLugatHelper::init($params);
+    
+    $input = JRequest::getVar('word', '', 'get');
+    $lugat['translation'] = modLugatHelper::getTranslation($input);
     
     require JModuleHelper::getLayoutPath('mod_lugat');

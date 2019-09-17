@@ -9,7 +9,7 @@ defined('_JEXEC') or die;
 ?>
 
 <div class="lugat">
-    <form autocomplete="off" action="" class="search-row">
+    <form autocomplete="off" action="" class="search-row" onsubmit="getWord(this[0].value); return false">
         <div  class="autocomplete" style="width: 100%;">
             <input id="search-input" type="text" name="search-input" placeholder="Type your text... " oninput="autocompleteGo(this.value)">
         </div>
@@ -22,7 +22,7 @@ defined('_JEXEC') or die;
 
     <div class='info-row'>
         <div class='query-word_block'>
-            <div class="query-word"><?php echo $lugat['query_word']?></div>
+            <div class="query-word"><?php echo $lugat['translation']['query_word']?></div>
             <div class="query-word-transcription">
                 [ transcription ]
             </div>
@@ -40,7 +40,7 @@ defined('_JEXEC') or die;
                             </div>
                             <div class='referents-list'>
                                 <div class='referent-block'>
-                                    <span class='referent-name'>distinguish</span>
+                                    <span class='referent-name'><?php echo $lugat['translation']['translations']?></span>
                                     <span class='referent-clarification'>( clarification one )</span>
                                     <span class='referent-details tag'>scope_of_use</span>
                                     <div class="referent-suggestions">
@@ -62,6 +62,7 @@ defined('_JEXEC') or die;
     var countries = [];
     var current_letter = '';
     
+
     jQuery.noConflict();
     function goToDict() {
         var data = jQuery("#input").val();
@@ -79,7 +80,7 @@ defined('_JEXEC') or die;
     }
     ;
     function getWord(word) {
-        location.replace("?word=" + word + '_from_a');
+        location.replace("?word=" + word);
         return;
     }
     ;

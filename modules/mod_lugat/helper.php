@@ -65,12 +65,13 @@ class ModLugatHelper {
         return $result;
     }
 
-    public static function getTranslationsAjax() {
-        $input_word = JRequest::getVar('data', '', 'get');
-        return composeObject(getObjectByWord($input_word));
+    public static function getTranslation($input_word) {
+        $result = ModLugatHelper::composeObject(ModLugatHelper::getObjectByWord($input_word));
+        return $result;
     }
 
     private static function composeObject($relations) {
+        
         $final_object = [
             'query_word_id' => '',
             'query_word_id' => '',
@@ -99,8 +100,12 @@ class ModLugatHelper {
         ];
         $current_part_of_speech_id = '';
         foreach ($relations as $relation) {
-            $final_object['query_word_id'] = $relation['word_query_word_id'];
-            $final_object['query_word'] = $relation['word_query_word'];
+            $final_object['query_word_id'] = $relation->word_query_word_id;
+            $final_object['query_word'] = $relation->word_query_word;
+            
+            $final_relation_object['word'] = $relation->word_result_word;
+            $final_object['translations'] = $relation->word_result_word;
+            continue;
             $final_object['query_part_of_speech_id'] = $relation['word_query_part_of_speech_id'];
             $final_object['query_word_transcription'] = $relation['word_query_transcription'];
 
@@ -127,6 +132,7 @@ class ModLugatHelper {
 
     private static function getObjectByWord($word) {
 
+      
         $db = JFactory::getDbo();
 
         $sql = "
@@ -161,7 +167,7 @@ class ModLugatHelper {
             wl2.part_of_speech_id   word_result_part_of_speech_id,
             pts.eng_part_descr      word_result_part_of_speech
         FROM
-            qirim_english_dictionary.word_list wl
+            word_list wl
                 JOIN
             relation_list r1 ON wl.word_id = r1.word_id 
                 JOIN
@@ -180,7 +186,7 @@ class ModLugatHelper {
 
         $db->setQuery($sql);
 
-        $result = $db->loadResult();
+        $result = $db->loadObjectList();
 
         return $result;
     }
