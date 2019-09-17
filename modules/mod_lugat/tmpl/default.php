@@ -22,7 +22,7 @@ defined('_JEXEC') or die;
 
     <div class='info-row'>
         <div class='query-word_block'>
-            <div class="query-word">Query word</div>
+            <div class="query-word"><?php echo $lugat['query_word']?></div>
             <div class="query-word-transcription">
                 [ transcription ]
             </div>
@@ -115,6 +115,11 @@ function autocomplete(inp, arr) {
     inp.parentNode.appendChild(a);
     /*for each item in the array...*/
     var limit = 0;
+    
+    if(arr.length < 1){
+        renderEmptySuggest(a);
+        return;
+    }
     for (i = 0; i < arr.length; i++) {
         /*check if the item starts with the same letters as the text field value:*/
             /*create a DIV element for each matching element:*/
@@ -122,9 +127,10 @@ function autocomplete(inp, arr) {
             /*make the matching letters bold:*/
             b.innerHTML = arr[i].word;
             /*insert a input field that will hold the current array item's value:*/
-            //b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            b.innerHTML += "<input type='hidden' value='" + arr[i].word + "'>";
             /*execute a function when someone clicks on the item value (DIV element):*/
             b.addEventListener("click", function (e) {
+                
                 /*insert the value for the autocomplete text field:*/
                 inp.value = this.getElementsByTagName("input")[0].value;
                 /*close the list of autocompleted values,
@@ -193,14 +199,20 @@ function autocomplete(inp, arr) {
             }
         }
     }
+    function renderEmptySuggest(a){
+        b = document.createElement("DIV");
+        b.innerHTML = '<i>No results!</i>';
+        a.appendChild(b);
+    }
     /*execute a function when someone clicks in the document:*/
     document.addEventListener("click", function (e) {
         closeAllLists(e.target);
     });
+    
 }
-/*An array containing all the country names in the world:*/
 
-/*initiate the autocomplete function on the "search-input" element, and pass along the countries array as possible autocomplete values:*/
+  
+
 
 
 
