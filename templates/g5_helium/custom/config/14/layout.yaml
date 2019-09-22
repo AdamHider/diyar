@@ -41,12 +41,12 @@ structure:
     type: section
     attributes:
       boxed: ''
-      class: ''
+      class: diyar-main-navigation
       variations: ''
   header:
     attributes:
       boxed: ''
-      class: ''
+      class: diyar-main-header
       variations: ''
   intro:
     type: section

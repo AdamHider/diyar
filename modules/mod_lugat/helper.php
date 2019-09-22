@@ -64,7 +64,8 @@ class ModLugatHelper {
 
         return $result;
     }
-
+    
+    
     public static function getTranslation($input_word) {
         $result = ModLugatHelper::composeObject(ModLugatHelper::getObjectByWord($input_word));
         return $result;
@@ -102,28 +103,35 @@ class ModLugatHelper {
         foreach ($relations as $relation) {
             $final_object['query_word_id'] = $relation->word_query_word_id;
             $final_object['query_word'] = $relation->word_query_word;
+            $final_object['query_dialectality'] = $relation->relation_query_dialectality;
+            $final_object['query_scope_of_use'] = $relation->relation_query_scope_of_use;
+            $final_object['query_expressivity'] = $relation->relation_query_expressivity;
+            $final_object['query_stylistic_status'] = $relation->relation_query_stylistic_status;
+            $final_object['query_modernity'] = $relation->relation_query_modernity;
+            $final_object['query_etymology_lang'] = $relation->relation_query_etymology_lang;
+            $final_object['query_etymology_word'] = $relation->relation_query_etymology_word;
             
+            $final_object['query_part_of_speech_id'] = $relation->word_query_part_of_speech_id;
+            $final_object['query_word_transcription'] = $relation->word_query_transcription;
+
+            $final_relation_object['word_id'] = $relation->word_result_word_id;
             $final_relation_object['word'] = $relation->word_result_word;
-            $final_object['translations'] = $relation->word_result_word;
-            continue;
-            $final_object['query_part_of_speech_id'] = $relation['word_query_part_of_speech_id'];
-            $final_object['query_word_transcription'] = $relation['word_query_transcription'];
-
-            $final_relation_object['word_id'] = $relation['word_result_word_id'];
-            $final_relation_object['word'] = $relation['word_result_word'];
-            $final_relation_object['word_part_of_speech'] = $relation['word_result_part_of_speech'];
-            $final_relation_object['relation_id'] = $relation['relation_result_relation_id'];
-            $final_relation_object['clarification'] = $relation['relation_result_clarification'];
-            $final_relation_object['dialectality'] = $relation['relation_result_dialectality'];
-            $final_relation_object['scope_of_use'] = $relation['relation_result_scope_of_use'];
-            $final_relation_object['expressivity'] = $relation['relation_result_expressivity'];
-            $final_relation_object['stylistic_status'] = $relation['relation_result_stylistic_status'];
-            $final_relation_object['etymology_lang'] = $relation['relation_result_etymology_lang'];
-            $final_relation_object['etymology_word'] = $relation['relation_result_etymology_word'];
+            $final_relation_object['word_part_of_speech'] = $relation->word_result_part_of_speech;
+            $final_relation_object['relation_id'] = $relation->relation_result_relation_id;
+            $final_relation_object['clarification'] = $relation->relation_result_clarification;
+            $final_relation_object['dialectality'] = $relation->relation_result_dialectality;
+            $final_relation_object['scope_of_use'] = $relation->relation_result_scope_of_use;
+            $final_relation_object['expressivity'] = $relation->relation_result_expressivity;
+            $final_relation_object['stylistic_status'] = $relation->relation_result_stylistic_status;
+            $final_relation_object['etymology_lang'] = $relation->relation_result_etymology_lang;
+            $final_relation_object['etymology_word'] = $relation->relation_result_etymology_word;
+            $final_relation_object['relevance'] = (50*(1-(ceil($relation->relation_result_relevance)/7)));
+            if($final_relation_object['relevance']<0){$final_relation_object['relevance'] = 5;};
+            $final_relation_object['word_suggestion'] = array_slice(explode(',',$relation->word_result_suggestion),0,6);
 
 
-            if ($relation['word_result_part_of_speech'] != $current_part_of_speech_id) {
-                $current_part_of_speech_id = $relation['word_result_part_of_speech'];
+            if ($relation->word_result_part_of_speech != $current_part_of_speech_id) {
+                $current_part_of_speech_id = $relation->word_result_part_of_speech;
             }
             $final_object['translations'][$current_part_of_speech_id][] = $final_relation_object;
         }
@@ -131,10 +139,7 @@ class ModLugatHelper {
     }
 
     private static function getObjectByWord($word) {
-
-      
         $db = JFactory::getDbo();
-
         $sql = "
         SELECT DISTINCT
             wl.word_id              word_query_word_id,
@@ -154,18 +159,24 @@ class ModLugatHelper {
             dl.denotation_description,
             dl.part_of_speech_id    denotation_part_of_speech_id,
             r2.relation_id          relation_result_relation_id,
-            r2.clarification        relation_result_clarification,
+            
+            if(wl.language_id = 1, 
+            r2.clarification, 
+            r1.clarification)       relation_result_clarification,
+            
             r2.dialectality         relation_result_dialectality,
             r2.scope_of_use         relation_result_scope_of_use,
             r2.expressivity         relation_result_expressivity,
             r2.stylistic_status     relation_result_stylistic_status,
             r2.etymology_lang       relation_result_etymology_lang,
             r2.etymology_word       relation_result_etymology_word,
+            r2.relevance            relation_result_relevance,
             r2.modernity            relation_result_modernity,
             wl2.word_id             word_result_word_id,
             wl2.word                word_result_word,
             wl2.part_of_speech_id   word_result_part_of_speech_id,
-            pts.eng_part_descr      word_result_part_of_speech
+            pts.eng_part_descr      word_result_part_of_speech,
+            GROUP_CONCAT(wl3.word)  word_result_suggestion
         FROM
             word_list wl
                 JOIN
@@ -178,9 +189,25 @@ class ModLugatHelper {
             word_list wl2 ON wl2.word_id = r2.word_id
                 JOIN
             parts_of_speech pts ON wl2.part_of_speech_id = pts.part_of_speech_id
+            
+               
+                JOIN
+            word_list wl4 ON wl4.word = wl2.word 
+                JOIN
+            relation_list r3 ON wl4.word_id = r3.word_id 
+                JOIN
+            denotation_list dl2 ON dl2.denotation_id = r3.denotation_id
+                JOIN
+            relation_list r4 ON dl2.denotation_id = r4.denotation_id  
+                    AND r4.language_id = wl.language_id 
+                    AND r4.word_id != wl.word_id
+                JOIN
+            word_list wl3 ON wl3.word_id = r4.word_id 
         WHERE
             wl.word = '$word'
                 AND wl.language_id != wl2.language_id
+            GROUP BY relation_result_relation_id
+            ORDER BY r2.relevance    
     ";
         // Retrieve the shout
 

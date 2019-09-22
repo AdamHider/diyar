@@ -27,5 +27,10 @@
     
     $input = JRequest::getVar('word', '', 'get');
     $lugat['translation'] = modLugatHelper::getTranslation($input);
+    $document->setTitle($input.' - перевод в крымскотатарском словаре');
     
     require JModuleHelper::getLayoutPath('mod_lugat');
+    
+    
+    
+    

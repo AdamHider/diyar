@@ -46,6 +46,8 @@ structure:
     type: section
     attributes:
       boxed: ''
+      class: lugat-container
+      variations: ''
   features:
     type: section
     attributes:
@@ -102,6 +104,7 @@ content:
     title: 'Module Instance'
     attributes:
       module_id: '93'
+      key: module-instance
   position-position-4734:
     title: Aside
     attributes:

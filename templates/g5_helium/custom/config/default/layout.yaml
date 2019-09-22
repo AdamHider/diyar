@@ -58,12 +58,14 @@ structure:
   header:
     attributes:
       boxed: ''
-      class: ''
+      class: g-flushed
       variations: ''
   intro:
     type: section
     attributes:
       boxed: ''
+      class: lugat-container
+      variations: ''
   features:
     type: section
     attributes:
@@ -140,8 +142,9 @@ content:
   position-module-2306:
     title: 'Module Instance'
     attributes:
-      module_id: '93'
+      module_id: '98'
       chrome: ''
+      key: module-instance
     block:
       variations: center
   custom-3119:
@@ -221,7 +224,7 @@ content:
   logo-7150:
     title: 'Footer Logo'
     attributes:
-      image: 'gantry-media://diyar_logo.png'
+      image: 'gantry-media://logos/square_white.png'
       svg: ''
   horizontalmenu-5578:
     title: 'Horizontal Menu'

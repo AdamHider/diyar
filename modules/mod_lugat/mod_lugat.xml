@@ -15,11 +15,10 @@
         <filename module = "mod_lugat">mod_lugat.php</filename>
         <filename>index.html</filename>
         <filename>helper.php</filename>
-        <filename>tmpl/default.php</filename>
-        <filename>tmpl/index.html</filename>
 	<folder>language</folder>
         <folder>mysql</folder>
         <folder>assets</folder>
+        <folder>tmpl</folder>
     </files>
    
     <config>

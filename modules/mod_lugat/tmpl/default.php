@@ -9,50 +9,136 @@ defined('_JEXEC') or die;
 ?>
 
 <div class="lugat">
-    <form autocomplete="off" action="" class="search-row" onsubmit="getWord(this[0].value); return false">
-        <div  class="autocomplete" style="width: 100%;">
-            <input id="search-input" type="text" name="search-input" placeholder="Type your text... " oninput="autocompleteGo(this.value)">
-        </div>
-        <button  id='search-button' style="border-radius: 11px; padding: 1.5em;" type="submit" class="button">
-            translate
-            <i class="fa fa-arrow-circle-right fa-lg"></i> 
-        </button>
-    </form>
-
-
-    <div class='info-row'>
-        <div class='query-word_block'>
-            <div class="query-word"><?php echo $lugat['translation']['query_word']?></div>
-            <div class="query-word-transcription">
-                [ transcription ]
+    <div id="lugat-head">
+        <form autocomplete="off" action="" class="search-row" onsubmit="getWord(this[0].value); return false">
+            <div  class="autocomplete" style="width: 100%;">
+                <input id="search-input" type="text" name="search-input" placeholder="Type your text... " oninput="autocompleteGo(this.value)"
+                     <?php if(!empty($lugat['translation']['query_word'])){  ?>
+                       value="<?php  echo  $lugat['translation']['query_word'] ?>"
+                     <?php }  ?>   
+                       >
             </div>
-        </div>
-        <div class='translations-block'>
-            <div class='part-of-speech-list'>
-                <div class='part-of-speech-block'>
-                    <div class='part-of-speech-name'>noun</div>
-                    <div class='denotations-list'>
-                        <div class='denotation-block'>
-                            <div class='denotation-info'>
-                                <span class='denotation-number'>1)</span>
-                                <span class='denotation-description'>Smth. that is put to tea</span>
-                                <span class='denotation-etymology tag'>arab.</span>
-                            </div>
-                            <div class='referents-list'>
-                                <div class='referent-block'>
-                                    <span class='referent-name'><?php echo $lugat['translation']['translations']?></span>
-                                    <span class='referent-clarification'>( clarification one )</span>
-                                    <span class='referent-details tag'>scope_of_use</span>
-                                    <div class="referent-suggestions">
-                                        <span>see also: </span>
-                                        <a class="suggestion">suggestion1</a>
+            <button  id='search-button' style="border-radius: 11px; padding: 1.5em;" type="submit" class="button">
+                <i class="fa fa-search fa-lg"></i> 
+            </button>
+        </form>
+    </div>    
+    <div id="lugat-body">
+        <div class='info-row'>
+            <div class='query-word_block'>
+                 <?php if(!empty($lugat['translation']['query_word'])){ ?>
+                    <div class="query-word"><?php echo $lugat['translation']['query_word']?></div>
+                 <?php  } ?> 
+                <?php if(!empty($lugat['translation']['query_word_transcription'])){ ?>
+                <div class="query-word-transcription">
+                    <?php echo  $lugat['translation']['query_word_transcription'] ?>
+                </div>
+                <?php  } ?> 
+                <?php if(!empty($lugat['translation']['query_dialectality'])){ ?>                                   
+                                            <span class='referent-details dialectality-tag tag'><?php echo $lugat['translation']['query_dialectality'] ?></span>
+                <?php  } ?>
+                <?php if(!empty($lugat['translation']['query_scope_of_use'])){ ?>                                   
+                                            <span class='referent-details scope-of-use-tag tag'><?php echo $lugat['translation']['query_scope_of_use'] ?></span>
+                <?php  } ?>
+                <?php if(!empty($lugat['translation']['query_expressivity'])){ ?>                                   
+                                            <span class='referent-details expressivity-tag tag'><?php echo $lugat['translation']['query_expressivity'] ?></span>
+                <?php  } ?>
+                <?php if(!empty($lugat['translation']['query_stylistic_status'])){ ?>                                   
+                                            <span class='referent-details stylistic-status-tag tag'><?php echo $lugat['translation']['query_stylistic_status'] ?></span>
+                <?php  } ?>
+                <?php if(!empty($lugat['translation']['query_modernity'])){ ?>                                   
+                                            <span class='referent-details modernity-tag tag'><?php echo $lugat['translation']['query_modernity'] ?></span>
+                <?php  } ?>
+                <?php if(!empty($lugat['translation']['query_etymology_lang'])){ ?>            
+                                                <span class='denotation-etymology tag'><?php echo $lugat['translation']['query_etymology_lang'] ?></span>
+                <?php  } ?>   
+                <?php if(!empty($lugat['translation']['query_etymology_word'])){ ?>            
+                                                <span class='denotation-etymology-word tag'><?php echo $lugat['translation']['query_etymology_word'] ?></span>
+                <?php  } ?>       
+            </div>
+            <?php  if(isset($lugat['translation']['translations'])){ ?>
+
+                <div class='translations-block'>
+                    <div class='part-of-speech-list'>
+
+            <?php  foreach($lugat['translation']['translations'] as $key=>$parts_of_speech){  ?>
+
+                 <div class='part-of-speech-block'>
+                            <div class='part-of-speech-name'><?php echo $key ?></div>
+
+            <?php  foreach($parts_of_speech as $key=>$translation){  ?>
+
+                            <div class='denotations-list'>
+                                <div class='denotation-block'>
+                                    <div class='denotation-info'>
+           <!-- <?php if(count($parts_of_speech) > 1){ ?>                               
+                                        <span class='denotation-number'><?php echo $key*1+1 ?>)</span>
+            <?php  } ?>                         
+                                        <span class='denotation-description'></span>
+            -->   
+
+                                    </div>
+
+                                    <div class='referents-list'>
+                                        <div class='referent-block'>
+                                            <div class="relevance">
+                                                <div class="relevance-container">
+                                                     <div class="relevance-content" style="width: <?php echo $translation['relevance'] ?>px;"></div>
+                                                </div>
+                                               
+                                            </div>
+            <?php if(!empty($translation['word'])){ ?>                                          
+                                            <a class='referent-name' onclick="getWord('<?php echo $translation['word'] ?>'); return false"><?php echo $translation['word'] ?></a>
+            <?php  } ?>            
+            <?php if(!empty($translation['clarification'])){ ?>                                   
+                                            <span class='referent-clarification'>( <?php echo $translation['clarification'] ?> )</span>
+            <?php  } ?>                                  
+            <?php if(!empty($translation['dialectality'])){ ?>                                   
+                                            <span class='referent-details dialectality-tag tag'><?php echo $translation['dialectality'] ?></span>
+            <?php  } ?>                               
+            <?php if(!empty($translation['scope_of_use'])){ ?>                                   
+                                            <span class='referent-details scope-of-use-tag tag'><?php echo $translation['scope_of_use'] ?></span>
+            <?php  } ?>                               
+            <?php if(!empty($translation['expressivity'])){ ?>                                   
+                                            <span class='referent-details expressivity-tag tag'><?php echo $translation['expressivity'] ?></span>
+            <?php  } ?>                               
+            <?php if(!empty($translation['stylistic_status'])){ ?>                                   
+                                            <span class='referent-details stylistic-status-tag tag'><?php echo $translation['stylistic_status'] ?></span>
+            <?php  } ?>                               
+            <?php if(!empty($translation['modernity'])){ ?>                                   
+                                            <span class='referent-details modernity-tag tag'><?php echo $translation['modernity'] ?></span>
+            <?php  } ?>
+            <?php if(!empty($translation['etymology_lang'])){ ?>            
+                                            <span class='relation-etymology tag'><?php echo $translation['etymology_lang'] ?></span>
+            <?php  } ?>  
+            <?php if(!empty($translation['etymology_word'])){ ?>            
+                                            <span class='relation-etymology-word tag'><?php echo $translation['etymology_word'] ?></span>
+            <?php  } ?>  
+            <?php if(!empty($translation['word_suggestion'])){ ?>         
+                                            <div class="referent-suggestions">
+                                                (
+                                                <?php foreach($translation['word_suggestion'] as $key=>$suggestion){ ?> 
+                                                <a class="suggestion" onclick="getWord('<?php echo $suggestion ?>'); return false"><?php echo $suggestion ?></a> 
+                                                <?php 
+                                                    if( isset($translation['word_suggestion'][$key+1])){
+                                                        echo ',';
+                                                    }
+                                                
+                                                } ?>  
+                                                )
+                                            </div>
+              <?php  } ?>                                  
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+            <?php  } ?>                
+
                         </div>
+             <?php  } ?>              
                     </div>
                 </div>
-            </div>
+             <?php  } ?>  
         </div>
     </div>
 </div>
@@ -64,15 +150,12 @@ defined('_JEXEC') or die;
     
 
     jQuery.noConflict();
-    function goToDict() {
-        var data = jQuery("#input").val();
-        location.replace("?word=" + data);
-        return;
-        console.log(data);
+    function goToDict(word) {
+        console.log(word);
         jQuery.ajax({
-            url: "index.php?option=com_ajax&module=lugat&method=getHello&format=json",
+            url: "index.php?option=com_ajax&module=lugat&method=getWord&format=raw",
             type: "GET",
-            data: {data: data},
+            data: {word: word},
             success: function (response) {
                 jQuery("#text").html(response.data);
             }
@@ -211,12 +294,19 @@ function autocomplete(inp, arr) {
     });
     
 }
+</script>
+<script>
+window.onscroll = function() {myFunction()};
 
-  
+var header = document.getElementById("lugat-head");
+var sticky = header.offsetTop;
 
-
-
-
-
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
 </script>
 

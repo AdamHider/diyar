@@ -12,7 +12,7 @@ link:
   regular: '#5dad45'
   hover: '#424753'
 header:
-  background: '#37536a'
+  background: '#312f38'
 features:
   background: '#ffffff'
 utility:
@@ -20,7 +20,7 @@ utility:
 testimonials:
   background: '#5dad45'
 footer:
-  background: '#37536a'
+  background: '#312f38'
 offcanvas:
   background: '#37536a'
   toggle-color: '#5dad45'

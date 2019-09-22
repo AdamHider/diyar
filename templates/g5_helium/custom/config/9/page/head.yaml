@@ -1,0 +1,10 @@
+atoms:
+  -
+    id: assets-2025
+    type: assets
+    title: 'Custom CSS / JS'
+    inherit:
+      outline: default
+      atom: assets-4435
+      include:
+        - attributes

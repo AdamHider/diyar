@@ -41,7 +41,7 @@ structure:
     type: section
     attributes:
       boxed: ''
-      class: ''
+      class: lugat-container
       variations: ''
   features:
     type: section
@@ -124,3 +124,4 @@ content:
     title: 'Module Instance'
     attributes:
       module_id: '93'
+      key: module-instance
