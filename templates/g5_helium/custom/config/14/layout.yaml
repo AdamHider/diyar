@@ -14,6 +14,8 @@ layout:
       - 'position-module-6835 24'
   /header/:
     -
+      - owlcarousel-1772
+    -
       - custom-6019
   intro: {  }
   features: {  }
@@ -174,6 +176,13 @@ content:
         - attributes
         - block
       particle: position-module-5422
+  owlcarousel-1772:
+    title: 'Header Carousel'
+    inherit:
+      outline: default
+      particle: owlcarousel-5369
+      include:
+        - attributes
   custom-6019:
     title: 'Custom HTML'
     attributes:

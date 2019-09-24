@@ -8,22 +8,18 @@
 defined('_JEXEC') or die;
 ?>
 
-<div class="lugat_searchbar">
-    <div id="lugat-head">
-        <form autocomplete="off" action="" class="search-row" onsubmit="getWord(this[0].value); return false">
-            <div  class="autocomplete" style="width: 100%;">
-                <input id="search-input" type="text" name="search-input" placeholder="Type your text... " oninput="autocompleteGo(this.value)"
-                     <?php if(!empty($lugat['translation']['query_word'])){  ?>
-                       value="<?php  echo  $lugat['translation']['query_word'] ?>"
-                     <?php }  ?>   
-                       >
-            </div>
-            <button  id='search-button' style="border-radius: 11px; padding: 1.5em;" type="submit" class="button">
-                <i class="fa fa-search fa-lg"></i> 
-            </button>
-        </form>
-    </div>   
+<div class="lugat-input-container">
+        <input id="search-input" type="text"  placeholder="Type your text... " oninput="autocompleteGo(this.value)"
+         <?php if(!empty($lugat['translation']['query_word'])){  ?>
+           value="<?php  echo  $lugat['translation']['query_word'] ?>"
+         <?php }  ?>   
+           >
 </div>
+
+<button  id='search-button'  class="button" onclick="goToDict(); return false">
+    translate
+    <i class="fa fa-search fa-lg"></i> 
+</button> 
 
 <script>
     
@@ -32,16 +28,14 @@ defined('_JEXEC') or die;
     
 
     jQuery.noConflict();
-    function goToDict(word) {
-        console.log(word);
-        jQuery.ajax({
-            url: "index.php?option=com_ajax&module=lugat&method=getWord&format=raw",
-            type: "GET",
-            data: {word: word},
-            success: function (response) {
-                jQuery("#text").html(response.data);
-            }
-        });
+    function goToDict() {
+        var word = jQuery('#search-input').val();
+        if(word == ''){
+            alert('Enter a word');
+            return;
+        }
+        location.replace(location.pathname+"dictionary?word=" + word);
+        return;
     }
     ;
     function getWord(word) {
@@ -75,7 +69,7 @@ function autocomplete(inp, arr) {
     currentFocus = -1;
     /*create a DIV element that will contain the items (values):*/
     a = document.createElement("DIV");
-    a.setAttribute("id", this.id + "autocomplete-list");
+    a.setAttribute("id", inp.id + "autocomplete-list");
     a.setAttribute("class", "autocomplete-items");
     /*append the DIV element as a child of the autocomplete container:*/
     inp.parentNode.appendChild(a);
@@ -111,7 +105,7 @@ function autocomplete(inp, arr) {
     }
     /*execute a function presses a key on the keyboard:*/
     inp.addEventListener("keydown", function (e) {
-        var x = document.getElementById(this.id + "autocomplete-list");
+        var x = document.getElementById(inp.id + "autocomplete-list");
         if (x)
             x = x.getElementsByTagName("div");
         if (e.keyCode == 40) {
@@ -175,20 +169,6 @@ function autocomplete(inp, arr) {
         closeAllLists(e.target);
     });
     
-}
-</script>
-<script>
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("lugat-head");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
 }
 </script>
 

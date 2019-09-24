@@ -1,5 +1,5 @@
 name: default
-timestamp: 1569180023
+timestamp: 1569346917
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -33,7 +33,7 @@ particles:
     position-module-5422: 'Module Instance'
     position-module-2306: 'Module Instance'
   owlcarousel:
-    owlcarousel-5183: 'Owl Carousel'
+    owlcarousel-5369: 'Header Carousel'
   custom:
     custom-3119: Features
     custom-7658: 'Customer Testimonials'

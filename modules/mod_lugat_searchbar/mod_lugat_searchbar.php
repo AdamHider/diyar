@@ -6,7 +6,7 @@
 
     $document = JFactory::getDocument();
     
-    $document->addStyleSheet('modules/mod_lugat/assets/mod_lugat_searchbar.css');
+    $document->addStyleSheet('modules/mod_lugat_searchbar/assets/mod_lugat_searchbar.css');
     
     $lang = JFactory::getLanguage();
     // Include the syndicate functions only once

@@ -8,5 +8,5 @@ atoms:
     attributes:
       enabled: '1'
       css:
-        - { location: '', inline: ".diyar-main-header{\n  margin-top: -9.5em !important;\npadding-top: 9.5em !important;\n}\n.diyar-main-navigation{\n   background: #312f3880 !important;\n}\n#g-header{\nbackground-image: url(/diyar/templates/g5_helium/images/header/back_2.jpg) !important;\n}", extra: {  }, priority: '1', name: CustomCss1 }
+        - { location: '', inline: ".diyar-main-header{\n  margin-top: -9.5em !important;\npadding-top: 9.5em !important;\noverflow: hidden;\n}\n.diyar-main-navigation{\n   background: #312f3880 !important;\n}\n#g-header{\nbackground-image: url(/diyar/templates/g5_helium/images/header/back_2.jpg) !important;\n}\n\n.home-header-image{\n  position: absolute;\n  top:0; left: 0; \n  width: 100vw; height: inherit; overflow: hidden;z-index: -1;\n}\n.home-header-image .owl-item.cloned{\nwidth: 100vw !important;\n}", extra: {  }, priority: '1', name: CustomCss1 }
       javascript: {  }

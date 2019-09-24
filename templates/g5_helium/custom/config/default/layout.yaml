@@ -14,7 +14,7 @@ layout:
       - 'position-module-5422 24'
   /header/:
     -
-      - owlcarousel-5183
+      - owlcarousel-5369
   /intro/:
     -
       - position-module-2306
@@ -120,25 +120,21 @@ content:
     attributes:
       module_id: '95'
       key: module-instance
-  owlcarousel-5183:
-    title: 'Owl Carousel'
+  owlcarousel-5369:
+    title: 'Header Carousel'
     attributes:
-      class: ''
-      title: asd
-      nav: disable
-      dots: enable
-      imageOverlay: enable
+      class: home-header-image
       items:
         -
           class: ''
-          image: ''
-          title: sad
-          desc: sadasd
+          image: 'gantry-media://headers/1598836_original.jpg'
+          title: ''
+          desc: ''
           link: ''
           linktext: ''
           buttonclass: button-outline
           disable: '0'
-          name: 'New item'
+          name: Image1
   position-module-2306:
     title: 'Module Instance'
     attributes:

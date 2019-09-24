@@ -1,5 +1,5 @@
-name: 14
-timestamp: 1569180023
+name: '14'
+timestamp: 1569347793
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -34,46 +34,49 @@ particles:
   module:
     position-module-6835: 'Module Instance'
     position-module-8479: 'Module Instance'
+  owlcarousel:
+    owlcarousel-1772: 'Header Carousel'
   custom:
     custom-6019: 'Custom HTML'
-    custom-3748: 'Custom HTML'
     custom-8640: Features
     custom-6447: 'Customer Testimonials'
     custom-3783: 'Develop CMS themes quickly'
-  horizontalmenu:
-    horizontalmenu-5487: 'Horizontal Menu'
-  totop:
-    totop-3746: 'To Top'
+    custom-3748: 'Custom HTML'
   contenttabs:
     contenttabs-7571: 'Content Tabs'
   contentcubes:
     contentcubes-3323: 'Content Cubes'
-  mobile-menu:
-    mobile-menu-5934: Mobile-menu
   position:
     position-position-8941: Aside
+  horizontalmenu:
+    horizontalmenu-5487: 'Horizontal Menu'
+  totop:
+    totop-3746: 'To Top'
+  mobile-menu:
+    mobile-menu-5934: Mobile-menu
 inherit:
   default:
     system-messages-1962: system-messages-4409
     logo-5571: logo-8554
     social-2035: social-5236
     position-module-6835: position-module-5422
+    owlcarousel-1772: owlcarousel-5369
     intro: intro
+    position-module-8479: position-module-2306
     features: features
+    custom-8640: custom-3119
     utility: utility
+    contenttabs-7571: contenttabs-3854
     above: above
+    contentcubes-3323: contentcubes-7850
     testimonials: testimonials
+    custom-6447: custom-7658
     expanded: expanded
+    custom-3783: custom-6355
     mainbar: mainbar
     sidebar: sidebar
     logo-1144: logo-8554
     offcanvas: offcanvas
-    position-module-8479: position-module-2306
-    custom-8640: custom-3119
-    contenttabs-7571: contenttabs-3854
-    contentcubes-3323: contentcubes-7850
-    custom-6447: custom-7658
-    custom-3783: custom-6355
     mobile-menu-5934: mobile-menu-9030
   9:
     aside: aside
