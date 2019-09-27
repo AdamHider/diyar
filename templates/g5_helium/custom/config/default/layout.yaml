@@ -8,10 +8,10 @@ layout:
     -
       - system-messages-4409
     -
-      - 'logo-8554 25'
-      - 'menu-4076 36'
-      - 'social-5236 15'
-      - 'position-module-5422 24'
+      - 'logo-8554 23'
+      - 'menu-4076 41'
+      - 'social-5236 18'
+      - 'position-module-5422 18'
   /header/:
     -
       - owlcarousel-5369
@@ -120,6 +120,8 @@ content:
     attributes:
       module_id: '95'
       key: module-instance
+    block:
+      class: language-switcher
   owlcarousel-5369:
     title: 'Header Carousel'
     attributes:

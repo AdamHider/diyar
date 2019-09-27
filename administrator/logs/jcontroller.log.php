@@ -18,3 +18,8 @@
 2019-09-22T18:59:09+00:00	INFO 127.0.0.1	controller	Holding edit ID com_menus.edit.item.112 Array (     [0] => 112 ) 
 2019-09-22T18:59:53+00:00	INFO 127.0.0.1	controller	Holding edit ID com_menus.edit.item.112 Array (     [0] => 112 ) 
 2019-09-22T19:00:33+00:00	INFO 127.0.0.1	controller	Releasing edit ID com_menus.edit.item.112 Array ( ) 
+2019-09-25T17:06:02+00:00	INFO 127.0.0.1	controller	Holding edit ID com_modules.edit.module.95 Array (     [0] => 95 ) 
+2019-09-25T17:06:03+00:00	INFO 127.0.0.1	controller	Checking edit ID com_modules.edit.module.95: 1 Array (     [0] => 95 ) 
+2019-09-25T17:06:24+00:00	INFO 127.0.0.1	controller	Holding edit ID com_modules.edit.module.95 Array (     [0] => 95 ) 
+2019-09-25T17:06:26+00:00	INFO 127.0.0.1	controller	Checking edit ID com_modules.edit.module.95: 1 Array (     [0] => 95 ) 
+2019-09-25T17:06:58+00:00	INFO 127.0.0.1	controller	Releasing edit ID com_modules.edit.module.95 Array ( ) 

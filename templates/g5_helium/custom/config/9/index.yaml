@@ -1,5 +1,5 @@
-name: '9'
-timestamp: 1569347617
+name: 9
+timestamp: 1569431830
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -38,20 +38,20 @@ particles:
     owlcarousel-8554: 'Header Carousel'
   custom:
     custom-7115: 'Custom HTML'
+    custom-3748: 'Custom HTML'
     custom-4443: Features
     custom-8257: 'Customer Testimonials'
     custom-8076: 'Develop CMS themes quickly'
-    custom-3748: 'Custom HTML'
-  contenttabs:
-    contenttabs-2815: 'Content Tabs'
-  contentcubes:
-    contentcubes-7483: 'Content Cubes'
   position:
     position-position-4734: Aside
   horizontalmenu:
     horizontalmenu-5487: 'Horizontal Menu'
   totop:
     totop-3746: 'To Top'
+  contenttabs:
+    contenttabs-2815: 'Content Tabs'
+  contentcubes:
+    contentcubes-7483: 'Content Cubes'
   mobile-menu:
     mobile-menu-4518: Mobile-menu
 inherit:
@@ -62,19 +62,19 @@ inherit:
     position-module-5240: position-module-5422
     owlcarousel-8554: owlcarousel-5369
     intro: intro
-    position-module-5886: position-module-2306
     features: features
-    custom-4443: custom-3119
     utility: utility
-    contenttabs-2815: contenttabs-3854
     above: above
-    contentcubes-7483: contentcubes-7850
     testimonials: testimonials
-    custom-8257: custom-7658
     expanded: expanded
-    custom-8076: custom-6355
     mainbar: mainbar
     sidebar: sidebar
     logo-1144: logo-7150
     offcanvas: offcanvas
+    position-module-5886: position-module-2306
+    custom-4443: custom-3119
+    contenttabs-2815: contenttabs-3854
+    contentcubes-7483: contentcubes-7850
+    custom-8257: custom-7658
+    custom-8076: custom-6355
     mobile-menu-4518: mobile-menu-9030
