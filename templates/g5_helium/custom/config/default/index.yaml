@@ -1,5 +1,5 @@
 name: default
-timestamp: 1569431830
+timestamp: 1569700260
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -38,6 +38,7 @@ particles:
     custom-3119: Features
     custom-7658: 'Customer Testimonials'
     custom-6355: 'Develop CMS themes quickly'
+    custom-6291: 'Social Share'
   contenttabs:
     contenttabs-3854: 'Content Tabs'
   contentcubes:

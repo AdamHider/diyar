@@ -11017,13 +11017,13 @@ return jQuery;
 }));
 
 } catch (e) {
-console.error('Error in file:/diyar/media/jui/js/jquery.js?c06eee3947841147a7d6e34f5c6f8cad; Error:' + e.message);
+console.error('Error in file:/diyar/media/jui/js/jquery.js?b1a8db9cca88816ad0e1d7e3cd760ba0; Error:' + e.message);
 };
 try {
 jQuery.noConflict();
 
 } catch (e) {
-console.error('Error in file:/diyar/media/jui/js/jquery-noconflict.js?c06eee3947841147a7d6e34f5c6f8cad; Error:' + e.message);
+console.error('Error in file:/diyar/media/jui/js/jquery-noconflict.js?b1a8db9cca88816ad0e1d7e3cd760ba0; Error:' + e.message);
 };
 try {
 /*!
@@ -11780,61 +11780,7 @@ if ( jQuery.Callbacks ) {
 })( jQuery, window );
 
 } catch (e) {
-console.error('Error in file:/diyar/media/jui/js/jquery-migrate.js?c06eee3947841147a7d6e34f5c6f8cad; Error:' + e.message);
-};
-try {
-/**
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
-
-/**
- * JCaption javascript behavior
- *
- * Used for displaying image captions
- *
- * @package     Joomla
- * @since       1.5
- * @version  1.0
- */
-var JCaption = function(_selector) {
-    var $, selector,
-    
-    initialize = function(_selector) {
-        $ = jQuery.noConflict();
-        selector = _selector;
-        $(selector).each(function(index, el) {
-            createCaption(el);
-        })
-    },
-    
-    createCaption = function(element) {
-        var $el = $(element), 
-        caption = $el.attr('title'),
-        width = $el.attr("width") || element.width,
-        align = $el.attr("align") || $el.css("float") || element.style.styleFloat || "none",
-        $p = $('<p/>', {
-            "text" : caption,
-            "class" : selector.replace('.', '_')
-        }),
-        $container = $('<div/>', {
-            "class" : selector.replace('.', '_') + " " + align,
-            "css" : {
-                "float" : align,
-                "width" : width
-            }
-        });
-        $el.before($container);
-        $container.append($el);
-        if (caption !== "") {
-            $container.append($p);
-        }
-    }
-    initialize(_selector);
-}
-
-} catch (e) {
-console.error('Error in file:/diyar/media/system/js/caption-uncompressed.js?c06eee3947841147a7d6e34f5c6f8cad; Error:' + e.message);
+console.error('Error in file:/diyar/media/jui/js/jquery-migrate.js?b1a8db9cca88816ad0e1d7e3cd760ba0; Error:' + e.message);
 };
 try {
 /* ===================================================
@@ -14205,7 +14151,7 @@ try {
 }(window.jQuery);
 
 } catch (e) {
-console.error('Error in file:/diyar/media/jui/js/bootstrap.js?c06eee3947841147a7d6e34f5c6f8cad; Error:' + e.message);
+console.error('Error in file:/diyar/media/jui/js/bootstrap.js?b1a8db9cca88816ad0e1d7e3cd760ba0; Error:' + e.message);
 };
 try {
 /*! jQuery UI - v1.11.4 - 2016-01-06

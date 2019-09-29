@@ -127,8 +127,9 @@ class ModLugatHelper {
             $final_relation_object['etymology_word'] = $relation->relation_result_etymology_word;
             $final_relation_object['relevance'] = (50*(1-(ceil($relation->relation_result_relevance)/7)));
             if($final_relation_object['relevance']<0){$final_relation_object['relevance'] = 5;};
-            $final_relation_object['word_suggestion'] = array_slice(explode(',',$relation->word_result_suggestion),0,6);
-
+            if(!empty($relation->word_result_suggestion)){
+                $final_relation_object['word_suggestion'] = array_slice(explode(',',$relation->word_result_suggestion),0,6);
+            }
 
             if ($relation->word_result_part_of_speech != $current_part_of_speech_id) {
                 $current_part_of_speech_id = $relation->word_result_part_of_speech;
@@ -152,7 +153,7 @@ class ModLugatHelper {
             r1.scope_of_use         relation_query_scope_of_use,
             r1.expressivity         relation_query_expressivity,
             r1.stylistic_status     relation_query_stylistic_status,
-            r1.etymology_lang       relation_query_etymology_lang,
+            IF(r1.etymology_lang != 'unset', r1.etymology_lang, '') as    relation_query_etymology_lang,
             r1.etymology_word       relation_query_etymology_word,
             r1.modernity            relation_query_modernity,
             dl.denotation_id,
@@ -168,7 +169,7 @@ class ModLugatHelper {
             r2.scope_of_use         relation_result_scope_of_use,
             r2.expressivity         relation_result_expressivity,
             r2.stylistic_status     relation_result_stylistic_status,
-            r2.etymology_lang       relation_result_etymology_lang,
+            IF(r2.etymology_lang != 'unset',  r2.etymology_lang , '') as relation_result_etymology_lang,
             r2.etymology_word       relation_result_etymology_word,
             r2.relevance            relation_result_relevance,
             r2.modernity            relation_result_modernity,
@@ -191,17 +192,17 @@ class ModLugatHelper {
             parts_of_speech pts ON wl2.part_of_speech_id = pts.part_of_speech_id
             
                
-                JOIN
+                LEFT JOIN
             word_list wl4 ON wl4.word = wl2.word 
-                JOIN
+                LEFT JOIN
             relation_list r3 ON wl4.word_id = r3.word_id 
-                JOIN
+                LEFT JOIN
             denotation_list dl2 ON dl2.denotation_id = r3.denotation_id
-                JOIN
+                LEFT JOIN
             relation_list r4 ON dl2.denotation_id = r4.denotation_id  
                     AND r4.language_id = wl.language_id 
                     AND r4.word_id != wl.word_id
-                JOIN
+                LEFT JOIN
             word_list wl3 ON wl3.word_id = r4.word_id 
         WHERE
             wl.word = '$word'

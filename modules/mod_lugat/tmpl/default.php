@@ -85,14 +85,19 @@ defined('_JEXEC') or die;
                                                 <div class="relevance-container">
                                                      <div class="relevance-content" style="width: <?php echo $translation['relevance'] ?>px;"></div>
                                                 </div>
-                                               
                                             </div>
             <?php if(!empty($translation['word'])){ ?>                                          
                                             <a class='referent-name' onclick="getWord('<?php echo $translation['word'] ?>'); return false"><?php echo $translation['word'] ?></a>
             <?php  } ?>            
-            <?php if(!empty($translation['clarification'])){ ?>                                   
-                                            <span class='referent-clarification'>( <?php echo $translation['clarification'] ?> )</span>
-            <?php  } ?>                                  
+                                            
+                                            
+                                            <span>
+                                                <a class='referent-to-map' target="_blank" href="https://www.google.com/maps/place/Гвардейское+Крым">
+                                                    <i class='fa fa-globe'></i>
+                                                </a>
+                                            </span>   
+                                            
+                                            
             <?php if(!empty($translation['dialectality'])){ ?>                                   
                                             <span class='referent-details dialectality-tag tag'><?php echo $translation['dialectality'] ?></span>
             <?php  } ?>                               
@@ -114,6 +119,9 @@ defined('_JEXEC') or die;
             <?php if(!empty($translation['etymology_word'])){ ?>            
                                             <span class='relation-etymology-word tag'><?php echo $translation['etymology_word'] ?></span>
             <?php  } ?>  
+            <?php if(!empty($translation['clarification'])){ ?>                                   
+                                            <div class='referent-clarification'>( <?php echo $translation['clarification'] ?> )</div>
+            <?php  } ?>                  
             <?php if(!empty($translation['word_suggestion'])){ ?>         
                                             <div class="referent-suggestions">
                                                 (

@@ -90,7 +90,9 @@
      background-color: #529312 !important;
 }
 
-
+.referent-to-map{
+    
+}
 
 .part-of-speech-list, .denotations-list, .referents-list, .referent-suggestions{
     margin: 0% 2%;
