@@ -1,0 +1,40 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/body-only.png'
+  name: _body_only
+  timestamp: 1563522857
+layout:
+  /mainbar/:
+    -
+      - system-messages-5681
+    -
+      - system-content-3337
+    -
+      - custom-3429
+structure:
+  mainbar:
+    type: section
+    subtype: main
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+content:
+  system-messages-5681:
+    inherit:
+      outline: _body_only
+      include:
+        - attributes
+        - block
+      particle: system-messages-6659
+  system-content-3337:
+    inherit:
+      outline: _body_only
+      include:
+        - attributes
+        - block
+      particle: system-content-5845
+  custom-3429:
+    title: 'Custom HTML'
+    attributes:
+      html: "<div class=\"center\" style=\"color:white; z-index: 1;\nposition: relative;\">\n<h2>Page is under construction</h2>\n<h4>Oops...you caught us!</h4>\n<p>We're just constructing this page at the moment, it should be completed as soon as posible.</p>\n<p>Thank you for attention and stay tuned.</p>\n<button onclick=\"location.href='/diyar'\" class=\"button diyar-button-back\" style=\"text-shadow: 1px 1px 1px #424141;\nbackground: linear-gradient(to right, #5dc43c 0%, #67db2b);\">\n    <i class=\"fa fa-arrow-left fa-lg\"></i> \n    MAIN PAGE\n</button>\n</div>\n\n<div class=\"background-image\" style=\"background-image: url(/diyar/images/headers/page_construction.jpg);\nheight: 100vh;\nbackground-size: cover;\nwidth: 100vw;\nposition: absolute;\ntop: 0;\nleft: 0;\nz-index: 0;\">\n</div>"

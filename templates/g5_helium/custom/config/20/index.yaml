@@ -1,0 +1,21 @@
+name: '20'
+timestamp: 1570542548
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/body-only.png'
+  name: _body_only
+  timestamp: 1563522857
+positions: {  }
+sections:
+  mainbar: Mainbar
+particles:
+  messages:
+    system-messages-9702: 'System Messages'
+  content:
+    system-content-4904: 'Page Content'
+  custom:
+    custom-9346: 'Custom HTML'
+inherit:
+  19:
+    system-messages-9702: system-messages-5681
+    system-content-4904: system-content-3337

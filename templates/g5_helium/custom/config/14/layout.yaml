@@ -8,10 +8,10 @@ layout:
     -
       - system-messages-1962
     -
-      - 'logo-5571 25'
-      - 'menu-6097 36'
-      - 'social-2035 15'
-      - 'position-module-6835 24'
+      - 'logo-5571 22'
+      - 'menu-6097 46'
+      - 'position-module-6835 16'
+      - 'menu-6935 16'
   /header/:
     -
       - owlcarousel-1772
@@ -161,13 +161,6 @@ content:
   menu-6097:
     attributes:
       menu: enter-russianmenu
-  social-2035:
-    inherit:
-      outline: default
-      include:
-        - attributes
-        - block
-      particle: social-5236
   position-module-6835:
     title: 'Module Instance'
     inherit:
@@ -176,6 +169,9 @@ content:
         - attributes
         - block
       particle: position-module-5422
+  menu-6935:
+    attributes:
+      menu: russian-user-menu
   owlcarousel-1772:
     title: 'Header Carousel'
     inherit:

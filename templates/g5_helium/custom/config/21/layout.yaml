@@ -1,0 +1,47 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/body-only.png'
+  name: _body_only
+  timestamp: 1563522857
+layout:
+  /mainbar/:
+    -
+      - system-messages-9871
+    -
+      - system-content-1177
+    -
+      - position-module-2330
+    -
+      - custom-6311
+structure:
+  mainbar:
+    type: section
+    subtype: main
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+content:
+  system-messages-9871:
+    inherit:
+      outline: 19
+      include:
+        - attributes
+        - block
+      particle: system-messages-5681
+  system-content-1177:
+    inherit:
+      outline: 19
+      include:
+        - attributes
+        - block
+      particle: system-content-3337
+  position-module-2330:
+    title: 'Module Instance'
+    attributes:
+      module_id: '99'
+      key: module-instance
+  custom-6311:
+    title: 'Background Image'
+    attributes:
+      html: "<div\nstyle=\"\nbackground-image: url(/diyar/images/headers/4304978.jpg);\nwidth: 100vw;\nheight: 100vh;\nposition: absolute;\nleft: 0;\ntop: 0;\nz-index: 1;\nbackground-size: cover;\n\"\n\n></div>"

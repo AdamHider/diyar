@@ -1,0 +1,40 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/body-only.png'
+  name: _body_only
+  timestamp: 1563522857
+layout:
+  /mainbar/:
+    -
+      - system-messages-9702
+    -
+      - system-content-4904
+    -
+      - custom-9346
+structure:
+  mainbar:
+    type: section
+    subtype: main
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+content:
+  system-messages-9702:
+    inherit:
+      outline: '19'
+      include:
+        - attributes
+        - block
+      particle: system-messages-5681
+  system-content-4904:
+    inherit:
+      outline: '19'
+      include:
+        - attributes
+        - block
+      particle: system-content-3337
+  custom-9346:
+    title: 'Custom HTML'
+    attributes:
+      html: "<div class=\"center\" style=\"color:white; z-index: 1;\nposition: relative;\">\n<h2>Страница в разработке</h2>\n<h4>Упс...Вы подловили нас!</h4>\n<p>В данный момент мы разрабатываем выбранную Вами страницу. Мы работаем в поте лица, чтобы эта страница была доступна как можно быстрее.</p>\n<p>Спасибо за понимание и оставайтесь с нами.</p>\n<button onclick=\"location.href='/diyar'\" class=\"button diyar-button-back\" style=\"text-shadow: 1px 1px 1px #424141;\nbackground: linear-gradient(to right, #5dc43c 0%, #67db2b);\">\n    <i class=\"fa fa-arrow-left fa-lg\"></i> \n    НА ГЛАВНУЮ\n</button>\n</div>\n\n<div class=\"background-image\" style=\"background-image: url(/diyar/images/headers/page_construction.jpg);\nheight: 100vh;\nbackground-size: cover;\nwidth: 100vw;\nposition: absolute;\ntop: 0;\nleft: 0;\nz-index: 0;\">\n</div>"

@@ -1,5 +1,5 @@
 name: 18
-timestamp: 1569700259
+timestamp: 1570643530
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -33,8 +33,6 @@ particles:
     logo-1710: 'Logo / Image'
   menu:
     menu-9340: Menu
-  social:
-    social-9867: Social
   custom:
     custom-9547: 'Custom HTML'
   horizontalmenu:
@@ -55,7 +53,6 @@ inherit:
     system-messages-7611: system-messages-1962
     logo-5979: logo-5571
     menu-9340: menu-6097
-    social-9867: social-2035
     position-module-7524: position-module-6835
     logo-1710: logo-1144
     custom-9547: custom-3748

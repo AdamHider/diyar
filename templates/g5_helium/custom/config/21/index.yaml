@@ -1,0 +1,23 @@
+name: '21'
+timestamp: 1570646446
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/body-only.png'
+  name: _body_only
+  timestamp: 1563522857
+positions: {  }
+sections:
+  mainbar: Mainbar
+particles:
+  messages:
+    system-messages-9871: 'System Messages'
+  content:
+    system-content-1177: 'Page Content'
+  module:
+    position-module-2330: 'Module Instance'
+  custom:
+    custom-6311: 'Background Image'
+inherit:
+  19:
+    system-messages-9871: system-messages-5681
+    system-content-1177: system-content-3337

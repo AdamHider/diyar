@@ -8,10 +8,10 @@ layout:
     -
       - system-messages-8776
     -
-      - 'logo-9531 25'
-      - 'menu-4597 36'
-      - 'social-6902 15'
-      - 'position-module-5240 24'
+      - 'logo-9531 22'
+      - 'menu-4597 46'
+      - 'position-module-5240 16'
+      - 'menu-3291 16'
   /header/:
     -
       - owlcarousel-8554
@@ -159,13 +159,6 @@ content:
   menu-4597:
     attributes:
       menu: enter-englismenu
-  social-6902:
-    inherit:
-      outline: default
-      include:
-        - attributes
-        - block
-      particle: social-5236
   position-module-5240:
     title: 'Module Instance'
     inherit:
@@ -174,6 +167,9 @@ content:
         - attributes
         - block
       particle: position-module-5422
+  menu-3291:
+    attributes:
+      menu: english-user-menu
   owlcarousel-8554:
     title: 'Header Carousel'
     inherit:
