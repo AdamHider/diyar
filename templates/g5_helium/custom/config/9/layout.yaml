@@ -169,7 +169,7 @@ content:
       particle: position-module-5422
   menu-3291:
     attributes:
-      menu: english-user-menu
+      menu: english-submenu
   owlcarousel-8554:
     title: 'Header Carousel'
     inherit:

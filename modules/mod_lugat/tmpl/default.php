@@ -34,27 +34,11 @@ defined('_JEXEC') or die;
                     <?php echo  $lugat['translation']['query_word_transcription'] ?>
                 </div>
                 <?php  } ?> 
-                <?php if(!empty($lugat['translation']['query_dialectality'])){ ?>                                   
-                                            <span class='referent-details dialectality-tag tag'><?php echo $lugat['translation']['query_dialectality'] ?></span>
-                <?php  } ?>
-                <?php if(!empty($lugat['translation']['query_scope_of_use'])){ ?>                                   
-                                            <span class='referent-details scope-of-use-tag tag'><?php echo $lugat['translation']['query_scope_of_use'] ?></span>
-                <?php  } ?>
-                <?php if(!empty($lugat['translation']['query_expressivity'])){ ?>                                   
-                                            <span class='referent-details expressivity-tag tag'><?php echo $lugat['translation']['query_expressivity'] ?></span>
-                <?php  } ?>
-                <?php if(!empty($lugat['translation']['query_stylistic_status'])){ ?>                                   
-                                            <span class='referent-details stylistic-status-tag tag'><?php echo $lugat['translation']['query_stylistic_status'] ?></span>
-                <?php  } ?>
-                <?php if(!empty($lugat['translation']['query_modernity'])){ ?>                                   
-                                            <span class='referent-details modernity-tag tag'><?php echo $lugat['translation']['query_modernity'] ?></span>
-                <?php  } ?>
-                <?php if(!empty($lugat['translation']['query_etymology_lang'])){ ?>            
-                                                <span class='denotation-etymology tag'><?php echo $lugat['translation']['query_etymology_lang'] ?></span>
-                <?php  } ?>   
-                <?php if(!empty($lugat['translation']['query_etymology_word'])){ ?>            
-                                                <span class='denotation-etymology-word tag'><?php echo $lugat['translation']['query_etymology_word'] ?></span>
-                <?php  } ?>       
+                <?php if(!empty($lugat['translation']['query_attributes'])){ 
+                    foreach ($lugat['translation']['query_attributes'] as $attribute){ 
+                        if(!empty($attribute)){  ?> 
+                        <span class='referent-details tag'><?php echo $attribute ?></span>
+                <?php } } } ?>     
             </div>
             <?php  if(isset($lugat['translation']['translations'])){ ?>
 
@@ -98,27 +82,11 @@ defined('_JEXEC') or die;
                                             </span>   
                                             
                                             
-            <?php if(!empty($translation['dialectality'])){ ?>                                   
-                                            <span class='referent-details dialectality-tag tag'><?php echo $translation['dialectality'] ?></span>
-            <?php  } ?>                               
-            <?php if(!empty($translation['scope_of_use'])){ ?>                                   
-                                            <span class='referent-details scope-of-use-tag tag'><?php echo $translation['scope_of_use'] ?></span>
-            <?php  } ?>                               
-            <?php if(!empty($translation['expressivity'])){ ?>                                   
-                                            <span class='referent-details expressivity-tag tag'><?php echo $translation['expressivity'] ?></span>
-            <?php  } ?>                               
-            <?php if(!empty($translation['stylistic_status'])){ ?>                                   
-                                            <span class='referent-details stylistic-status-tag tag'><?php echo $translation['stylistic_status'] ?></span>
-            <?php  } ?>                               
-            <?php if(!empty($translation['modernity'])){ ?>                                   
-                                            <span class='referent-details modernity-tag tag'><?php echo $translation['modernity'] ?></span>
-            <?php  } ?>
-            <?php if(!empty($translation['etymology_lang'])){ ?>            
-                                            <span class='relation-etymology tag'><?php echo $translation['etymology_lang'] ?></span>
-            <?php  } ?>  
-            <?php if(!empty($translation['etymology_word'])){ ?>            
-                                            <span class='relation-etymology-word tag'><?php echo $translation['etymology_word'] ?></span>
-            <?php  } ?>  
+            <?php if(!empty($translation['attributes'])){ 
+                foreach ($translation['attributes'] as $attribute){ 
+                    if(!empty($attribute)){  ?>  
+                                            <span class='referent-details tag'><?php echo $attribute ?></span>
+            <?php  } } } ?> 
             <?php if(!empty($translation['clarification'])){ ?>                                   
                                             <div class='referent-clarification'>( <?php echo $translation['clarification'] ?> )</div>
             <?php  } ?>                  

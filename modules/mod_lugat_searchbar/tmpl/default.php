@@ -34,7 +34,7 @@ defined('_JEXEC') or die;
             alert('Enter a word');
             return;
         }
-        location.replace(location.pathname+"dictionary?word=" + word);
+        location.replace(location.pathname+"/language/dictionary?word=" + word);
         return;
     }
     ;

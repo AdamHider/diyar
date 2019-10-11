@@ -171,7 +171,7 @@ content:
       particle: position-module-5422
   menu-6935:
     attributes:
-      menu: russian-user-menu
+      menu: russian-submenu
   owlcarousel-1772:
     title: 'Header Carousel'
     inherit:
