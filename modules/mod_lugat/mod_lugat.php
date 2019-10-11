@@ -20,6 +20,7 @@
     $document->addStyleSheet('modules/mod_lugat/assets/mod_lugat.css');
     
     $lang = JFactory::getLanguage();
+    $lang_tag = $lang->get('tag');
     // Include the syndicate functions only once
     require_once dirname(__FILE__) . '/helper.php';
     
@@ -27,7 +28,15 @@
     
     $input = JRequest::getVar('word', '', 'get');
     $lugat['translation'] = modLugatHelper::getTranslation($input);
-    $document->setTitle($input.' - перевод в крымскотатарском словаре');
+    
+    if($lang_tag == 'en-GB'){
+        $header_title = $input.' - Translation in crimean tatar dictionary';
+    } else if ($lang_tag == 'ru-RU'){
+         $header_title = $input.' - Перевод в крымскотатарском словаре';
+    }
+    
+    
+    $document->setTitle($header_title);
     
     require JModuleHelper::getLayoutPath('mod_lugat');
     

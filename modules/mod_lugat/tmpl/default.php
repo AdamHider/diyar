@@ -37,7 +37,15 @@ defined('_JEXEC') or die;
                 <?php if(!empty($lugat['translation']['query_attributes'])){ 
                     foreach ($lugat['translation']['query_attributes'] as $attribute){ 
                         if(!empty($attribute)){  ?> 
-                        <span class='referent-details tag'><?php echo $attribute ?></span>
+                            <span class='referent-details tag'>
+                                <?php echo $attribute['attribute_name']?>
+                        <?php if(!empty($attribute['attribute_value'])){ echo  ' ('.$attribute['attribute_value'].')'; }?>    
+                            
+                        <?php if(!empty($attribute['attribute_group'])){ ?>
+                            <span class='tag-description'><?php echo $attribute['attribute_group'] ?></span>
+                        <?php  } ?>   
+                            
+                            </span>     
                 <?php } } } ?>     
             </div>
             <?php  if(isset($lugat['translation']['translations'])){ ?>
@@ -74,19 +82,27 @@ defined('_JEXEC') or die;
                                             <a class='referent-name' onclick="getWord('<?php echo $translation['word'] ?>'); return false"><?php echo $translation['word'] ?></a>
             <?php  } ?>            
                                             
-                                            
+                                           <!--
                                             <span>
                                                 <a class='referent-to-map' target="_blank" href="https://www.google.com/maps/place/Гвардейское+Крым">
                                                     <i class='fa fa-globe'></i>
                                                 </a>
                                             </span>   
-                                            
+                                            -->
                                             
             <?php if(!empty($translation['attributes'])){ 
                 foreach ($translation['attributes'] as $attribute){ 
-                    if(!empty($attribute)){  ?>  
-                                            <span class='referent-details tag'><?php echo $attribute ?></span>
-            <?php  } } } ?> 
+                    if(!empty($attribute)){  ?> 
+                            <span class='referent-details tag'>
+                                <?php echo $attribute['attribute_name']?>
+                        <?php if(!empty($attribute['attribute_value'])){ echo  ' ('.$attribute['attribute_value'].')'; }?>    
+                            
+                            <?php if(!empty($attribute['attribute_group'])){ ?>
+                                <span class='tag-description'><?php echo $attribute['attribute_group'] ?></span>
+                            <?php  } ?> 
+                            
+                            </span> 
+            <?php  } }  }?> 
             <?php if(!empty($translation['clarification'])){ ?>                                   
                                             <div class='referent-clarification'>( <?php echo $translation['clarification'] ?> )</div>
             <?php  } ?>                  

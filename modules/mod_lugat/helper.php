@@ -101,8 +101,12 @@ class ModLugatHelper {
         foreach ($relations as $relation) {
             $final_object['query_word_id'] = $relation->word_query_word_id;
             $final_object['query_word'] = $relation->word_query_word;
-            $final_object['query_attributes'] = explode('|',$relation->relation_query_attributes);
-
+            
+            if(!empty($relation->relation_query_attributes)){
+                $query_attributes_array = explode('|',$relation->relation_query_attributes);
+                $final_object['query_attributes'] =  ModLugatHelper::composeAttributes($query_attributes_array);
+            }
+            
             $final_object['query_part_of_speech_id'] = $relation->word_query_part_of_speech_id;
             $final_object['query_word_transcription'] = $relation->word_query_transcription;
 
@@ -111,7 +115,12 @@ class ModLugatHelper {
             $final_relation_object['word_part_of_speech'] = $relation->word_result_part_of_speech;
             $final_relation_object['relation_id'] = $relation->relation_result_relation_id;
             $final_relation_object['clarification'] = $relation->relation_result_clarification;
-            $final_relation_object['attributes'] = explode('|', $relation->relation_result_attributes);
+            
+            if(!empty($relation->relation_result_attributes)){
+                $result_attributes_array = explode('|',$relation->relation_result_attributes);
+                $final_relation_object['attributes'] = ModLugatHelper::composeAttributes($result_attributes_array);
+            }  
+            
             $final_relation_object['relevance'] = (50 * (1 - (ceil($relation->relation_result_relevance) / 7)));
             if ($final_relation_object['relevance'] < 0) {
                 $final_relation_object['relevance'] = 5;
@@ -127,7 +136,25 @@ class ModLugatHelper {
         }
         return $final_object;
     }
-
+    
+    private static function composeAttributes($attribute_array){
+        if(empty($attribute_array)){
+            return [];
+        }
+        $result_array = [];
+        foreach($attribute_array as $attribute_row){
+            $attribute_items = explode(':',$attribute_row);
+            $attribute_object = [
+                'attribute_group' => $attribute_items[0],
+                'attribute_name' => $attribute_items[1],
+                'attribute_value' => $attribute_items[2],
+            ];
+            $result_array[] = $attribute_object;
+        }
+        
+        return $result_array;
+    }
+    
     private static function getObjectByWord($word) {
         $db = JFactory::getDbo();
         $lang_config = [
@@ -145,8 +172,8 @@ class ModLugatHelper {
             r1.relation_id relation_query_relation_id,
             r1.clarification relation_query_clarification,
             (SELECT 
-                    GROUP_CONCAT(attrg.name, ':', IF(attr2rel.attribute_value IS NOT NULL, CONCAT(attr.name, ' (',attr2rel.attribute_value, ')'), attr.name) 
-                            SEPARATOR '|') test1
+                    GROUP_CONCAT(attrg.name, ':', attr.name, ':', IF(attr2rel.attribute_value IS NOT NULL, attr2rel.attribute_value, '')
+                            SEPARATOR '|') t
                 FROM
                     lgt_attribute_to_relation attr2rel
                         LEFT JOIN
@@ -165,8 +192,8 @@ class ModLugatHelper {
                 r2.clarification,
                 r1.clarification) relation_result_clarification,
             (SELECT 
-                    GROUP_CONCAT(attrg.name, ': ', IF(attr2rel.attribute_value IS NOT NULL, CONCAT(attr.name, ' (',attr2rel.attribute_value, ')'), attr.name) 
-                            SEPARATOR '|') test1
+                    GROUP_CONCAT(attrg.name, ':', attr.name, ':', IF(attr2rel.attribute_value IS NOT NULL, attr2rel.attribute_value, '')
+                            SEPARATOR '|') t
                 FROM
                     lgt_attribute_to_relation attr2rel
                         LEFT JOIN
