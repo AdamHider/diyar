@@ -8,10 +8,8 @@ layout:
     -
       - system-messages-8776
     -
-      - 'logo-9531 22'
-      - 'menu-4597 46'
-      - 'position-module-5240 16'
-      - 'menu-3291 16'
+      - 'logo-9531 20'
+      - 'menu-4597 80'
   /header/:
     -
       - owlcarousel-8554
@@ -39,7 +37,11 @@ layout:
       - 'custom-3748 37'
       - 'horizontalmenu-5487 29'
       - 'totop-3746 18'
-  offcanvas: {  }
+  offcanvas:
+    -
+      - logo-9504
+    -
+      - mobile-menu-9030
 structure:
   navigation:
     type: section
@@ -134,12 +136,12 @@ structure:
       class: ''
       variations: ''
   offcanvas:
-    inherit:
-      outline: default
-      include:
-        - attributes
-        - block
-        - children
+    attributes:
+      position: g-offcanvas-left
+      class: ''
+      extra: {  }
+      swipe: '1'
+      css3animation: '1'
 content:
   system-messages-8776:
     inherit:
@@ -159,28 +161,30 @@ content:
   menu-4597:
     attributes:
       menu: enter-englismenu
-  position-module-5240:
-    title: 'Module Instance'
-    inherit:
-      outline: default
-      include:
-        - attributes
-        - block
-      particle: position-module-5422
-  menu-3291:
-    attributes:
-      menu: english-submenu
+      mobileTarget: '1'
+      forceTarget: '0'
+    block:
+      class: home-menu
   owlcarousel-8554:
     title: 'Header Carousel'
-    inherit:
-      outline: default
-      particle: owlcarousel-5369
-      include:
-        - attributes
+    attributes:
+      enabled: 0
+      class: home-header-image
+      items:
+        -
+          class: ''
+          image: 'gantry-media://headers/1598836_original.jpg'
+          title: ''
+          desc: ''
+          link: ''
+          linktext: ''
+          buttonclass: button-outline
+          disable: '0'
+          name: Image1
   custom-7115:
     title: 'Custom HTML'
     attributes:
-      html: "<div class=\"benefit-content revealOnScroll\" data-animation=\"fadeIn\" data-timeout=\"100\">\n        <h1>Configure anything and everything</h1>\n<p>When we started the Gantry 5 project, we wanted to think past the concept of Gantry as a framework.</p>\n<p>We wanted to create something so <strong>versatile</strong> and <strong>powerful</strong>, that it could stand on its own as a platform, virtually independent of a CMS in concept and implementation.</p>\n</div>"
+      html: "<div class=\"benefit-content revealOnScroll\" data-animation=\"fadeIn\" data-timeout=\"100\">\n        <h1>Welcome!</h1>\n<p>Diyar is a modern Crimean Tatar website dedicated to the language, history and culture of Crimean Tatars. </br>\nHere we collect bit by bit everything that concerns the Crimean Tatar people: from textbooks and dictionaries to historical chronicles and autobiographies. </br>\nIf you have the opportunity to extend our collection with your materials, please contact us. Any of your contributions is very valuable to us.\n</p>\n</div>"
   position-position-4734:
     title: Aside
     attributes:
@@ -196,10 +200,12 @@ content:
   custom-3748:
     title: 'Custom HTML'
     attributes:
+      enabled: 0
       html: '<p>Developed by Adam Hider and Diyar Team</p>'
   horizontalmenu-5487:
     title: 'Horizontal Menu'
     attributes:
+      enabled: 0
       items:
         -
           text: Dictionary
@@ -207,3 +213,11 @@ content:
           name: Dictionary
   totop-3746:
     title: 'To Top'
+  logo-9504:
+    title: 'Logo / Image'
+    attributes:
+      image: 'gantry-media://header/SIDEBAR BACKGROUND.jpg'
+      svg: ''
+      class: ''
+    block:
+      class: offcanvas-image

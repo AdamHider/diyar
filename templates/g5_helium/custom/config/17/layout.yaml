@@ -95,7 +95,7 @@ structure:
         - children
   offcanvas:
     inherit:
-      outline: default
+      outline: '9'
       include:
         - attributes
         - children

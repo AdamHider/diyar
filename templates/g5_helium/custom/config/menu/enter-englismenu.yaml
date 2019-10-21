@@ -1,5 +1,67 @@
 ordering:
   home-english: ''
+  lang:
+    dictionary: ''
+    education:
+      grammar: ''
+      pronunciation: ''
+      lexicon: ''
+  history:
+    ancient_turks: ''
+    golden_horde: ''
+    crimean_khanate: ''
+    postkhan_period: ''
+    soviet_period: ''
+    xxi_century: ''
+  __module-7yXP8: ''
+  login-register: ''
+  logout: ''
+  contact_us: ''
 items:
   home-english:
     id: 109
+  lang:
+    id: 113
+  lang/dictionary:
+    id: 111
+  lang/education:
+    id: 115
+  lang/education/grammar:
+    id: 117
+  lang/education/pronunciation:
+    id: 118
+  lang/education/lexicon:
+    id: 119
+  history:
+    id: 127
+  history/ancient_turks:
+    id: 128
+  history/golden_horde:
+    id: 129
+  history/crimean_khanate:
+    id: 130
+  history/postkhan_period:
+    id: 131
+  history/soviet_period:
+    id: 132
+  history/xxi_century:
+    id: 133
+  login-register:
+    id: 180
+  logout:
+    id: 184
+  contact_us:
+    id: 185
+  __module-7yXP8:
+    type: particle
+    particle: module
+    title: 'Change language'
+    options:
+      particle:
+        enabled: '1'
+        module_id: '95'
+        chrome: ''
+      block:
+        class: home-lang-switcher
+        extra: {  }
+    enabled: '1'

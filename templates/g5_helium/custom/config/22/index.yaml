@@ -1,0 +1,26 @@
+name: '22'
+timestamp: 1571060785
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/body-only.png'
+  name: _body_only
+  timestamp: 1563522857
+positions: {  }
+sections:
+  mainbar: Mainbar
+particles:
+  messages:
+    system-messages-3780: 'System Messages'
+  content:
+    system-content-9807: 'Page Content'
+  module:
+    position-module-3343: 'Login Form'
+  custom:
+    custom-3992: 'Background Image'
+    custom-4342: 'Bottom Bar'
+inherit:
+  21:
+    system-messages-3780: system-messages-9871
+    system-content-9807: system-content-1177
+    position-module-3343: position-module-2330
+    custom-3992: custom-6311

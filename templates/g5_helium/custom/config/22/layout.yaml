@@ -1,0 +1,60 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/body-only.png'
+  name: _body_only
+  timestamp: 1563522857
+layout:
+  /mainbar/:
+    -
+      - system-messages-3780
+    -
+      - system-content-9807
+    -
+      - position-module-3343
+    -
+      - custom-3992
+    -
+      - custom-4342
+structure:
+  mainbar:
+    type: section
+    subtype: main
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+content:
+  system-messages-3780:
+    inherit:
+      outline: '21'
+      include:
+        - attributes
+        - block
+      particle: system-messages-9871
+  system-content-9807:
+    inherit:
+      outline: '21'
+      include:
+        - attributes
+        - block
+      particle: system-content-1177
+  position-module-3343:
+    title: 'Login Form'
+    inherit:
+      outline: '21'
+      include:
+        - attributes
+        - block
+      particle: position-module-2330
+  custom-3992:
+    title: 'Background Image'
+    inherit:
+      outline: '21'
+      include:
+        - attributes
+        - block
+      particle: custom-6311
+  custom-4342:
+    title: 'Bottom Bar'
+    attributes:
+      html: "<div style=\"\nposition: fixed;\nbottom: 0;\nz-index: 100;\ntext-align: center;\nwidth: 30%;\nmargin: 0px auto;\nleft: 20%;\nright: 20%;\nbackground-color: #00000094;\nborder-top-left-radius: 10px;\nborder-top-right-radius: 10px;\n\">\n<a href=\"/\" >Главная</a>\n</div>"

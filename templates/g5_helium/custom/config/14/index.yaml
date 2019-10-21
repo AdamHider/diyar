@@ -1,5 +1,5 @@
 name: '14'
-timestamp: 1570816306
+timestamp: 1571224396
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -20,28 +20,27 @@ sections:
   sidebar: Sidebar
   mainbar: Mainbar
   footer: Footer
-  offcanvas: Offcanvas
+  offcanvas: Untitled
 particles:
   messages:
     system-messages-1962: 'System Messages'
   logo:
     logo-5571: 'Logo / Image'
-    logo-1144: 'Logo / Image'
+    logo-1144: 'Footer Logo'
+    logo-2999: 'Logo / Image'
   menu:
     menu-6097: Menu
-    menu-6935: Menu
-  module:
-    position-module-6835: 'Module Instance'
-    position-module-8479: 'Module Instance'
   owlcarousel:
     owlcarousel-1772: 'Header Carousel'
   custom:
-    custom-6019: 'Custom HTML'
+    custom-6019: 'Header Message'
     custom-8640: Features
     custom-6447: 'Customer Testimonials'
     custom-3783: 'Develop CMS themes quickly'
     custom-5063: 'Social Share'
     custom-3748: 'Custom HTML'
+  module:
+    position-module-3433: 'Module Instance'
   contenttabs:
     contenttabs-7571: 'Content Tabs'
   contentcubes:
@@ -53,15 +52,13 @@ particles:
   totop:
     totop-3746: 'To Top'
   mobile-menu:
-    mobile-menu-5934: Mobile-menu
+    mobile-menu-7896: Mobile-menu
 inherit:
   default:
     system-messages-1962: system-messages-4409
     logo-5571: logo-8554
-    position-module-6835: position-module-5422
-    owlcarousel-1772: owlcarousel-5369
     intro: intro
-    position-module-8479: position-module-2306
+    position-module-3433: position-module-2306
     features: features
     custom-8640: custom-3119
     utility: utility
@@ -75,9 +72,8 @@ inherit:
     custom-5063: custom-6291
     mainbar: mainbar
     sidebar: sidebar
-    logo-1144: logo-8554
-    offcanvas: offcanvas
-    mobile-menu-5934: mobile-menu-9030
+    logo-1144: logo-7150
+    logo-2999: logo-9504
   9:
     aside: aside
     position-position-8941: position-position-4734

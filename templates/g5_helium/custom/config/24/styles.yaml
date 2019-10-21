@@ -1,0 +1,11 @@
+preset: preset1
+accent:
+  color-1: '#66ad4c'
+  color-2: '#66ad4c'
+link:
+  regular: '#66ad4c'
+  hover: '#424753'
+navigation:
+  background: '#424753'
+testimonials:
+  background: '#66ad4c'

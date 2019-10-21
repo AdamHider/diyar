@@ -26,15 +26,23 @@
     
     $lugat = modLugatHelper::init($params);
     
+    $header_title = '';
     $input = JRequest::getVar('word', '', 'get');
-    $lugat['translation'] = modLugatHelper::getTranslation($input);
-    
-    if($lang_tag == 'en-GB'){
-        $header_title = $input.' - Translation in crimean tatar dictionary';
-    } else if ($lang_tag == 'ru-RU'){
-         $header_title = $input.' - Перевод в крымскотатарском словаре';
+    $lugat['not_found'] = false;
+    $lugat['empty'] = false;
+    $lugat['translation'] = [];
+    if(!empty($input)){
+        $lugat['input_value'] = $input;
+        $lugat['translation'] = modLugatHelper::getTranslation($input);
+        if(empty($lugat['translation']['query_word_id'])){
+            $lugat['not_found'] = true;
+        }  
+        $header_title = $input .= ' - ';
+    } else {
+        $lugat['empty'] = true;
     }
     
+    $header_title .= JText::_('MOD_LUGAT_HEADER_TITLE');
     
     $document->setTitle($header_title);
     

@@ -1,5 +1,5 @@
-name: 18
-timestamp: 1570816306
+name: '18'
+timestamp: 1571225357
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -21,52 +21,49 @@ sections:
   sidebar: Sidebar
   mainbar: Mainbar
   footer: Footer
-  offcanvas: Offcanvas
+  offcanvas: Untitled
 particles:
-  module:
-    position-module-2671: 'Module Instance'
-    position-module-7524: 'Module Instance'
   messages:
     system-messages-7611: 'System Messages'
   logo:
     logo-5979: 'Logo / Image'
-    logo-1710: 'Logo / Image'
+    logo-1710: 'Footer Logo'
+    logo-4730: 'Logo / Image'
   menu:
     menu-9340: Menu
-    menu-6771: Menu
+  module:
+    position-module-2671: 'Module Instance'
+  position:
+    position-position-2726: Aside
+    position-position-2457: Sidebar
+  content:
+    system-content-8360: 'Page Content'
   custom:
     custom-9547: 'Custom HTML'
   horizontalmenu:
     horizontalmenu-4161: 'Horizontal Menu'
   totop:
     totop-3095: 'To Top'
-  position:
-    position-position-2726: Aside
-    position-position-2457: Sidebar
-  content:
-    system-content-8360: 'Page Content'
   mobile-menu:
-    mobile-menu-2243: Mobile-menu
+    mobile-menu-7073: Mobile-menu
 inherit:
   14:
     navigation: navigation
-    footer: footer
     system-messages-7611: system-messages-1962
     logo-5979: logo-5571
     menu-9340: menu-6097
-    position-module-7524: position-module-6835
-    menu-6771: menu-6935
+    footer: footer
     logo-1710: logo-1144
     custom-9547: custom-3748
     horizontalmenu-4161: horizontalmenu-5487
     totop-3095: totop-3746
+    offcanvas: offcanvas
+    logo-4730: logo-2999
+    mobile-menu-7073: mobile-menu-7896
   17:
     aside: aside
-    mainbar: mainbar
-    sidebar: sidebar
     position-position-2726: position-position-4734
+    mainbar: mainbar
     system-content-8360: system-content-1587
+    sidebar: sidebar
     position-position-2457: position-position-3949
-  default:
-    offcanvas: offcanvas
-    mobile-menu-2243: mobile-menu-9030

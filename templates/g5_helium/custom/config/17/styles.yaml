@@ -5,5 +5,8 @@ accent:
 link:
   regular: '#66ad4c'
   hover: '#424753'
+navigation:
+  background: '#424753'
+  text-color: '#ffffff'
 testimonials:
   background: '#66ad4c'

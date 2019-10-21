@@ -12,11 +12,11 @@ link:
   regular: '#4db2b3'
   hover: '#424753'
 navigation:
-  background: '#312f38'
+  background: 'rgba(49, 47, 56, 0.27)'
   text-color: '#ffffff'
 header:
   background: '#312f38'
-  background-image: 'gantry-media://header/img01.jpg'
+  background-image: 'gantry-media://headers/1598836_original.jpg'
   background-overlay: enabled
   text-color: '#eceeef'
 intro:
@@ -43,11 +43,11 @@ footer:
   background: '#312f38'
   text-color: '#ffffff'
 offcanvas:
-  background: '#4db2b3'
-  text-color: '#eceeef'
-  toggle-color: '#4db2b3'
-  toggle-visibility: '1'
-  width: 12rem
+  background: '#ffffff'
+  text-color: '#424753'
+  toggle-color: '#66ad4c'
+  toggle-visibility: '2'
+  width: 15rem
 breakpoints:
   large-desktop-container: 75rem
   desktop-container: 60rem

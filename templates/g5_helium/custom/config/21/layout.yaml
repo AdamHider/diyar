@@ -13,6 +13,8 @@ layout:
       - position-module-2330
     -
       - custom-6311
+    -
+      - custom-9593
 structure:
   mainbar:
     type: section
@@ -24,24 +26,28 @@ structure:
 content:
   system-messages-9871:
     inherit:
-      outline: 19
+      outline: '19'
       include:
         - attributes
         - block
       particle: system-messages-5681
   system-content-1177:
     inherit:
-      outline: 19
+      outline: '19'
       include:
         - attributes
         - block
       particle: system-content-3337
   position-module-2330:
-    title: 'Module Instance'
+    title: 'Login Form'
     attributes:
       module_id: '99'
-      key: module-instance
+      key: login-form
   custom-6311:
     title: 'Background Image'
     attributes:
-      html: "<div\nstyle=\"\nbackground-image: url(/diyar/images/headers/4304978.jpg);\nwidth: 100vw;\nheight: 100vh;\nposition: absolute;\nleft: 0;\ntop: 0;\nz-index: 1;\nbackground-size: cover;\n\"\n\n></div>"
+      html: "<div\nstyle=\"\nbackground-image: url(/images/headers/4304978.jpg);\nwidth: 100vw;\nheight: 130vh;\nposition: absolute;\nleft: 0;\ntop: 0;\nz-index: 1;\nbackground-size: cover;\n\"\n\n></div>"
+  custom-9593:
+    title: 'Bottom Bar'
+    attributes:
+      html: "<div style=\"\nposition: fixed;\nbottom: 0;\nz-index: 100;\ntext-align: center;\nwidth: 30%;\nmargin: 0px auto;\nleft: 20%;\nright: 20%;\nbackground-color: #00000094;\nborder-top-left-radius: 10px;\nborder-top-right-radius: 10px;\n\">\n<a href=\"/\" >Home</a>\n</div>"

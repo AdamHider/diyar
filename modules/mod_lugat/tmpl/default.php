@@ -9,152 +9,66 @@ defined('_JEXEC') or die;
 ?>
 
 <div class="lugat">
-    <div id="lugat-head">
+    <div id="lugat-head<?php if(empty($lugat['translation'] && !$lugat['not_found'])){ echo '-empty'; }?>">
         <form autocomplete="off" action="" class="search-row" onsubmit="getWord(this[0].value); return false">
-            <div  class="autocomplete" style="width: 100%;">
-                <input id="search-input" type="text" name="search-input" placeholder="Type your text... " oninput="autocompleteGo(this.value)"
-                     <?php if(!empty($lugat['translation']['query_word'])){  ?>
-                       value="<?php  echo  $lugat['translation']['query_word'] ?>"
+            <div  class="autocomplete">
+                <input id="search-input" type="text" name="search-input" placeholder="<?php echo JText::_('MOD_LUGAT_ENTER_WORD'); ?> " oninput="autocompleteGo(this.value)"
+                     <?php if(!empty($lugat['input_value'])){  ?>
+                       value="<?php  echo  $lugat['input_value'] ?>"
                      <?php }  ?>   
                        >
+                <input type="submit" style="visibility: hidden;" />
             </div>
+            
             <button  id='search-button' style="border-radius: 11px; padding: 1.5em;" type="submit" class="button">
                 <i class="fa fa-search fa-lg"></i> 
             </button>
         </form>
-    </div>    
-    <div id="lugat-body">
-        <div class='info-row'>
-            <div class='query-word_block'>
-                 <?php if(!empty($lugat['translation']['query_word'])){ ?>
-                    <div class="query-word"><?php echo $lugat['translation']['query_word']?></div>
-                 <?php  } ?> 
-                <?php if(!empty($lugat['translation']['query_word_transcription'])){ ?>
-                <div class="query-word-transcription">
-                    <?php echo  $lugat['translation']['query_word_transcription'] ?>
-                </div>
-                <?php  } ?> 
-                <?php if(!empty($lugat['translation']['query_attributes'])){ 
-                    foreach ($lugat['translation']['query_attributes'] as $attribute){ 
-                        if(!empty($attribute)){  ?> 
-                            <span class='referent-details tag'>
-                                <?php echo $attribute['attribute_name']?>
-                        <?php if(!empty($attribute['attribute_value'])){ echo  ' ('.$attribute['attribute_value'].')'; }?>    
-                            
-                        <?php if(!empty($attribute['attribute_group'])){ ?>
-                            <span class='tag-description'><?php echo $attribute['attribute_group'] ?></span>
-                        <?php  } ?>   
-                            
-                            </span>     
-                <?php } } } ?>     
-            </div>
-            <?php  if(isset($lugat['translation']['translations'])){ ?>
-
-                <div class='translations-block'>
-                    <div class='part-of-speech-list'>
-
-            <?php  foreach($lugat['translation']['translations'] as $key=>$parts_of_speech){  ?>
-
-                 <div class='part-of-speech-block'>
-                            <div class='part-of-speech-name'><?php echo $key ?></div>
-
-            <?php  foreach($parts_of_speech as $key=>$translation){  ?>
-
-                            <div class='denotations-list'>
-                                <div class='denotation-block'>
-                                    <div class='denotation-info'>
-           <!-- <?php if(count($parts_of_speech) > 1){ ?>                               
-                                        <span class='denotation-number'><?php echo $key*1+1 ?>)</span>
-            <?php  } ?>                         
-                                        <span class='denotation-description'></span>
-            -->   
-
-                                    </div>
-
-                                    <div class='referents-list'>
-                                        <div class='referent-block'>
-                                            <div class="relevance">
-                                                <div class="relevance-container">
-                                                     <div class="relevance-content" style="width: <?php echo $translation['relevance'] ?>px;"></div>
-                                                </div>
-                                            </div>
-            <?php if(!empty($translation['word'])){ ?>                                          
-                                            <a class='referent-name' onclick="getWord('<?php echo $translation['word'] ?>'); return false"><?php echo $translation['word'] ?></a>
-            <?php  } ?>            
-                                            
-                                           <!--
-                                            <span>
-                                                <a class='referent-to-map' target="_blank" href="https://www.google.com/maps/place/Гвардейское+Крым">
-                                                    <i class='fa fa-globe'></i>
-                                                </a>
-                                            </span>   
-                                            -->
-                                            
-            <?php if(!empty($translation['attributes'])){ 
-                foreach ($translation['attributes'] as $attribute){ 
-                    if(!empty($attribute)){  ?> 
-                            <span class='referent-details tag'>
-                                <?php echo $attribute['attribute_name']?>
-                        <?php if(!empty($attribute['attribute_value'])){ echo  ' ('.$attribute['attribute_value'].')'; }?>    
-                            
-                            <?php if(!empty($attribute['attribute_group'])){ ?>
-                                <span class='tag-description'><?php echo $attribute['attribute_group'] ?></span>
-                            <?php  } ?> 
-                            
-                            </span> 
-            <?php  } }  }?> 
-            <?php if(!empty($translation['clarification'])){ ?>                                   
-                                            <div class='referent-clarification'>( <?php echo $translation['clarification'] ?> )</div>
-            <?php  } ?>                  
-            <?php if(!empty($translation['word_suggestion'])){ ?>         
-                                            <div class="referent-suggestions">
-                                                (
-                                                <?php foreach($translation['word_suggestion'] as $key=>$suggestion){ ?> 
-                                                <a class="suggestion" onclick="getWord('<?php echo $suggestion ?>'); return false"><?php echo $suggestion ?></a> 
-                                                <?php 
-                                                    if( isset($translation['word_suggestion'][$key+1])){
-                                                        echo ',';
-                                                    }
-                                                
-                                                } ?>  
-                                                )
-                                            </div>
-              <?php  } ?>                                  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-            <?php  } ?>                
-
-                        </div>
-             <?php  } ?>              
-                    </div>
-                </div>
-             <?php  } ?>  
+        <div class="lugat-header-description" ><?php echo JText::_('MOD_LUGAT_HEADER_DESCRIPTION'); ?></div>
+        <div class="lugat-actions">
+            <i class="fa fa-retweet fa-2" aria-hidden="true" id="syncronizeIndexedDb" onclick="syncronizeIndexedDb()"></i>
         </div>
+        
+        <div id="sync_progress">
+            <div class="loading-from-server" style="display: none">Loading data from server...</div>
+            <div class="loading-row-counter" style="display: none">
+                <span class="sync-counter">0</span> <span>of</span> <span class="sync-total">0</span>
+            </div>
+            
+        </div>
+    </div>    
+    
+    <div id="lugat-body">
+        <?php if(!empty($lugat['translation'] && !$lugat['not_found'])){  
+            include 'lugat_results.php';  
+        } else { 
+            if($lugat['empty']){ 
+                include 'empty.php';  
+            };
+            if($lugat['not_found']){ 
+                include 'not_found.php';  
+            };
+        } ?>  
     </div>
 </div>
 
 <script>
-    
-    var countries = [];
+   
+    var autocomplete_results = [];
     var current_letter = '';
-    
-
+    var db;
+    var request;
     jQuery.noConflict();
-    function goToDict(word) {
-        console.log(word);
-        jQuery.ajax({
-            url: "index.php?option=com_ajax&module=lugat&method=getWord&format=raw",
-            type: "GET",
-            data: {word: word},
-            success: function (response) {
-                jQuery("#text").html(response.data);
-            }
-        });
-    }
-    ;
+    jQuery(document).ready(function(){
+        createDb();
+    });
+    
     function getWord(word) {
+        if(word == ''){
+            jQuery('#search-input').css('border', '1px solid #ff7373');
+            jQuery('#search-input').css('box-shadow', '0px 0px 7px #f25e5e');
+            return;
+        }
         location.replace("?word=" + word);
         return;
     }
@@ -166,13 +80,157 @@ defined('_JEXEC') or die;
             type: "POST",
             data: {word: word},
             success: function (response){
-                countries = response.data;
-                autocomplete(document.getElementById('search-input'), countries);
+                autocomplete_results = response.data;
+                autocomplete(document.getElementById('search-input'), autocomplete_results);
             }
         });
         
     }
     
+    function syncronizeIndexedDb(){
+
+
+        
+        var mixed_table = getMixedTable();
+        
+    }
+   
+    function getMixedTable(){
+        var start = new Date().getTime();
+        jQuery('.loading-from-server').show();
+        jQuery.ajax({
+            url: "index.php?option=com_ajax&module=lugat&method=getMixedTable&format=json",
+            type: "POST",
+            data: {},
+            success: function (response){
+                jQuery('.loading-from-server').hide();
+                jQuery('.loading-row-counter').show();
+                addData(JSON.parse(response.data));
+                var end = new Date().getTime();
+                var time = end - start;
+                alert('Execution time: ' + time);
+                return;
+            }
+        });
+    }
+    
+    function getDataFromDb(word){
+        var transaction = db.transaction(["word_list"], "readwrite");
+        var invStore = transaction.objectStore("word_list");
+        var invIndex = invStore.index("word");
+        var getRequestIdx = invIndex.getAll(word);
+        getRequestIdx.onsuccess = () => {
+            console.log(getRequestIdx.result); 
+        };  
+    }
+    
+    function addData(mixedTable) {
+        var rowsTotal = mixedTable.length;
+        jQuery('.sync-total').html(rowsTotal);
+        // Start a database transaction and get the notes object store
+        var tx = db.transaction(['word_list'], 'readwrite');
+        for(var i = 0; i<rowsTotal; i++){
+            var store = tx.objectStore('word_list');  // Put the sticky note into the object store
+            var table = {
+                query_word_id: mixedTable[i].query_word_id, 
+                query_word: mixedTable[i].query_word, 
+                query_part_of_speech_id: mixedTable[i].query_part_of_speech_id, 
+                query_transcription: mixedTable[i].query_transcription, 
+                query_relation_id: mixedTable[i].query_relation_id, 
+                query_clarification: mixedTable[i].query_clarification, 
+                query_attributes: mixedTable[i].query_attributes, 
+                denotation_id: mixedTable[i].denotation_id, 
+                denotation_description: mixedTable[i].denotation_description, 
+                denotation_number: mixedTable[i].denotation_number, 
+                result_relation_id: mixedTable[i].result_relation_id, 
+                result_relevance: mixedTable[i].result_relevance, 
+                result_attributes: mixedTable[i].result_attributes, 
+                result_word_id: mixedTable[i].result_word_id, 
+                result_word: mixedTable[i].result_word, 
+                result_part_of_speech_id: mixedTable[i].result_part_of_speech_id, 
+                tstamp: mixedTable[i].tstamp
+            };
+            store.add(table);  
+            jQuery('.sync-counter').html(i);
+            // Wait for the database transaction to complete
+        }
+            tx.oncomplete = function() { 
+                console.log('stored note!'); 
+            };
+            tx.onerror = function(event) {
+                alert('error storing note ' + event.target.errorCode);
+                return;
+            };
+
+        
+       
+
+    };
+   
+   function createDb(){
+        request = window.indexedDB.open("lugat", 1);
+
+        // Create schema
+        request.onupgradeneeded = event => {
+            db = event.target.result;
+
+            var invoiceStore = db.createObjectStore("word_list", { autoIncrement: true });
+            invoiceStore.createIndex("word", "query_word");
+        };
+
+        request.onsuccess = () => {
+            db = request.result;
+            
+            /*
+
+            // Update an item
+            itemStore.put({invoiceId: "123", row: "1", item: "Dish washer", cost: 1300});
+
+            // Delete an item
+            itemStore.delete(["123", "2"]);
+
+            // Get an item by key
+            const getRequest = invStore.get("123");
+            getRequest.onsuccess = () => {
+                console.log(getRequest.result); // {invoiceId: "123", vendor: "Whirlpool", paid: false}
+            };
+*/
+            // Get an item by index
+                                               //   {invoiceId: "580", vendor: "Whirlpool", paid: true} ]
+        };
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
@@ -209,9 +267,11 @@ function autocomplete(inp, arr) {
                 
                 /*insert the value for the autocomplete text field:*/
                 inp.value = this.getElementsByTagName("input")[0].value;
+                getWord(inp.value);
                 /*close the list of autocompleted values,
                  (or any other open lists of autocompleted values:*/
                 closeAllLists();
+                return;
             });
             if (limit > 6) {
                 break;
@@ -285,20 +345,6 @@ function autocomplete(inp, arr) {
         closeAllLists(e.target);
     });
     
-}
-</script>
-<script>
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("lugat-head");
-var sticky = header.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
 }
 </script>
 

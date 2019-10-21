@@ -115,7 +115,7 @@ structure:
         - children
   offcanvas:
     inherit:
-      outline: default
+      outline: '14'
       include:
         - attributes
         - children

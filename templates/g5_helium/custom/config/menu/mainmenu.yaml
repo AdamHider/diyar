@@ -1,9 +1,12 @@
 ordering:
   home: ''
   __module-H7nZF: ''
+  feeds: ''
 items:
   home:
     id: 101
+  feeds:
+    id: 107
   __module-H7nZF:
     type: particle
     particle: module
@@ -14,6 +17,6 @@ items:
         module_id: '90'
         chrome: ''
       block:
+        class: mod-languages
         extra: {  }
-    enabled: true
-    anchor_class: ''
+    enabled: '1'

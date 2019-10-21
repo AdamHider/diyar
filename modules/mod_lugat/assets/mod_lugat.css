@@ -3,14 +3,40 @@
     margin: 0px !important;
 }
 
+@media all and (max-width: 1000px){
+    #lugat-body{
+        width: 95% !important;
+    }
+    .info-row{
+        width: 100% !important;
+    }
+}
+
+@media all and (max-width: 700px){
+    .part-of-speech-list, .denotations-list, .referents-list, .referent-suggestions {
+        margin: 0px 4px !important; 
+        white-space: normal !important;
+    }
+    .search-row{
+        width: 80% !important;
+    }
+    .autocomplete{
+        width: 90% !important;
+    }
+}
+
+
 .lugat-container .g-container{
     width: 100% !important;
+}
+.lugat-header-description{
+    display: none;
 }
 
 #lugat-head{
     background-color: #312f38;
-    padding-top: 7px;
 }
+
 
 #lugat-head.sticky {
   position: fixed;
@@ -31,16 +57,18 @@
 
 
 .search-row{
-    width: 40%;
+    width: 75%;
     margin: 0 auto;
     display: flex;
 }
 
+
+
 .search-row #search-input{
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     padding-left: 1em;
     height: 40px;
     z-index: 1;
@@ -51,8 +79,8 @@
 
 
 .search-row #search-button{
-    border-top-right-radius: 20px !important;
-    border-bottom-right-radius: 20px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
     width: auto !important;
@@ -95,15 +123,16 @@
     
 }
 
-.part-of-speech-list, .denotations-list, .referents-list, .referent-suggestions{
+.part-of-speech-list, .denotations-list, .referents-list, .referent-suggestions, .part-of-speech-block{
     margin: 0% 2%;
     white-space: nowrap;
 }
 
 .referent-name{
     font-weight: bold;
-    color: #538c1b;
+    color: #45822f;
     cursor: pointer;
+    font-size: 17px;
 }
 .referent-name:hover, .suggestion:hover{
     text-decoration: underline;
@@ -139,14 +168,19 @@
 }
 
 .part-of-speech-name{
-    color: #737373;
-    font-style: italic;
+    color: #3c81c8;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.query-word_block{
+ border-bottom: 2px solid #424753;
 }
 
 .query-word-transcription{
     color: #737373;
     font-size: 18px;
 }
+
 
 .query-word{
     font-size: 30px;
@@ -156,21 +190,14 @@
 
 .tag{
     position: relative;
-    padding: 5px 9px;
+    padding: 4px 8px;
     border-radius: 6px;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    box-shadow: inset 0 1px #7BBBD9, 0 1px 2px rgba(0,0,0,0.21);
-    border: 1px solid #26949D;
-    border-bottom-color: rgb(38, 148, 157);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    background: linear-gradient(to bottom, #66aef4 0%,#477cb5 100%);
+    color: #737373;
+    font-size: 13px;
+    border: 1px solid #737373;
     margin-left: 10px;
-    border-bottom: 1px solid #4189C6;
-    text-shadow: 0 1px rgba(51, 66, 244, 0.68);
     cursor: help;
+    display: ruby-base;
 }
 
 .tag-description{
@@ -228,18 +255,17 @@
 .autocomplete{
     position: relative;
     height: 40px;
+    width: 35%;
 }
 
 .autocomplete-items {
     position: absolute;
     border: 1px solid #7ad520;
-    border-top: none;
     z-index: 99;
-    /*position the autocomplete items to be the same width as the container:*/
     top: 100%;
-    width: 95%;
-    margin-left: 3%;
-    box-shadow: 0px 0px 10px gray;
+    width: 99%;
+    box-shadow: 0px 6px 10px #3e3e3e5e;
+    margin-left: 1%;
 }
 
 .autocomplete-items div {
@@ -259,4 +285,67 @@
 .autocomplete-active {
     background-color: DodgerBlue !important; 
     color: #ffffff; 
+}
+
+
+#lugat-head-empty {
+    background-image: url('/diyar/modules/mod_lugat/tmpl/books-bookshelf-education.jpg');
+    background-position-y: 59%;
+    background-size: cover;
+}
+
+#lugat-head-empty .search-row {
+    padding: 3em 3em 0.5em 3em;
+    width: 31%;
+}
+#lugat-head-empty .autocomplete {
+    width: 100%;
+}
+
+#lugat-head-empty .lugat-header-description {
+    display: inline-block;
+    width: 100%;
+    margin: 0.5em 0 2.5em 0;
+    text-align: center;
+    color: white;
+}
+
+.advantages-grid{
+    padding: 1em 0;
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    grid-column-gap: 2%;
+    grid-row-gap: 3%;
+}
+.advantage-block {
+    text-align: center;
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 1em;
+}
+.advantage img{
+    
+}
+.advantage-text{
+    margin-top: 1rem;
+}
+.advantage-description{
+    color: slategray;
+    font-size: 15px;
+}
+.advantage-title{
+    color: #312f38;
+    font-size: 18px;
+}
+
+.lugat-actions{
+    color: #7ad520;
+    font-size: 25px;
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+}
+.lugat-actions i:hover{
+    text-shadow: 2px 1px 0px #515151;
+    color: #69ae25;
 }

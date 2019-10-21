@@ -21,6 +21,3 @@ testimonials:
   background: '#5dad45'
 footer:
   background: '#312f38'
-offcanvas:
-  background: '#37536a'
-  toggle-color: '#5dad45'

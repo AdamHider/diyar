@@ -1,5 +1,5 @@
 name: default
-timestamp: 1569700260
+timestamp: 1571223658
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -18,13 +18,14 @@ sections:
   mainbar: Mainbar
   sidebar: Sidebar
   footer: Footer
-  offcanvas: Offcanvas
+  offcanvas: Untitled
 particles:
   messages:
     system-messages-4409: 'System Messages'
   logo:
     logo-8554: 'Logo / Image'
     logo-7150: 'Footer Logo'
+    logo-9504: 'Logo / Image'
   menu:
     menu-4076: Menu
   social:
@@ -32,8 +33,6 @@ particles:
   module:
     position-module-5422: 'Module Instance'
     position-module-2306: 'Module Instance'
-  owlcarousel:
-    owlcarousel-5369: 'Header Carousel'
   custom:
     custom-3119: Features
     custom-7658: 'Customer Testimonials'

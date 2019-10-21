@@ -1,0 +1,7 @@
+preset: preset1
+accent:
+  color-1: '#4db2b3'
+  color-2: '#66ad4c'
+link:
+  regular: '#66ad4c'
+  hover: '#ffffff'

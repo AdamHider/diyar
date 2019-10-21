@@ -157,6 +157,110 @@ class ModLugatHelper {
     
     private static function getObjectByWord($word) {
         $db = JFactory::getDbo();
+        $db->setQuery($sql);
+
+        $result = $db->loadObjectList();
+
+        return $result;
+    }
+    
+    private static function createMixedTable (){
+        $db = JFactory::getDbo();
+        $sql = "
+            CREATE TABLE IF NOT EXISTS lgt_mixed 
+            SELECT 
+                wl.word_id query_word_id,
+                wl.word query_word,
+                wl.part_of_speech_id query_part_of_speech_id,
+                wl.transcription query_transcription,
+                r1.relation_id query_relation_id,
+                r1.clarification query_clarification,
+                (SELECT 
+                    CONCAT('{',
+                        GROUP_CONCAT('\"attribute_group_name\":\"',
+                            attrg.name,
+                            '\",\"attribute_name\":\"',
+                            attr.name,
+                            '\",\"attribute_value\":\"',
+                            IF(attr2rel.attribute_value IS NOT NULL,
+                                attr2rel.attribute_value,
+                                ''),
+                            '\",\"lang_id\":',
+                            attrg.language_id
+                            SEPARATOR ';'),
+                        '}') t
+                    FROM
+                        lgt_attribute_to_relation attr2rel
+                            LEFT JOIN
+                        lgt_attributes attr ON attr2rel.attribute_id = attr.attribute_id
+                            LEFT JOIN
+                        lgt_attribute_groups attrg ON attrg.attribute_group_id = attr.attribute_group_id
+                    WHERE
+                        r1.relation_id = attr2rel.relation_id
+                            AND attrg.language_id = attr.language_id) AS query_attributes,
+                dl.denotation_id,
+                dl.denotation_description,
+                dl.denotation_number,
+                r2.relation_id result_relation_id,
+                r2.relevance result_relevance,
+                (SELECT 
+                    CONCAT('{',
+                        GROUP_CONCAT('\"attribute_group_name\":\"',
+                            attrg.name,
+                            '\",\"attribute_name\":\"',
+                            attr.name,
+                            '\",\"attribute_value\":\"',
+                            IF(attr2rel.attribute_value IS NOT NULL,
+                                attr2rel.attribute_value,
+                                ''),
+                            '\",\"lang_id\":',
+                            attrg.language_id
+                            SEPARATOR ';'),
+                        '}') t
+                    FROM
+                        lgt_attribute_to_relation attr2rel
+                            LEFT JOIN
+                        lgt_attributes attr ON attr2rel.attribute_id = attr.attribute_id
+                            LEFT JOIN
+                        lgt_attribute_groups attrg ON attrg.attribute_group_id = attr.attribute_group_id
+                    WHERE
+                        r2.relation_id = attr2rel.relation_id
+                            AND attrg.language_id = attr.language_id) AS result_attributes,
+                wl2.word_id result_word_id,
+                wl2.word result_word,
+                wl2.part_of_speech_id result_part_of_speech_id,
+                GREATEST(wl.tstamp,
+                        r1.tstamp,
+                        dl.tstamp,
+                        r2.tstamp,
+                        wl2.tstamp) tstamp
+            FROM
+                word_list wl
+                    JOIN
+                relation_list r1 ON wl.word_id = r1.word_id
+                    JOIN
+                denotation_list dl ON dl.denotation_id = r1.denotation_id
+                    JOIN
+                relation_list r2 ON dl.denotation_id = r2.denotation_id
+                    AND r1.language_id != r2.language_id
+                    JOIN
+                word_list wl2 ON wl2.word_id = r2.word_id";
+        $db->setQuery($sql);
+        return;
+    }
+    
+    public static function getMixedTableAjax() {
+        ini_set('memory_limit', '512M');
+        $db = JFactory::getDbo();
+        $db->setQuery("SELECT * FROM lgt_mixed");
+
+        $result = $db->loadObjectList();
+
+        return json_encode($result);
+    }
+    /*----------
+private static function getObjectByWord($word) {
+        $db = JFactory::getDbo();
         $lang_config = [
             'en-GB' => '1',
             'ru-RU' => '2'
@@ -248,5 +352,6 @@ class ModLugatHelper {
 
         return $result;
     }
-
+     * 
+     */
 }

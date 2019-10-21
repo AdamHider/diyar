@@ -1,5 +1,5 @@
-name: '21'
-timestamp: 1570646446
+name: 21
+timestamp: 1571063040
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/body-only.png'
@@ -14,9 +14,10 @@ particles:
   content:
     system-content-1177: 'Page Content'
   module:
-    position-module-2330: 'Module Instance'
+    position-module-2330: 'Login Form'
   custom:
     custom-6311: 'Background Image'
+    custom-9593: 'Bottom Bar'
 inherit:
   19:
     system-messages-9871: system-messages-5681
