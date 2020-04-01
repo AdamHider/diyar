@@ -12,14 +12,28 @@ layout:
       - 'menu-6097 80'
   /header/:
     -
-      - owlcarousel-1772
+      - custom-7115
     -
-      - custom-6019
-  intro: {  }
-  features: {  }
+      - owlcarousel-8554
+    -
+      - custom-6963
+    -
+      - position-module-5365
+  /intro/:
+    -
+      - custom-7643
+  /features/:
+    -
+      - custom-8640
+    -
+      - logo-4015
+    -
+      - position-module-3433
   utility: {  }
   above: {  }
-  testimonials: {  }
+  /testimonials/:
+    -
+      - custom-3267
   expanded: {  }
   /container-main/:
     -
@@ -31,10 +45,15 @@ layout:
         'sidebar 25': {  }
   /footer/:
     -
-      - 'logo-1144 16'
-      - 'custom-3748 25'
-      - 'horizontalmenu-5487 41'
-      - 'totop-3746 18'
+      - custom-2297
+    -
+      - 'custom-7183 30'
+      - 'spacer-5222 5'
+      - 'custom-3360 30'
+      - 'spacer-4416 5'
+      - 'custom-7504 30'
+    -
+      - custom-3748
   offcanvas:
     -
       - logo-2999
@@ -45,28 +64,25 @@ structure:
     type: section
     attributes:
       boxed: ''
-      class: diyar-main-navigation
+      class: 'diyar-main-navigation home-navigation'
       variations: ''
   header:
     attributes:
       boxed: ''
-      class: diyar-main-header
+      class: 'background-image-section home-header parallax-background'
       variations: ''
   intro:
     type: section
-    inherit:
-      outline: default
-      include:
-        - attributes
-        - children
+    attributes:
+      boxed: '0'
+      class: about-us-home
+      variations: ''
   features:
     type: section
-    inherit:
-      outline: default
-      include:
-        - attributes
-        - block
-        - children
+    attributes:
+      boxed: ''
+      class: 'lugat-container home-lugat-searchbar'
+      variations: 'nomarginall nopaddingall'
   utility:
     type: section
     inherit:
@@ -85,12 +101,10 @@ structure:
         - children
   testimonials:
     type: section
-    inherit:
-      outline: default
-      include:
-        - attributes
-        - block
-        - children
+    attributes:
+      boxed: '2'
+      class: ''
+      variations: ''
   expanded:
     type: section
     inherit:
@@ -164,7 +178,15 @@ content:
       menu: enter-russianmenu
       mobileTarget: '1'
       forceTarget: '1'
-  owlcarousel-1772:
+    block:
+      class: home-menu
+  custom-7115:
+    title: 'Header Greetings'
+    attributes:
+      html: "<div class=\"benefit-content  header-text revealOnScroll\" data-animation=\"fadeIn\" data-timeout=\"100\">\n        <h1>Добро пожаловать!</h1>\n\n\n\n\n</div>"
+    block:
+      class: header-info-block
+  owlcarousel-8554:
     title: 'Header Carousel'
     attributes:
       enabled: 0
@@ -180,37 +202,83 @@ content:
           buttonclass: button-outline
           disable: '0'
           name: Image1
-  custom-6019:
-    title: 'Header Message'
+  custom-6963:
+    title: 'Header Icons'
     attributes:
-      html: "<div class=\"benefit-content revealOnScroll\" data-animation=\"fadeIn\" data-timeout=\"100\">\n        <h1>Добро пожаловать!</h1>\n<p>\nDiyar - это современный крымскотатарский веб-сайт, посвященный языку, истории и культуре крымских татар. </br> Здесь мы собираем по крупицам всё, что касается крымскотатарского народа: от учебников и словарей - до исторических летописей и автобиографий. </br> Если Вы имеете возможность пополнить нашу коллекцию своими материалами, обращайтесь сюда. Любой Ваш вклад очень ценен для нас.\n</p>\n</div>"
-  logo-1144:
-    title: 'Footer Logo'
+      html: "<div class=\"head-icon-container\">\n<img class=\"tamga-icon\" src=\"/images/icons/Tamga_Vector_Icon.png\"/>\n<img class=\"arrow-icon\" src=\"/images/icons/Tamga_Vector_Icon_Arrow.png\"/>\n</div>"
+    block:
+      class: head-icon-block
+  position-module-5365:
+    title: 'Complex Header'
+    attributes:
+      module_id: '108'
+      key: complex-header
+    block:
+      class: complex-header
+      variations: 'nomarginall nopaddingall'
+  custom-7643:
+    title: 'About Us'
+    attributes:
+      html: "<div class=\"main-text\">Diyar - это современный крымскотатарский веб-сайт, посвященный языку, истории и культуре крымских татар. </div>\n<div class=\"additional-text\"> Здесь мы собираем по крупицам всё, что касается крымскотатарского народа: от учебников и словарей - до исторических летописей и автобиографий. </br> Если Вы имеете возможность пополнить нашу коллекцию своими материалами, обращайтесь <a href=\"/index.php/ru/свяжитесь_с_нами\">сюда</a>. Любой Ваш вклад очень ценен для нас.\n</div>\n<a  href=\"/index.php/ru/прочее/о_нас\"  class=\"button button-white\">Подробнее</a>"
+    block:
+      class: about-us-block
+  custom-8640:
+    title: Features
     inherit:
       outline: default
-      particle: logo-7150
       include:
         - attributes
         - block
+      particle: custom-3119
+  logo-4015:
+    title: 'Logo / Image'
+    attributes:
+      image: 'gantry-media://headers/Lugat_Image1.png'
+      link: '0'
+      svg: ''
+      class: lugat-searchbar-image
+    block:
+      class: lugat-searchbar-image-block
+      variations: 'nomarginall nopaddingall'
+      fixed: '1'
+  position-module-3433:
+    title: 'Module Instance'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: position-module-2306
+  custom-3267:
+    title: 'Join Us'
+    attributes:
+      html: "<div class=\"main\">\n<div class=\"image-container\">\n<img class=\"layer-background\" src=\"/images/headers/join_us/Diyar_Join_Us_Back1.jpg\"/>\n<img class=\"layer-base\" src=\"/images/headers/join_us/Diyar_Join_Us_layer_base.png\"/>\n<img class=\"layer-1\" src=\"/images/headers/join_us/Diyar_Join_Us_layer1.png\"/>\n<img class=\"layer-2\" src=\"/images/headers/join_us/Diyar_Join_Us_layer2.png\"/>\n<img class=\"layer-3\" src=\"/images/headers/join_us/Diyar_Join_Us_layer3.png\"/>\n<img class=\"layer-4\" src=\"/images/headers/join_us/Diyar_Join_Us_layer4.png\"/>\n<img class=\"layer-db1\" src=\"/images/headers/join_us/Diyar_Join_Us_db_1.png\"/>\n<img class=\"layer-db2\" src=\"/images/headers/join_us/Diyar_Join_Us_db_2.png\"/>\n<div class=\"text\">\n<h1>Присоединяйся к нам!</h1>\n<p>Наш проект постоянно развивается, поэтому нам пригодится Ваша помощь.</p>\n</div>\n\n</div>\n<div class=\"animation-trigger\"></div>\n</div>"
+    block:
+      class: join-us-block
+  custom-2297:
+    title: Social
+    attributes:
+      html: ''
+  custom-7183:
+    title: 'Logo And Descrıptıon'
+    attributes:
+      html: "<a href=\"/\" target=\"_self\"  rel=\"home\" class=\"g-logo g-logo-helium\">\n                        <img src=\"/images/logos/diyar_logo_footer.png\" >\n            </a>\n<div class=\"logo-text\">\n<p>Мы команда простых инициативных людей, главная цель которых - сделать информацию о крымских татарах доступной для каждого в интернете. Наша деятельность ни в коем случае не преследует коммерческих интересов.\n</p>\n</div>"
+  custom-3360:
+    title: 'Footer Menu'
+    attributes:
+      html: "<div class=\"footer-menu\">\n    <h4>Сайт</h4>\n    <div class=\"list-block\">\n        \n          \n        <a class=\"collapsed menu-item\" data-toggle=\"collapse\" href=\"#collapseLanguage\" role=\"button\" aria-expanded=\"false\" aria-controls=\"collapseLanguage\">\n          Язык\n        <i class=\"fa fa-chevron-right\"></i></a>\n        <div class=\"collapse\" id=\"collapseLanguage\">\n            <div class=\"card card-body\">\n              <ul>\n                <li>\n                    <a href=\"https://diyar.im/index.php/ru/язык/словарь\">Словарь</a>\n                </li>\n                <li>\n                    <a href=\"https://diyar.im/index.php/ru/язык/образование/грамматика\">Грамматика</a>\n                </li>\n                <li>\n                    <a href=\"https://diyar.im/index.php/ru/язык/образование/произношение\">Произношение</a>\n                </li>\n                <li>\n                    <a href=\"https://diyar.im/index.php/ru/язык/образование/лексика\">Лексика</a>\n                </li>\n            </ul>\n            </div>\n        </div>\n        \n    </div>\n    <div class=\"list-block\">\n        <a class=\"collapsed menu-item\" data-toggle=\"collapse\" href=\"#collapseHistory\" role=\"button\" aria-expanded=\"false\" aria-controls=\"collapseHistory\">\n            История\n        <i class=\"fa fa-chevron-right\"></i></a>\n        <div class=\"collapse\" id=\"collapseHistory\">\n            <div class=\"card card-body\">\n                <ul>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/история/древние_тюрки\">Древние Тюрки</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/история/золотая_орда\">Золотая Орда</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/история/крымское_ханство\">Крымское Ханство</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/история/послеханский_период\">Послеханский Период</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/история/советский_период\">Советский период</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/история/xxi_век\">XXI Век</a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <div class=\"list-block\">\n        <a class=\"collapsed menu-item\" data-toggle=\"collapse\" href=\"#collapseCulture\" role=\"button\" aria-expanded=\"false\" aria-controls=\"collapseCulture\">\n            Культура\n        <i class=\"fa fa-chevron-right\"></i></a>\n        <div class=\"collapse\" id=\"collapseCulture\">\n            <div class=\"card card-body\">\n                <ul>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/культура/традиции\">Традиции</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/культура/быт\">Быт</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/культура/музыка\">Музыка</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/культура/литература\">Литература</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/культура/живопись\">Живопись</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/культура/религия\">Религия</a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <div class=\"list-block\">\n        <a class=\"collapsed menu-item\" data-toggle=\"collapse\" href=\"#collapseBooks\" role=\"button\" aria-expanded=\"false\" aria-controls=\"collapseBooks\">\n            Книги\n        <i class=\"fa fa-chevron-right\"></i></a>\n        <div class=\"collapse\" id=\"collapseBooks\">\n            <div class=\"card card-body\">\n                <ul>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/книги/учебная_литература\">Учебная литература</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/книги/историческая_литература\">Историческая литература</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/книги/книги_о_культуре\">Книги о культуре</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/книги/детская_литература\">Детская литература</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/книги/художественная_литература\">Художественная Литература</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/книги/биографии\">Биографии</a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n    <div class=\"list-block\">\n        <a class=\"collapsed menu-item\" data-toggle=\"collapse\" href=\"#collapseOther\" role=\"button\" aria-expanded=\"false\" aria-controls=\"collapseOther\">\n            Прочее\n        <i class=\"fa fa-chevron-right\"></i></a>\n        <div class=\"collapse\" id=\"collapseOther\">\n            <div class=\"card card-body\">\n                <ul>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/прочее/обсуждения\">Обсуждения</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/прочее/загрузки\">Загрузки</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/прочее/галерея\">Галерея</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/прочее/партнеры\">Партнеры</a>\n                    </li>\n                    <li>\n                        <a href=\"https://diyar.im/index.php/ru/прочее/о_нас\">О нас</a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</div>"
+    block:
+      class: menu-block
+  custom-7504:
+    title: Contact
+    attributes:
+      html: "<div class=\"footer-contact\">\n    <h4>Обратная связь</h4>\n    <div class=\"content\">\n<p>Если у вас есть какие-либо вопросы или предложения по поводу сайта, вы всегда можете сообщить нам об этом, написав нам. </p>\n<div>\n<b>Email:</b> <a href=\"/index.php/ru/свяжитесь_с_нами\">info@diyar.im</a> \n</div>\n<p>Мы всегда рады узнать ваше мнение.</p>\n</div>\n</div>"
   custom-3748:
-    title: 'Custom HTML'
+    title: 'Copyright and Policies'
     attributes:
-      enabled: 0
-      html: '<p>Разработано командой Diyar совместно с Adam Hider</p>'
-  horizontalmenu-5487:
-    title: 'Horizontal Menu'
-    attributes:
-      enabled: 0
-      items:
-        -
-          text: Словарь
-          link: 'http://localhost:888/joomla/index.php/dictionary-rus'
-          name: Dictionary
-  totop-3746:
-    title: 'To Top'
-    attributes:
-      icon: 'fa fa-chevron-up fa-fw'
-      content: Наверх
+      html: "<p>\n2019 © Все права защищены \n<a href=\"/index.php/ru/пользовательское_соглашение\">Пользовательское соглашение</a>\n|\n<a href=\"/index.php/ru/политика_конфиденциальности\">Политика конфеденциальности</a>\n\n</p>"
+    block:
+      class: policies-block
   logo-2999:
     title: 'Logo / Image'
     inherit:

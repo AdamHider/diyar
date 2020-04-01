@@ -1,66 +1,23 @@
+
 <?php
 
-/**
- * Helper class for Hello World! module
- *
- * @package    Joomla.Tutorials
- * @subpackage Modules
- * @link http://docs.joomla.org/J3.x:Creating_a_simple_module/Developing_a_Basic_Module
- * @license        GNU/GPL, see LICENSE.php
- * mod_helloworld is free software. This version may have been modified pursuant
- * to the GNU General Public License, and as distributed it includes or
- * is derivative of works licensed under the GNU General Public License or
- * other free or open source software licenses.
- */
 class ModLugatHelper {
-
-    /**
-     * Retrieves the hello message
-     *
-     * @param   array  $params An object containing the module parameters
-     *
-     * @access public
-     */
-    public static function init($params) {
-
-        $input_word = JFactory::getApplication()->input->get('word', '', 'string');
-        // Return the Hello
-        $param = [
-            'header' => 'Lugat',
-            'input_type' => 'text',
-            'input_value' => $input_word,
-            'input_placeholder' => 'Type your text...'
-        ];
-
-        if (!empty($input_word)) {
-            $param['result'] = [
-                'output_result' => $input_word,
-                'output_description' => $input_word,
-                'output_meaning' => $input_word,
-                'output_suggest' => $input_word
-            ];
-        }
-        return $param;
-    }
 
     public static function autocompleteAjax() {
         $input = JRequest::getVar('word', '', 'post');
         $db = JFactory::getDbo();
-        // Retrieve the shout
         $query = "
-                SELECT 
-                   word 
+                SELECT DISTINCT
+                    word 
                 FROM 
-                   word_list
+                   lgt_word_list
                 WHERE 
                    word LIKE '$input%'
-                GROUP BY word
+                ORDER BY language_id ASC
                 LIMIT 7
                ";
         $db->setQuery($query);
-
         $result = $db->loadObjectList();
-
         return $result;
     }
 
@@ -70,7 +27,6 @@ class ModLugatHelper {
     }
 
     private static function composeObject($relations) {
-
         $final_object = [
             'query_word_id' => '',
             'query_word_id' => '',
@@ -101,165 +57,67 @@ class ModLugatHelper {
         foreach ($relations as $relation) {
             $final_object['query_word_id'] = $relation->word_query_word_id;
             $final_object['query_word'] = $relation->word_query_word;
-            
-            if(!empty($relation->relation_query_attributes)){
-                $query_attributes_array = explode('|',$relation->relation_query_attributes);
-                $final_object['query_attributes'] =  ModLugatHelper::composeAttributes($query_attributes_array);
-            }
-            
             $final_object['query_part_of_speech_id'] = $relation->word_query_part_of_speech_id;
-            $final_object['query_word_transcription'] = $relation->word_query_transcription;
+            $final_object['query_toponymy_link'] = $relation->word_query_toponymy;
+            $final_object['query_word_transcription'] = ModLugatHelper::composeTranscription($relation->word_query_transcription);
+            
+            $final_object['attributes'] = ModLugatHelper::getWordAttributes($relation->relation_query_relation_id);
 
             $final_relation_object['word_id'] = $relation->word_result_word_id;
             $final_relation_object['word'] = $relation->word_result_word;
             $final_relation_object['word_part_of_speech'] = $relation->word_result_part_of_speech;
             $final_relation_object['relation_id'] = $relation->relation_result_relation_id;
             $final_relation_object['clarification'] = $relation->relation_result_clarification;
+            $final_relation_object['toponymy_link'] = $relation->word_result_toponymy;
             
-            if(!empty($relation->relation_result_attributes)){
-                $result_attributes_array = explode('|',$relation->relation_result_attributes);
-                $final_relation_object['attributes'] = ModLugatHelper::composeAttributes($result_attributes_array);
-            }  
+            $final_relation_object['examples'] = ModLugatHelper::getWordExamples($relation->relation_result_relation_id);
+            $final_relation_object['attributes'] = ModLugatHelper::getWordAttributes($relation->relation_result_relation_id);
+            $final_relation_object['word_suggestion'] = ModLugatHelper::getWordRelated($relation->word_result_word, $relation->word_query_word);
             
             $final_relation_object['relevance'] = (50 * (1 - (ceil($relation->relation_result_relevance) / 7)));
             if ($final_relation_object['relevance'] < 0) {
                 $final_relation_object['relevance'] = 5;
             };
-            if (!empty($relation->word_result_suggestion)) {
-                $final_relation_object['word_suggestion'] = array_slice(explode(',', $relation->word_result_suggestion), 0, 6);
-            }
-
+            
             if ($relation->word_result_part_of_speech != $current_part_of_speech_id) {
                 $current_part_of_speech_id = $relation->word_result_part_of_speech;
             }
             $final_object['translations'][$current_part_of_speech_id][] = $final_relation_object;
         }
+        
         return $final_object;
     }
     
-    private static function composeAttributes($attribute_array){
-        if(empty($attribute_array)){
-            return [];
-        }
-        $result_array = [];
-        foreach($attribute_array as $attribute_row){
-            $attribute_items = explode(':',$attribute_row);
-            $attribute_object = [
-                'attribute_group' => $attribute_items[0],
-                'attribute_name' => $attribute_items[1],
-                'attribute_value' => $attribute_items[2],
+    private static function composeTranscription($transcription){
+        $words = explode(' ', $transcription);
+        $result = '';
+        foreach($words as $word){
+            $chunks = explode('-',$word);
+            $replace = [
+                'a' => 'á',
+                'â' => 'ấ',
+                'o' => 'ó',
+                'ø' => 'ǿ',
+                'u' => 'ú',
+                'y' => 'ý',
+                'ɯ' => 'ɯ́',
+                'ɪ' => 'ɪ́',
+                'ɛ' => 'ɛ́',
+                '|' => ''
             ];
-            $result_array[] = $attribute_object;
+            foreach($chunks as &$chunk){
+                if(strpos($chunk,'|') === 0){
+                    $chunk = '<b>'.strtr($chunk, $replace).'</b>';
+                }
+            }
+            $result .= ' '.implode('-',$chunks);
         }
-        
-        return $result_array;
+        return trim($result);
     }
+    
+    
     
     private static function getObjectByWord($word) {
-        $db = JFactory::getDbo();
-        $db->setQuery($sql);
-
-        $result = $db->loadObjectList();
-
-        return $result;
-    }
-    
-    private static function createMixedTable (){
-        $db = JFactory::getDbo();
-        $sql = "
-            CREATE TABLE IF NOT EXISTS lgt_mixed 
-            SELECT 
-                wl.word_id query_word_id,
-                wl.word query_word,
-                wl.part_of_speech_id query_part_of_speech_id,
-                wl.transcription query_transcription,
-                r1.relation_id query_relation_id,
-                r1.clarification query_clarification,
-                (SELECT 
-                    CONCAT('{',
-                        GROUP_CONCAT('\"attribute_group_name\":\"',
-                            attrg.name,
-                            '\",\"attribute_name\":\"',
-                            attr.name,
-                            '\",\"attribute_value\":\"',
-                            IF(attr2rel.attribute_value IS NOT NULL,
-                                attr2rel.attribute_value,
-                                ''),
-                            '\",\"lang_id\":',
-                            attrg.language_id
-                            SEPARATOR ';'),
-                        '}') t
-                    FROM
-                        lgt_attribute_to_relation attr2rel
-                            LEFT JOIN
-                        lgt_attributes attr ON attr2rel.attribute_id = attr.attribute_id
-                            LEFT JOIN
-                        lgt_attribute_groups attrg ON attrg.attribute_group_id = attr.attribute_group_id
-                    WHERE
-                        r1.relation_id = attr2rel.relation_id
-                            AND attrg.language_id = attr.language_id) AS query_attributes,
-                dl.denotation_id,
-                dl.denotation_description,
-                dl.denotation_number,
-                r2.relation_id result_relation_id,
-                r2.relevance result_relevance,
-                (SELECT 
-                    CONCAT('{',
-                        GROUP_CONCAT('\"attribute_group_name\":\"',
-                            attrg.name,
-                            '\",\"attribute_name\":\"',
-                            attr.name,
-                            '\",\"attribute_value\":\"',
-                            IF(attr2rel.attribute_value IS NOT NULL,
-                                attr2rel.attribute_value,
-                                ''),
-                            '\",\"lang_id\":',
-                            attrg.language_id
-                            SEPARATOR ';'),
-                        '}') t
-                    FROM
-                        lgt_attribute_to_relation attr2rel
-                            LEFT JOIN
-                        lgt_attributes attr ON attr2rel.attribute_id = attr.attribute_id
-                            LEFT JOIN
-                        lgt_attribute_groups attrg ON attrg.attribute_group_id = attr.attribute_group_id
-                    WHERE
-                        r2.relation_id = attr2rel.relation_id
-                            AND attrg.language_id = attr.language_id) AS result_attributes,
-                wl2.word_id result_word_id,
-                wl2.word result_word,
-                wl2.part_of_speech_id result_part_of_speech_id,
-                GREATEST(wl.tstamp,
-                        r1.tstamp,
-                        dl.tstamp,
-                        r2.tstamp,
-                        wl2.tstamp) tstamp
-            FROM
-                word_list wl
-                    JOIN
-                relation_list r1 ON wl.word_id = r1.word_id
-                    JOIN
-                denotation_list dl ON dl.denotation_id = r1.denotation_id
-                    JOIN
-                relation_list r2 ON dl.denotation_id = r2.denotation_id
-                    AND r1.language_id != r2.language_id
-                    JOIN
-                word_list wl2 ON wl2.word_id = r2.word_id";
-        $db->setQuery($sql);
-        return;
-    }
-    
-    public static function getMixedTableAjax() {
-        ini_set('memory_limit', '512M');
-        $db = JFactory::getDbo();
-        $db->setQuery("SELECT * FROM lgt_mixed");
-
-        $result = $db->loadObjectList();
-
-        return json_encode($result);
-    }
-    /*----------
-private static function getObjectByWord($word) {
         $db = JFactory::getDbo();
         $lang_config = [
             'en-GB' => '1',
@@ -268,90 +126,154 @@ private static function getObjectByWord($word) {
         $lang = JFactory::getLanguage();
         $dict_lang_id = $lang_config[$lang->get('tag')];
         $sql = "
-        SELECT DISTINCT
+        SELECT 
             wl.word_id word_query_word_id,
             wl.word word_query_word,
             wl.part_of_speech_id word_query_part_of_speech_id,
             wl.transcription word_query_transcription,
-            r1.relation_id relation_query_relation_id,
-            r1.clarification relation_query_clarification,
-            (SELECT 
-                    GROUP_CONCAT(attrg.name, ':', attr.name, ':', IF(attr2rel.attribute_value IS NOT NULL, attr2rel.attribute_value, '')
-                            SEPARATOR '|') t
-                FROM
-                    lgt_attribute_to_relation attr2rel
-                        LEFT JOIN
-                    lgt_attributes attr ON attr2rel.attribute_id = attr.attribute_id
-                        LEFT JOIN
-                    lgt_attribute_groups attrg ON attrg.attribute_group_id = attr.attribute_group_id
-                WHERE
-                    r1.relation_id = attr2rel.relation_id
-                        AND attr.language_id = $dict_lang_id
-                        AND attrg.language_id = $dict_lang_id) relation_query_attributes,
-            dl.denotation_id,
-            dl.denotation_description,
-            dl.part_of_speech_id denotation_part_of_speech_id,
-            r2.relation_id relation_result_relation_id,
-            IF(wl.language_id = 1,
-                r2.clarification,
-                r1.clarification) relation_result_clarification,
-            (SELECT 
-                    GROUP_CONCAT(attrg.name, ':', attr.name, ':', IF(attr2rel.attribute_value IS NOT NULL, attr2rel.attribute_value, '')
-                            SEPARATOR '|') t
-                FROM
-                    lgt_attribute_to_relation attr2rel
-                        LEFT JOIN
-                    lgt_attributes attr ON attr2rel.attribute_id = attr.attribute_id
-                        LEFT JOIN
-                    lgt_attribute_groups attrg ON attrg.attribute_group_id = attr.attribute_group_id
-                WHERE
-                    r2.relation_id = attr2rel.relation_id
-                        AND attr.language_id = $dict_lang_id
-                        AND attrg.language_id = $dict_lang_id) relation_result_attributes,
-            r2.relevance relation_result_relevance,
-            wl2.word_id word_result_word_id,
-            wl2.word word_result_word,
-            wl2.part_of_speech_id word_result_part_of_speech_id,
-            pts.name word_result_part_of_speech,
-            GROUP_CONCAT(wl3.word) word_result_suggestion
+            wl.relation_id relation_query_relation_id,
+            wl.clarification relation_query_clarification,
+            wl.toponymy_link word_query_toponymy,
+            wl.denotation_id,
+            wl.part_of_speech_id denotation_part_of_speech_id,
+            wl1.relation_id relation_result_relation_id,
+            wl1.relevance relation_result_relevance,
+            wl1.word_id word_result_word_id,
+            wl1.word word_result_word,
+            wl1.transcription word_result_transcription,
+            wl1.part_of_speech_id word_result_part_of_speech_id,
+            IF(wl1.clarification IS NOT NULL, wl1.clarification, wl.clarification) relation_result_clarification,
+            wl1.toponymy_link word_result_toponymy,
+            pts.name word_result_part_of_speech
         FROM
-            word_list wl
+            lgt_word_list wl
                 JOIN
-            relation_list r1 ON wl.word_id = r1.word_id
-                JOIN
-            denotation_list dl ON dl.denotation_id = r1.denotation_id
-                JOIN
-            relation_list r2 ON dl.denotation_id = r2.denotation_id
-                JOIN
-            word_list wl2 ON wl2.word_id = r2.word_id
-                JOIN
-            parts_of_speech pts ON wl2.part_of_speech_id = pts.part_of_speech_id AND pts.language_id = $dict_lang_id
-                LEFT JOIN
-            word_list wl4 ON wl4.word = wl2.word
-                LEFT JOIN
-            relation_list r3 ON wl4.word_id = r3.word_id
-                LEFT JOIN
-            denotation_list dl2 ON dl2.denotation_id = r3.denotation_id
-                LEFT JOIN
-            relation_list r4 ON dl2.denotation_id = r4.denotation_id
-                AND r4.language_id = wl.language_id
-                AND r4.word_id != wl.word_id
-                LEFT JOIN
-            word_list wl3 ON wl3.word_id = r4.word_id
+            lgt_word_list wl1 ON wl.denotation_id = wl1.denotation_id
+                AND wl.language_id != wl1.language_id
+                        JOIN
+                lgt_parts_of_speech pts ON wl1.part_of_speech_id = pts.part_of_speech_id AND pts.language_id = $dict_lang_id
         WHERE
-            wl.word = '$word'
-                AND wl.language_id != wl2.language_id
-        GROUP BY relation_result_relation_id
-        ORDER BY r2.relevance  
+           wl.word = '$word'
+        ORDER BY wl1.relevance  
     ";
         // Retrieve the shout
-
         $db->setQuery($sql);
-
         $result = $db->loadObjectList();
-
+        
         return $result;
     }
-     * 
-     */
+    private static function getWordExamples($relation_id) {
+        $db = JFactory::getDbo();
+        $lang_config = [
+            'en-GB' => '1',
+            'ru-RU' => '2'
+        ];
+        $lang = JFactory::getLanguage();
+        $dict_lang_id = $lang_config[$lang->get('tag')];
+        $sql = "
+            SELECT DISTINCT
+                CONCAT((SELECT 
+                                example
+                            FROM
+                                lgt_example_list dl
+                            WHERE
+                                ul.example_id = dl.example_id
+                                    AND language_id != $dict_lang_id),
+                        ' - ',
+                        (SELECT 
+                                example
+                            FROM
+                                lgt_example_list dl
+                            WHERE
+                                ul1.example_id = dl.example_id
+                                    AND language_id = $dict_lang_id)) AS example
+            FROM
+                lgt_example_to_relation ul
+                    JOIN
+                lgt_example_to_relation ul1 ON ul.relation_id != ul1.relation_id
+                    AND ul.example_id = ul1.example_id
+            WHERE
+                ul.relation_id = $relation_id
+        ";
+        $db->setQuery($sql);
+        $result = $db->loadAssocList();
+        return $result;
+    }
+    
+    private static function getWordAttributes($relation_id) {
+        $db = JFactory::getDbo();
+        $lang_config = [
+            'en-GB' => '1',
+            'ru-RU' => '2'
+        ];
+        $lang = JFactory::getLanguage();
+        $dict_lang_id = $lang_config[$lang->get('tag')];
+        $sql = "
+            SELECT 
+                attrg.name attribute_group_name, attr.name attribute_name, attr2rel.attribute_value
+            FROM
+                lgt_attribute_to_relation attr2rel
+                    LEFT JOIN
+                lgt_attributes attr ON attr2rel.attribute_id = attr.attribute_id
+                    LEFT JOIN
+                lgt_attribute_groups attrg ON attrg.attribute_group_id = attr.attribute_group_id
+            WHERE
+                    attr2rel.relation_id = $relation_id
+                    AND attr.system_language_id = $dict_lang_id
+                    AND attrg.system_language_id = $dict_lang_id
+        ";
+        $db->setQuery($sql);
+        $result = $db->loadAssocList();
+        return $result;
+    }
+    
+    private static function getWordRelated($word, $query_word) {
+        $db = JFactory::getDbo();
+        $lang_config = [
+            'en-GB' => '1',
+            'ru-RU' => '2'
+        ];
+        $lang = JFactory::getLanguage();
+        $dict_lang_id = $lang_config[$lang->get('tag')];
+        $sql = "
+            SELECT 
+                wl1.word_id suggested_word_id,
+                wl1.word suggested_word
+            FROM
+                lgt_word_list wl
+                    JOIN
+                lgt_word_list wl1 ON wl.denotation_id = wl1.denotation_id
+                    AND wl.language_id != wl1.language_id
+            WHERE
+                 wl1.word != '$query_word'
+            ORDER BY wl1.relevance 
+            LIMIT 5      
+        ";
+        $db->setQuery($sql);
+        $result = $db->loadAssocList();
+        return $result;
+    }
+    public static function addNotFoundStatistic($input_word) {
+        $db = JFactory::getDbo();
+        $lang_config = [
+            'en-GB' => '1',
+            'ru-RU' => '2'
+        ];
+        $lang = JFactory::getLanguage();
+        $dict_lang_id = $lang_config[$lang->get('tag')];
+         $sql = "
+            INSERT INTO
+                lgt_statistic
+            SET
+                statistic_word = '$input_word',
+                statistic_action = 'not_found',
+                created_date = NOW()
+            ON DUPLICATE KEY UPDATE
+                created_date = NOW()
+        ";
+        $db->setQuery($sql);
+        return $db->query();
+    }
 }
+
+

@@ -1,0 +1,140 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1563522857
+layout:
+  /navigation/: {  }
+  header: {  }
+  /intro/:
+    -
+      - position-module-5375
+  features: {  }
+  utility: {  }
+  above: {  }
+  testimonials: {  }
+  expanded: {  }
+  /container-main/:
+    -
+      -
+        'aside 25': {  }
+      -
+        'mainbar 50': {  }
+      -
+        'sidebar 25': {  }
+  footer: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+      class: diyar-main-navigation
+      variations: ''
+    inherit:
+      outline: '9'
+      include:
+        - children
+  header:
+    inherit:
+      outline: '17'
+      include:
+        - attributes
+        - block
+        - children
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+      class: lugat-container
+      variations: ''
+  features:
+    type: section
+    inherit:
+      outline: '17'
+      include:
+        - attributes
+        - block
+        - children
+  utility:
+    type: section
+    inherit:
+      outline: '17'
+      include:
+        - attributes
+        - block
+        - children
+  above:
+    type: section
+    inherit:
+      outline: '17'
+      include:
+        - attributes
+        - block
+        - children
+  testimonials:
+    type: section
+    inherit:
+      outline: '17'
+      include:
+        - attributes
+        - block
+        - children
+  expanded:
+    type: section
+    inherit:
+      outline: '17'
+      include:
+        - attributes
+        - block
+        - children
+  aside:
+    inherit:
+      outline: '17'
+      include:
+        - attributes
+        - block
+        - children
+    block:
+      fixed: '1'
+  mainbar:
+    type: section
+    subtype: main
+    inherit:
+      outline: '17'
+      include:
+        - attributes
+        - block
+        - children
+  sidebar:
+    type: section
+    subtype: aside
+    inherit:
+      outline: '17'
+      include:
+        - attributes
+        - block
+        - children
+    block:
+      fixed: '1'
+  container-main:
+    attributes:
+      boxed: ''
+  footer:
+    inherit:
+      outline: '9'
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: '9'
+      include:
+        - attributes
+        - children
+content:
+  position-module-5375:
+    title: 'Module Instance'
+    attributes:
+      module_id: '107'
+      key: module-instance

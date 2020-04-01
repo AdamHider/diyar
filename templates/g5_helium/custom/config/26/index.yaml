@@ -1,0 +1,73 @@
+name: 26
+timestamp: 1585403616
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1563522857
+positions: {  }
+sections:
+  navigation: Navigation
+  intro: Intro
+  features: Features
+  utility: Utility
+  above: Above
+  testimonials: Testimonials
+  expanded: Expanded
+  header: Header
+  aside: Aside
+  sidebar: Sidebar
+  mainbar: Mainbar
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  contentarray:
+    contentarray-4072: 'Joomla Articles'
+  content:
+    system-content-4747: 'Page Content'
+  messages:
+    system-messages-2102: 'System Messages'
+  logo:
+    logo-9267: 'Logo / Image'
+    logo-4730: 'Logo / Image'
+  menu:
+    menu-4584: Menu
+  custom:
+    custom-4862: Social
+    custom-3743: 'Logo And Descrıptıon'
+    custom-4525: 'Footer Menu'
+    custom-4903: Contact
+    custom-3161: 'Copyright and Policies'
+  spacer:
+    spacer-6794: Spacer
+    spacer-1783: Spacer
+  mobile-menu:
+    mobile-menu-7073: Mobile-menu
+inherit:
+  14:
+    navigation: navigation
+    footer: footer
+    offcanvas: offcanvas
+    system-messages-2102: system-messages-1962
+    logo-9267: logo-5571
+    menu-4584: menu-6097
+    custom-4862: custom-2297
+    custom-3743: custom-7183
+    spacer-6794: spacer-5222
+    custom-4525: custom-3360
+    spacer-1783: spacer-4416
+    custom-4903: custom-7504
+    custom-3161: custom-3748
+    logo-4730: logo-2999
+    mobile-menu-7073: mobile-menu-7896
+  25:
+    system-content-4747: system-content-4867
+    features: features
+    expanded: expanded
+    aside: aside
+    mainbar: mainbar
+    sidebar: sidebar
+  18:
+    utility: utility
+    above: above
+    testimonials: testimonials

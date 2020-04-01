@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<extension type = "module" version = "3.1.0" client = "site" method="upgrade">
+
+    <name>Exercises Form</name>
+    <author>Adam Hider</author>
+    <version>1.0.0</version>
+    <description>A simple Exercises Form module.</description>
+
+    <media folder="css-compiled" destination="mod_exercise_form">
+        <folder>./media/gantry5/engines/nucleus/css-compiled</folder>
+    </media>
+    <files>
+        <filename>mod_exercise_form.xml</filename>
+        <filename module = "mod_exercise_form">mod_exercise_form.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+		<folder>language</folder>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+    </files>
+   
+    <config>
+        
+    </config>
+    
+    <languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.mod_exercise_form.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_exercise_form.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_exercise_form.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_exercise_form.ini</language>
+    </languages>
+</extension>

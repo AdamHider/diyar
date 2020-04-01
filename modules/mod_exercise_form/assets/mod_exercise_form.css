@@ -1,0 +1,396 @@
+#g-intro.exercise-container , .exercise-container .g-content{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.question-panel, .answer-panel,
+.questionvalue-panel, .answervalue-panel{
+    margin: 0 15px;
+}
+
+.questionvalue-block,
+.answervalue-block{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 88% 10%;
+    grid-column-gap: 2%;
+    padding: 0.5em;
+}
+.questionvalue-clarification,
+.answervalue-clarification{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-column-gap: 2%;
+}
+
+.questionvalue-clarification textarea,
+.answervalue-clarification textarea
+{
+    resize: none;
+    overflow:hidden;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid #65d62e;
+}
+
+.correct{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 40%;
+}
+
+@media all and (max-width: 700px){
+   
+}
+
+#exercise-manager-body div,
+#exercise-manager-body span,
+#exercise-manager-body label
+{
+    transition: 0.3s ease;
+}
+
+.questions-list{
+    margin: 0% 2%;
+    white-space: nowrap;
+}
+
+
+/*======== QUESTION LIST ===========*/
+.exercise-form,
+.exercise-view{
+    padding: 2em;
+    background-color: white;
+    border: 1px solid lightgray;
+    display: block;
+    width: 65%;
+    margin: 1em auto;
+    
+}
+
+.action-block{
+    text-align: center;
+}
+
+.question-name{
+    display: inline-block;
+    font-weight: bold;
+    color: #45822f;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.question-clarification label, .question-clarification input {
+    max-width: 40%;
+}
+
+.question-block{
+    border-bottom: 1px solid #eaeaea;
+    padding: 0.5vw 0.5vw;
+    border-left: 1px solid white;
+}
+
+.answer-block:hover .inputGroup{
+    background-color: #e3ffd9;
+    /*box-shadow: 0px 0px 1px 2px #5dc53b;*/
+}
+
+.questionvalue-panel h4{
+    padding: 0px;
+    margin: 0;
+}
+
+label{
+    font-size: 14px;
+    color: gray;
+}
+
+.question-clarification label:hover .question-clarification .label-description,
+.question-relevance label:hover .question-relevance .label-description{
+    display: block !important;
+}
+
+/*=========ANSWER LIST========*/
+
+.answer-list{
+    
+}
+
+.answer-block{
+    margin-top: 10px;
+    margin: 0.5em 1.2em;
+}
+.answer-panel{
+    padding: 10px;
+}
+
+
+/*=======INPUT BLOCK========*/
+
+.inputGroup {
+    background-color: #fff;
+    display: block;
+    margin: 10px 0;
+    position: relative;
+}
+.inputGroup label {
+    padding: 12px 30px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    color: #3C454C;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 200ms ease-in;
+    overflow: hidden;
+}
+.inputGroup label::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    content: '';
+    background-color: #60cb37;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 0;
+    z-index: -1;
+}
+
+.inputGroup label::after {
+    width: 32px;
+    height: 32px;
+    content: '';
+    border: 2px solid #D1D7DC;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: 2px 3px;
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+input:checked ~ label {
+      color: #fff;
+}
+
+input:checked ~ label:before {
+  transform: translate(-50%, -50%) scale3d(110, 110, 1);
+  opacity: 1;
+}
+
+input:checked ~ label:after {
+    background-color: #6ECE4A;
+    border-color: #FFF;
+    box-shadow: 1px 1px 4px #0000007d;
+}
+
+.inputGroup input {
+    width: 32px;
+    height: 32px;
+    order: 1;
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    visibility: hidden;
+}
+
+/*======= VIEW PAGE ========*/
+
+.exercise-result .answer-panel{
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.answer-block {
+    position: relative;
+}
+
+.answer-block.wrong-answer {
+    
+}
+
+.answer-block.user-choice,
+.answer-block.true-answer{
+    font-weight: bold;
+}
+
+.answer-block.wrong-answer.user-choice{
+    color: #e31414;
+}
+
+.answer-block.wrong-answer.user-choice i.check{
+    background-color: #e31414;
+}
+
+.answer-block.true-answer.user-choice{
+    color: #5fc839 !important;
+}
+
+.answer-block.true-answer.user-choice i.check{
+    background-color: #6ECE4A;
+}
+
+.answer-block.true-answer{
+    color: #5fc839;
+}
+
+.answer-block i.check{
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+    width: 30px;
+    height: 30px;
+    box-shadow: 1px 1px 4px #000000eb;
+    border: 2px solid #FFF;
+    background-position: 1px 2px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.5em 4px;
+}
+
+
+.answer-block.wrong-answer .answer-text{
+    
+}
+
+.answer-block.true-answer{
+    color: #a4a4a4;
+}
+
+.answer-points{
+    display: inline-block;
+    color: gold;
+    font-size: 25px;
+    text-shadow: 1px 1px 0px #b16b09;
+    font-family: Arial Black;
+    line-height: 1em;
+    vertical-align: middle;
+    margin-left: 0.3em;
+}
+
+.answer-points b{
+    vertical-align: middle;
+}
+
+.answer-points img{
+    margin-bottom: 2px;
+}
+
+
+.total-points-row .total-header,
+.total-points-row .total-level{
+    color: #fff;
+    text-shadow: 1px 1px 1px #131313d4;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-family: Arial Black;
+}
+
+.total-points .total-level{
+    font-size: 1.8em;
+    
+}
+
+.total-points{
+    text-align: center;
+    background-image: url('/diyar/images/exercise_engine/medal_background.jpg');
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+    padding-top: 14%;
+    padding-bottom: 1%;
+    box-shadow: inset 1px -2px 13px #0000003d;
+}
+.total-points .total-title{
+    font-weight: bold;
+    color: #43a412;
+    padding: 1em;
+    width: 80%;
+    margin: auto;
+    display: none;
+}
+
+.total-points .medal{
+    width: 11%;
+    position: absolute;
+    top: -10%;
+    left: 44.5%;
+}
+
+.exercise-title{
+    text-align: center;
+}
+
+.total-points h4{
+    margin: 0px;
+}
+
+.total-points .point-block{
+    font-size: 1.5em;
+    line-height: 2.3em;
+    display: inline-block;
+    position: relative;
+    margin: 0.5em;
+    margin-top: 0;
+}
+
+.total-points .point-block span,
+.total-points .point-block img{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.total-points .point-block .total-real-points{
+    text-shadow: 1px 1px 0px #b16b09;
+    font-family: Arial Black;
+    color: #f8da25;
+    font-size: 1.8em;
+}
+.total-points .point-block .total-max{
+    text-shadow: 1px 1px 0px #b16b09;
+    color: #f8da25;
+    font-family: Arial Black;
+    font-size: 1.2em;
+}
+
+.total-points .point-block img{
+    position: absolute;
+    top: 0.4em;
+    right: 100%;
+}
+
+.total-points.super .point-block .total-real-points{
+    text-shadow: 1px 1px 0px #b16b09;
+    color: #f8da25;
+}
+.total-points.good .point-block .total-real-points{
+    text-shadow: 1px 1px 0px #b16b09;
+    color: #f8da25;
+}
+.total-points.pre-good .point-block .total-real-points{
+    text-shadow: 1px 1px 0px #b16b09;
+    color: #f8da25;
+}
+.total-points.normal .point-block .total-real-points{
+    color: #eaad1e;
+}
+.total-points.pre-normal .point-block .total-real-points{
+    color: #eaad1e;
+}
+.total-points.bad .point-block .total-real-points{
+    color: #d03f30;
+}
+
+

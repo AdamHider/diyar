@@ -1,0 +1,123 @@
+#classroom-body{
+    font-size: 15px;
+}
+#tabs {
+    overflow: hidden;
+    margin: 0px;
+}
+a {cursor:pointer;}
+
+
+#tabs li {
+    float:left; 
+    list-style:none; 
+    outline:none;
+}
+
+#tabs li a {
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1em;
+    transition: 0.3s;
+    background-color: #45b71b;
+    color: white;
+    font-weight: bold;
+    border-bottom: 5px solid #45b71b;
+}
+
+#tabs li a.inactive{
+    background-color: #38991d;
+    border: none;
+    margin-top: 5px;
+}
+
+#tabs li a:hover, #tabs li a.inactive:hover {
+    background-color: #7cce5f;
+}
+
+.container {
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.container h2 { 
+    margin-left: 15px;  
+    margin-right: 15px;  
+    margin-bottom: 10px; 
+    color: #5685bc; 
+}
+
+.container p { 
+    margin-left: 15px; 
+    margin-right: 15px;  
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    line-height: 1.3; 
+    font-size: small; 
+}
+
+.container ul { 
+    margin-left: 25px; 
+    font-size: small; 
+    line-height: 1.4; 
+    list-style-type: disc; 
+}
+
+.container li { 
+    padding-bottom: 5px; 
+    margin-left: 5px;
+}
+
+
+
+/* Style the accordion panel. Note: hidden by default */
+
+.student-list .diyar-row .column{
+    
+}
+
+.student-list:last-child .diyar-row{
+    border-bottom: none;
+}
+
+
+.diyar-row,
+.first-row {
+    padding: 0.5em;
+}
+
+.student-list-head{
+    background-color: #f1f1f1;
+    padding: 1em;
+    font-weight: bold;
+}
+
+.username{
+    margin-left: 5px;
+}
+
+.first-row label{
+    margin-bottom: 0px;
+}
+
+.student-list .current-user{
+    background-color: lightblue;
+}
+
+.student-list .first-row,
+.student-list .diyar-row{
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    border-bottom: 1px solid lightgray;
+}
+
+.student-list .diyar-row .column{
+    border-right: 1px solid lightgray;
+    padding: 0.5em;
+}
+
+.student-list .diyar-row .column:last-child{
+    border-right: none;
+}

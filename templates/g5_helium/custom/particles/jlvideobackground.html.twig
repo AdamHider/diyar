@@ -1,0 +1,26 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ url('gantry-theme://css/jquery.mb.YTPlayer.min.css') }}" type="text/css"/>
+{% endblock %}
+
+{% block javascript_footer %}
+{% do gantry.load('jquery') %}
+  <script src="{{ url('gantry-theme://js/jquery.mb.YTPlayer.min.js') }}"></script>
+  <script>
+      jQuery(function($) {
+          {% for item in particle.items %}
+          {% if item.opacity matches '/^[-+]?[0-9]*\\.?[0-9]+$/' %}
+              {% set opacity = item.opacity %}
+          {% else %}
+              {% set opacity = 1 %}
+          {% endif %}
+              var data = "{videoURL: '{{item.url}}',addRaster:true,containment:'#{{item.element}}',startAt: {{item.start}},vol: {{item.vol }}, mute: {{item.vol == 0 ? 'true' : 'false'}}, addRaster: {{item.addraster == 1 ? 'true' : 'false'}}, showControls: {{item.controls  ? 'true' : 'false'}}, autoPlay: {{item.autoplay ? 'true' : 'false'}}, loop: {{item.loop == 0 ? 'false' : item.loop}}, showYTLogo: {{item.logo ? 'true' : 'false'}}, stopMovieOnBlur: {{item.stopvideo ? 'true' : 'false'}}, quality: '{{item.quality}}', ratio: '{{item.ratio}}', opacity: '{{opacity}}'}";
+              var $div = $('<div />').appendTo('body');
+              $div.attr('id', 'jl-background-container');
+              $div.attr('data-property',data);
+          {% endfor %}
+          $("#jl-background-container").YTPlayer();
+      });
+  </script>
+{% endblock %}

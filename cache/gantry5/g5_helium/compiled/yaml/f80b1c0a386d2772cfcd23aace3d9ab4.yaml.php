@@ -2,13 +2,13 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:/iSell/www/diyar/templates/g5_helium/gantry/theme.yaml',
-    'modified' => 1563522857,
+    'modified' => 1584945590,
     'data' => [
         'details' => [
             'name' => 'Helium',
-            'version' => '5.4.29',
+            'version' => '5.4.32',
             'icon' => 'paper-plane',
-            'date' => 'June 21, 2019',
+            'date' => 'January  2, 2020',
             'author' => [
                 'name' => 'RocketTheme, LLC',
                 'email' => 'support@rockettheme.com',

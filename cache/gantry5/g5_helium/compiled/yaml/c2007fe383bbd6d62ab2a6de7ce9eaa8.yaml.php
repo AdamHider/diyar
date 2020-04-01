@@ -2,10 +2,10 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:/iSell/www/diyar/templates/g5_helium/custom/config/14/index.yaml',
-    'modified' => 1568362021,
+    'modified' => 1584946676,
     'data' => [
         'name' => 14,
-        'timestamp' => 1568362021,
+        'timestamp' => 1584945590,
         'version' => 7,
         'preset' => [
             'image' => 'gantry-admin://images/layouts/default.png',
@@ -36,39 +36,45 @@ return [
             ],
             'logo' => [
                 'logo-5571' => 'Logo / Image',
-                'logo-1144' => 'Logo / Image'
+                'logo-4015' => 'Logo / Image',
+                'logo-2999' => 'Logo / Image'
             ],
             'menu' => [
                 'menu-6097' => 'Menu'
             ],
-            'social' => [
-                'social-2035' => 'Social'
+            'custom' => [
+                'custom-7115' => 'Header Greetings',
+                'custom-6963' => 'Header Icons',
+                'custom-7643' => 'About Us',
+                'custom-8640' => 'Features',
+                'custom-3267' => 'Join Us',
+                'custom-2297' => 'Social',
+                'custom-7183' => 'Logo And Descrıptıon',
+                'custom-3360' => 'Footer Menu',
+                'custom-7504' => 'Contact',
+                'custom-3748' => 'Copyright and Policies',
+                'custom-3783' => 'Develop CMS themes quickly',
+                'custom-5063' => 'Social Share'
+            ],
+            'owlcarousel' => [
+                'owlcarousel-8554' => 'Header Carousel'
             ],
             'module' => [
-                'position-module-6835' => 'Module Instance',
-                'position-module-8479' => 'Module Instance'
+                'position-module-5365' => 'Complex Header',
+                'position-module-3433' => 'Module Instance'
             ],
-            'custom' => [
-                'custom-6019' => 'Custom HTML',
-                'custom-3748' => 'Custom HTML',
-                'custom-8640' => 'Features',
-                'custom-6447' => 'Customer Testimonials',
-                'custom-3783' => 'Develop CMS themes quickly'
+            'spacer' => [
+                'spacer-5222' => 'Spacer',
+                'spacer-4416' => 'Spacer'
             ],
-            'horizontalmenu' => [
-                'horizontalmenu-5487' => 'Horizontal Menu'
-            ],
-            'totop' => [
-                'totop-3746' => 'To Top'
+            'mobile-menu' => [
+                'mobile-menu-7896' => 'Mobile-menu'
             ],
             'contenttabs' => [
                 'contenttabs-7571' => 'Content Tabs'
             ],
             'contentcubes' => [
                 'contentcubes-3323' => 'Content Cubes'
-            ],
-            'mobile-menu' => [
-                'mobile-menu-5934' => 'Mobile-menu'
             ],
             'position' => [
                 'position-position-8941' => 'Aside'
@@ -78,25 +84,18 @@ return [
             'default' => [
                 'system-messages-1962' => 'system-messages-4409',
                 'logo-5571' => 'logo-8554',
-                'social-2035' => 'social-5236',
-                'position-module-6835' => 'position-module-5422',
-                'intro' => 'intro',
-                'features' => 'features',
+                'custom-8640' => 'custom-3119',
+                'position-module-3433' => 'position-module-2306',
                 'utility' => 'utility',
                 'above' => 'above',
-                'testimonials' => 'testimonials',
                 'expanded' => 'expanded',
                 'mainbar' => 'mainbar',
                 'sidebar' => 'sidebar',
-                'logo-1144' => 'logo-8554',
-                'offcanvas' => 'offcanvas',
-                'position-module-8479' => 'position-module-2306',
-                'custom-8640' => 'custom-3119',
+                'logo-2999' => 'logo-9504',
                 'contenttabs-7571' => 'contenttabs-3854',
                 'contentcubes-3323' => 'contentcubes-7850',
-                'custom-6447' => 'custom-7658',
                 'custom-3783' => 'custom-6355',
-                'mobile-menu-5934' => 'mobile-menu-9030'
+                'custom-5063' => 'custom-6291'
             ],
             9 => [
                 'aside' => 'aside',

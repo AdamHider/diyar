@@ -9,32 +9,66 @@ defined('_JEXEC') or die;
 ?>
 
 <div class="lugat-input-container">
-        <input id="search-input" type="text"  placeholder="Type your text... " oninput="autocompleteGo(this.value)"
+    <div class="lugat-description">
+        <h2><?php echo JText::_('MOD_LUGAT_DESCRIPTION_TITLE'); ?></h2>
+        <p><?php echo JText::_('MOD_LUGAT_DESCRIPTION_TEXT'); ?></p>
+    </div>
+    <div class="lugat-input">
+        
+        <input id="search-input" type="text"  placeholder=" <?php echo JText::_('MOD_LUGAT_INPUT_PLACEHOLDER'); ?>" 
+        oninput="autocompleteGo(this.value)"
+        onfocus="autocompleteGo(this.value)"
          <?php if(!empty($lugat['translation']['query_word'])){  ?>
            value="<?php  echo  $lugat['translation']['query_word'] ?>"
          <?php }  ?>   
            >
+        <div class="input-notification" style="display: none"> <?php echo JText::_('MOD_LUGAT_ENTER_WORD'); ?></div>   
+        <div id="special-symbols" style="display: none">
+            <input class='input-letter button' type='button' onclick="enterSpecificLetter(this.value);" value='â'/>
+            <input class='input-letter button' type='button' onclick="enterSpecificLetter(this.value);" value='ö'/>
+            <input class='input-letter button' type='button' onclick="enterSpecificLetter(this.value);" value='ü'/>
+            <input class='input-letter button' type='button' onclick="enterSpecificLetter(this.value);" value='ı'/>
+            <input class='input-letter button' type='button' onclick="enterSpecificLetter(this.value);" value='ğ'/>
+            <input class='input-letter button' type='button' onclick="enterSpecificLetter(this.value);" value='ş'/>
+            <input class='input-letter button' type='button' onclick="enterSpecificLetter(this.value);" value='ç'/>
+            <input class='input-letter button' type='button' onclick="enterSpecificLetter(this.value);" value='ñ'/>
+        </div>
+        <button  id='search-button'  class="button" onclick="goToDict(); return false">
+            <?php echo JText::_('MOD_LUGAT_TRANSLATE_BUTTON'); ?>
+            <i class="fa fa-search fa-lg"></i> 
+        </button> 
+    </div>
 </div>
 
-<button  id='search-button'  class="button" onclick="goToDict(); return false">
-    translate
-    <i class="fa fa-search fa-lg"></i> 
-</button> 
+
 
 <script>
-    
     var countries = [];
     var current_letter = '';
     
-
+    function init(){
+        document.addEventListener("click", function (e) {
+            if(e.target.id !== 'search-input'){
+                if(e.target.id !== 'special-symbols' && e.target.className !== 'input-letter button'){
+                    document.getElementById("special-symbols").style.display = "none";
+                }
+                closeAllLists(document);
+            }
+        });
+    }
+    
+    
     jQuery.noConflict();
     function goToDict() {
         var word = jQuery('#search-input').val();
         if(word == ''){
-            alert('Enter a word');
+            jQuery('#search-input').css('border', '1px solid #ff7373');
+            jQuery('#search-input').css('box-shadow', '0px 0px 7px #f25e5e');
+            jQuery('.input-notification').show();
             return;
         }
-        location.replace(location.pathname+"/language/dictionary?word=" + word);
+        jQuery('.input-notification').hide();
+        location.replace("index.php<?php echo JText::_('MOD_LUGAT_LINK'); ?>?word=" + word);
         return;
     }
     ;
@@ -45,18 +79,42 @@ defined('_JEXEC') or die;
     ;
 
     function autocompleteGo(word){
+        renderSpecificLetters();
         jQuery.ajax({
-            url: "index.php?option=com_ajax&module=lugat&method=autocomplete&format=json",
+            url: "index.php?option=com_ajax&module=lugat_searchbar&method=autocomplete&format=json",
             type: "POST",
             data: {word: word},
             success: function (response){
                 countries = response.data;
                 autocomplete(document.getElementById('search-input'), countries);
+                
             }
         });
         
     }
     
+function renderSpecificLetters(){
+    var special_symbols = document.getElementById("special-symbols");
+    
+    special_symbols.style.display = "grid";
+    
+}
+
+function enterSpecificLetter(letter){
+    var inp = document.getElementById("search-input");
+    inp.value += letter;
+    inp.focus();
+    autocompleteGo(inp.value);
+    return false;
+}
+function closeAllLists() {
+    /*close all autocomplete lists in the document,
+     except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+            x[i].parentNode.removeChild(x[i]);
+    }
+}
    
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
@@ -71,6 +129,11 @@ function autocomplete(inp, arr) {
     a = document.createElement("DIV");
     a.setAttribute("id", inp.id + "autocomplete-list");
     a.setAttribute("class", "autocomplete-items");
+    
+
+    
+    
+    
     /*append the DIV element as a child of the autocomplete container:*/
     inp.parentNode.appendChild(a);
     /*for each item in the array...*/
@@ -83,19 +146,23 @@ function autocomplete(inp, arr) {
     for (i = 0; i < arr.length; i++) {
         /*check if the item starts with the same letters as the text field value:*/
             /*create a DIV element for each matching element:*/
+            
             b = document.createElement("DIV");
+            b.setAttribute("class", "autocomplete-item");
             /*make the matching letters bold:*/
             b.innerHTML = arr[i].word;
             /*insert a input field that will hold the current array item's value:*/
-            b.innerHTML += "<input type='hidden' value='" + arr[i].word + "'>";
+            b.innerHTML += "<input class='suggest-input' type='hidden' value='" + arr[i].word + "'>";
             /*execute a function when someone clicks on the item value (DIV element):*/
             b.addEventListener("click", function (e) {
                 
                 /*insert the value for the autocomplete text field:*/
-                inp.value = this.getElementsByTagName("input")[0].value;
+                inp.value = this.getElementsByClassName("suggest-input")[0].value;
+                goToDict();
                 /*close the list of autocompleted values,
                  (or any other open lists of autocompleted values:*/
                 closeAllLists();
+                return;
             });
             if (limit > 6) {
                 break;
@@ -107,7 +174,7 @@ function autocomplete(inp, arr) {
     inp.addEventListener("keydown", function (e) {
         var x = document.getElementById(inp.id + "autocomplete-list");
         if (x)
-            x = x.getElementsByTagName("div");
+            x = x.getElementsByClassName("autocomplete-item");
         if (e.keyCode == 40) {
             /*If the arrow DOWN key is pressed,
              increase the currentFocus variable:*/
@@ -149,26 +216,15 @@ function autocomplete(inp, arr) {
             x[i].classList.remove("autocomplete-active");
         }
     }
-    function closeAllLists(elmnt) {
-        /*close all autocomplete lists in the document,
-         except the one passed as an argument:*/
-        var x = document.getElementsByClassName("autocomplete-items");
-        for (var i = 0; i < x.length; i++) {
-            if (elmnt != x[i] && elmnt != inp) {
-                x[i].parentNode.removeChild(x[i]);
-            }
-        }
-    }
+    
     function renderEmptySuggest(a){
         b = document.createElement("DIV");
         b.innerHTML = '<i>No results!</i>';
         a.appendChild(b);
     }
-    /*execute a function when someone clicks in the document:*/
-    document.addEventListener("click", function (e) {
-        closeAllLists(e.target);
-    });
     
 }
+
+    init();
 </script>
 

@@ -8,7 +8,7 @@
     
     $document->addStyleSheet('modules/mod_lugat_searchbar/assets/mod_lugat_searchbar.css');
     
-    $lang = JFactory::getLanguage();
+    $language = JFactory::getLanguage();
     // Include the syndicate functions only once
     require_once dirname(__FILE__) . '/helper.php';
     

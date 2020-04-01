@@ -1,0 +1,218 @@
+#g-intro.exercise-container , .exercise-container .g-content{
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+input{
+    width: auto !important;
+}
+
+.exercise-list{
+    text-align: center;
+}
+
+.exercise_group .group-content{
+    display: grid;
+    grid-column-gap: 1%;
+    grid-template-columns: 19% 19% 19% 19% 19%;
+}
+.exercise-block{
+    background-color: white;
+    border: 1px solid lightgray;
+    text-align: center;
+    padding: 7vh 0em;
+    position: relative;
+    transition: 0.3s all;
+}
+
+.exercise-block:hover{
+    box-shadow: 1px 1px 10px #00000063;
+}
+
+.exercise-image{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.exercise-name{
+    font-size: 15px;
+    position: relative;
+}
+
+.exercise-name p{
+    min-height: 1.5em;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+}
+.exercise-name:hover label{
+    display: block;
+}
+.exercise-name label{
+    position: absolute;
+    display: none;
+    width: 80%;
+    top: 1.5em;
+    left: 10%;
+    z-index: 100;
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 0.5em;
+}
+
+
+.exercise-block.novice-difficulty{
+    
+}
+
+.exercise-block.easy-difficulty{
+    
+}
+
+.exercise-block.medium-difficulty{
+    
+}
+
+.exercise-block.hard-difficulty{
+    
+}
+
+.exercise-block.master-difficulty{
+    
+}
+
+.is-homework{
+    border: 2px solid gold !important;
+}
+
+
+
+.exercise-is-passed{
+    
+}
+
+.exercise-is-passed .points{
+    
+}
+
+.exercise-action{
+    margin: 1em;
+}
+
+.exercise-action .button,
+.exercise-new-version .button{
+    width: 80% !important;
+}
+
+.exercise-is-passed{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.exercise-new-version{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    padding: 0.5em;
+    text-align: left;
+}
+
+.exercise-points .points{
+    position: relative;
+}
+
+.points  .total-real-points{
+    text-shadow: 1px 1px 0px #b16b09;
+    font-family: Arial Black;
+    color: #f8da25;
+    font-size: 2em;
+}
+.points  .total-max{
+    text-shadow: 1px 1px 0px #b16b09;
+    color: #f8da25;
+    font-family: Arial Black;
+    font-size: 1.6em;
+}
+
+.points img{
+    position: absolute;
+    top: 17px;
+    margin: 0 3px;
+}
+
+.exercise-is-passed-container{
+    position: relative;
+}
+
+.exercise-new-version:hover label{
+    display: block !important;
+}
+
+.exercise-is-passed-container:hover label{
+    display: block !important;
+}
+
+.exercise-new-version label, 
+.exercise-is-passed-container label{
+    position: absolute;
+    display: none;
+    width: 90%;
+    top: 100%;
+    left: 10%;
+    z-index: 100;
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 0.5em;
+}
+
+.is-passed-action .fa-check{
+    padding: 0.5em;
+    background-color: #65d62e;
+    vertical-align: top;
+    color: white;
+    border-bottom-right-radius: 5px;
+}
+.is-passed-action .fa-eye{
+    padding: 0.5em;
+}
+
+.is-passed{
+    border: 2px solid #65d62e;
+}
+
+.edit-button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 !important;
+    padding: 0.4em 0.9em;
+    background-color: #65d62e;
+    color: white;
+    border-top-left-radius: 5px;
+}
+
+.button-exercise-new-version{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.passed-button{
+    padding: 0.5em;
+}
+
+@media all and (max-width: 700px){
+    
+}
+
+
+
+
+
+
+

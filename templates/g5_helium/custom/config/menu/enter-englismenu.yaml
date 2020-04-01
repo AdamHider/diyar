@@ -1,7 +1,8 @@
 ordering:
   home-english: ''
   lang:
-    dictionary: ''
+    dictionary:
+      edit-dictionary: ''
     education:
       grammar: ''
       pronunciation: ''
@@ -13,10 +14,32 @@ ordering:
     postkhan_period: ''
     soviet_period: ''
     xxi_century: ''
+  culture:
+    traditions: ''
+    lifestyle: ''
+    music: ''
+    literature: ''
+    art: ''
+    religion: ''
+  books:
+    educational_literature: ''
+    historical_literature: ''
+    culture_literature: ''
+    for_children: ''
+    fiction: ''
+    biographies: ''
+  other:
+    discussions: ''
+    downloads: ''
+    gallery: ''
+    partners: ''
+    about_us: ''
   __module-7yXP8: ''
   login-register: ''
   logout: ''
   contact_us: ''
+  terms_of_use: ''
+  privacy_policy: ''
 items:
   home-english:
     id: 109
@@ -24,6 +47,11 @@ items:
     id: 113
   lang/dictionary:
     id: 111
+    dropdown_dir: right
+    dropdown_hide: '1'
+    width: auto
+  lang/dictionary/edit-dictionary:
+    id: 205
   lang/education:
     id: 115
   lang/education/grammar:
@@ -46,12 +74,56 @@ items:
     id: 132
   history/xxi_century:
     id: 133
+  culture:
+    id: 141
+  culture/traditions:
+    id: 142
+  culture/lifestyle:
+    id: 143
+  culture/music:
+    id: 144
+  culture/literature:
+    id: 145
+  culture/art:
+    id: 146
+  culture/religion:
+    id: 147
+  books:
+    id: 159
+  books/educational_literature:
+    id: 160
+  books/historical_literature:
+    id: 161
+  books/culture_literature:
+    id: 162
+  books/for_children:
+    id: 163
+  books/fiction:
+    id: 164
+  books/biographies:
+    id: 165
+  other:
+    id: 174
+  other/discussions:
+    id: 155
+  other/downloads:
+    id: 176
+  other/gallery:
+    id: 157
+  other/partners:
+    id: 177
+  other/about_us:
+    id: 200
   login-register:
     id: 180
   logout:
     id: 184
   contact_us:
     id: 185
+  terms_of_use:
+    id: 201
+  privacy_policy:
+    id: 202
   __module-7yXP8:
     type: particle
     particle: module
@@ -64,4 +136,5 @@ items:
       block:
         class: home-lang-switcher
         extra: {  }
-    enabled: '1'
+    enabled: true
+    anchor_class: ''

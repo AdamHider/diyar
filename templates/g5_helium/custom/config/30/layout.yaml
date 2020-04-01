@@ -1,0 +1,160 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1563522857
+layout:
+  navigation: {  }
+  /header/:
+    -
+      - custom-6394
+  /intro/:
+    -
+      - position-module-1327
+    -
+      - 'system-content-8976 70'
+      - 'position-module-2292 30'
+  /features/: {  }
+  utility: {  }
+  above: {  }
+  testimonials: {  }
+  expanded: {  }
+  /container-main/:
+    -
+      -
+        'aside 25': {  }
+      -
+        'mainbar 50': {  }
+      -
+        'sidebar 25': {  }
+  footer: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: '9'
+      include:
+        - attributes
+        - children
+  header:
+    attributes:
+      boxed: ''
+      class: 'background-image-section article-header parallax-background'
+      variations: ''
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+      class: article-container
+      variations: ''
+  features:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  utility:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  above:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  testimonials:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  expanded:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  aside:
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+    block:
+      fixed: '1'
+  mainbar:
+    type: section
+    subtype: main
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+  sidebar:
+    type: section
+    subtype: aside
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+    block:
+      fixed: '1'
+  container-main:
+    attributes:
+      boxed: ''
+      class: ''
+      extra: {  }
+  footer:
+    inherit:
+      outline: '9'
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: '9'
+      include:
+        - attributes
+        - children
+content:
+  custom-6394:
+    title: 'Header Text'
+    attributes:
+      html: "<h2>Traditions</h2>\n<div class=\"additional-text\">Traditions of Crimean Tatars start from существований их общей родины - Крымского Ханства. С тех пор их культура и быт приобретала и мусульманский, и европейский оттенок. Однако, при этом, они сумели сохранить самобытность и неповторимость.</div>"
+    block:
+      class: header-text
+  position-module-1327:
+    title: Breadcrumb
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+      particle: position-module-3745
+  system-content-8976:
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+      particle: system-content-4867
+  position-module-2292:
+    title: 'Latest Articles'
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+      particle: position-module-3531

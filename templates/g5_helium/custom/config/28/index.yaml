@@ -1,0 +1,80 @@
+name: 28
+timestamp: 1584945590
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1563522857
+positions:
+  aside: Aside
+  sidebar: Sidebar
+sections:
+  navigation: Navigation
+  intro: Intro
+  features: Features
+  utility: Utility
+  above: Above
+  testimonials: Testimonials
+  expanded: Expanded
+  header: Header
+  aside: Aside
+  sidebar: Sidebar
+  mainbar: Mainbar
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  module:
+    position-module-5375: 'Module Instance'
+  messages:
+    system-messages-8189: 'System Messages'
+  logo:
+    logo-4265: 'Logo / Image'
+    logo-3529: 'Logo / Image'
+  menu:
+    menu-4547: Menu
+  custom:
+    custom-1650: Social
+    custom-7502: 'Logo And Descrıptıon'
+    custom-7334: 'Footer Menu'
+    custom-9225: Contact
+    custom-9538: 'Copyright and Policies'
+  spacer:
+    spacer-8681: Spacer
+    spacer-2859: Spacer
+  mobile-menu:
+    mobile-menu-3078: Mobile-menu
+  position:
+    position-position-9109: Aside
+    position-position-4263: Sidebar
+  content:
+    system-content-3839: 'Page Content'
+inherit:
+  9:
+    navigation: navigation
+    footer: footer
+    offcanvas: offcanvas
+    system-messages-8189: system-messages-8776
+    logo-4265: logo-9531
+    menu-4547: menu-4597
+    custom-1650: custom-2297
+    custom-7502: custom-7183
+    spacer-8681: spacer-5222
+    custom-7334: custom-3360
+    spacer-2859: spacer-4416
+    custom-9225: custom-7504
+    custom-9538: custom-3748
+    logo-3529: logo-9504
+    mobile-menu-3078: mobile-menu-9030
+  17:
+    header: header
+    features: features
+    utility: utility
+    above: above
+    testimonials: testimonials
+    expanded: expanded
+    aside: aside
+    mainbar: mainbar
+    sidebar: sidebar
+    position-position-9109: position-position-4734
+    system-content-3839: system-content-1587
+    position-position-4263: position-position-3949

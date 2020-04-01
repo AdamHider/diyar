@@ -1,0 +1,28 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+{% if particle.enabled %}
+
+{% set url = url(particle.url)|default(gantry.siteUrl()) %}
+{% if (url == gantry.siteUrl()) %}{% set rel='rel="home"' %}{% endif %}
+{% set class=(particle.class ? 'class="'~ particle.class ~'"') %}
+{% if particle.link == true %}
+<a href="{{ url }}" target="{{ particle.target|default('_self') }}" title="{{ particle.text }}" {{ rel|default('')|raw }} class="jl-logo jl-link-reset">
+{% else %}<div {{ class|default('')|raw }}>{% endif %}
+{% if particle.logo_type == 'svg' %}
+<img src="{{ url(particle.image) }}" alt="{{ particle.text }}" jl-svg>
+{% elseif particle.logo_type == 'image' %}
+<img src="{{ url(particle.image) }}" alt="{{ particle.text }}">
+{% else %}
+{{ particle.text|default('Logo') }}
+{% endif %}
+{% if particle.link == true %}</a>{% else %}</div>{% endif %}
+{% if particle.logo_description %}
+<div class="jl-width-large" jl-drop="pos: {{particle.description_position}};{% if particle.description_animation != 'inherit' %} animation: jl-animation-{{particle.description_animation}}; duration: 500{% endif %}">
+<div class="jl-drop-grid jl-width-{{ particle.description_grid_width }}@{{ particle.description_grid_breakpoint|e }}" jl-grid>
+<div class="jl-card jl-card-{{ particle.style }}{% if particle.cardsize != 'default' %} jl-card-{{ particle.cardsize }}{% endif %} jl-card-body jl-margin-remove-first-child">{{particle.logo_description|raw}}</div>
+</div>
+</div>
+{% endif %}
+{% endif %}
+{% endblock %}

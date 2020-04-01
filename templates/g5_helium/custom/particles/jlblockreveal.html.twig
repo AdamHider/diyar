@@ -1,0 +1,22 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block javascript_footer %}
+<script src="{{ url('gantry-theme://js/reveal.js') }}"></script>
+<script>
+{% for item in particle.items %}
+var scrollElemToWatch{{loop.index}} = document.getElementById('{{item.cssid}}'),
+watcher{{loop.index}} = scrollMonitor.create(scrollElemToWatch{{loop.index}}),
+{{item.cssid|trim|replace({"-" : "_"})}} = new RevealFx(scrollElemToWatch{{loop.index}}, {
+  revealSettings : { {% if item.bgcolor %}bgcolor: '{{item.bgcolor}}',{% endif %}direction: '{{item.direction}}',{% if item.duration %}duration: {{item.duration}},{% endif %}easing: '{{item.easing}}',
+  onCover: function(contentEl, revealerEl) {
+    contentEl.style.opacity = 1;
+  }
+}
+});
+watcher{{loop.index}}.enterViewport(function() {
+  {{item.cssid|trim|replace({"-" : "_"})}}.reveal();
+  watcher{{loop.index}}.destroy();
+});
+{% endfor %}
+</script>
+{% endblock %}

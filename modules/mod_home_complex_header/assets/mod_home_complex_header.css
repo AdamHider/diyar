@@ -1,0 +1,24 @@
+.complex-header, .background-image-holder{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.background-container{
+    position: relative;
+}
+.background-image-holder{
+    width: 100vw;
+    height: 125vh;
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
+}
+
+.background-image{
+    background-size: cover;
+    z-index: -1;
+}
+
+.foreground-image{
+    background-position: bottom;
+}

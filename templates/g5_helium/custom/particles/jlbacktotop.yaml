@@ -1,0 +1,44 @@
+name: JL Back To Top
+description: Show a scroll back to top button
+type: atom
+form:
+  overrideable: false
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+    icon_brand:
+      type: separator.note
+      class: alert alert-info
+      content: 'Just add the Uikit icon name below to display the actual icon, e.g: arrow-up, see more <a href="https://getuikit.com/docs/icon" target="_blank">UIkit Icon</a>'
+    icon:
+      type: input.text
+      label: Icon
+      default : arrow-up
+      placeholder: arrow-up
+    background:
+      type: input.colorpicker
+      label: Background Color
+      description: Customize the back to top background color.
+      default: "#1c1c1c"
+    color:
+      type: input.colorpicker
+      label: Color
+      description: Customize the back to top color.
+      default: "#ffffff"
+    backgroundhover:
+      type: input.colorpicker
+      label: Background Hover
+      description: Customize the back to top background on hover.
+      default: "#439a86"
+    icon_color:
+      type: input.colorpicker
+      label: Hover Color
+      description: Customize the back to top background on hover.
+      default: "#1c1c1c"
+    copyright:
+      type: separator.note
+      class: alert alert-info
+      content: 'JL Back To Top <strong>Version: 2.0.9</strong> Copyright (C) <a href="https://joomlead.com/" target="_blank">JoomLead</a>.'

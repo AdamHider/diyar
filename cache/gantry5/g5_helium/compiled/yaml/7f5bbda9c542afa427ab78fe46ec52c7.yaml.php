@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:/iSell/www/diyar/templates/g5_helium/blueprints/styles/link.yaml',
-    'modified' => 1563522857,
+    'modified' => 1584945590,
     'data' => [
         'name' => 'Link Colors',
         'description' => 'Link colors for the Helium theme',

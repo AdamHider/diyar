@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<extension type = "module" version = "3.1.0" client = "site" method="upgrade">
+
+    <name>Classroom Homeworks</name>
+    <author>Adam Hider</author>
+    <version>1.0.0</version>
+    <description>A classroom homeworks module.</description>
+
+    <media folder="css-compiled" destination="mod_classroom_homeworks">
+        <folder>./media/gantry5/engines/nucleus/css-compiled</folder>
+    </media>
+    <files>
+        <filename>mod_classroom_homeworks.xml</filename>
+        <filename module = "mod_classroom_homeworks">mod_classroom_homeworks.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+	<folder>language</folder>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+    </files>
+   
+    <config>
+        
+    </config>
+    
+    <languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.mod_classroom_homeworks.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_classroom_homeworks.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_classroom_homeworks.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_classroom_homeworks.ini</language>
+    </languages>
+</extension>

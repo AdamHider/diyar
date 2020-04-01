@@ -1,0 +1,117 @@
+.morphology-container{
+    margin: 1em auto;
+    width: 90%;
+}
+
+.morphology-container .morphology-table td{
+    border: 1px solid #c8c8c8;
+}
+
+.morphology-container h4{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.morphology-table{
+    display: grid;
+}
+
+.template-personilized.morphology-table{
+    grid-template-columns: auto auto auto;
+}
+
+.template-noun-plurality.morphology-table{
+    grid-template-columns: auto auto;
+}
+
+.template-noun-cases.morphology-table{
+    grid-template-columns: auto;
+}
+
+.morphology-table thead{
+    
+}
+
+.morphology-table thead td{
+    
+}
+
+.morphology-table .morphology-head-column{
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.morphology-table .morphology-column{
+    
+}
+
+.morphology-table tbody{
+    
+}
+
+.morphology-table tbody tr{
+    
+}
+
+.morphology-table tbody tr td{
+    
+}
+.morphology-row{
+    
+}
+
+.morphology-row .head-subrow .morphology-head-column,
+.morphology-row .morphology-subrow-body .morphology-head-column,
+.morphology-row .morphology-subrow-body .morphology-column{
+    border: 1px solid lightgray;
+    padding: 0.4em;
+}
+
+.template-personilized .morphology-subrow{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.morphology-row:not(:first-child) .head-subrow .morphology-head-column {
+    border: none !important;
+}
+
+.morphology-row .head-subrow{
+    display: grid;
+}
+
+
+.morphology-row:not(:first-child) .head-subrow{
+    border: 1px solid lightgray;
+}
+
+.morphology-row:not(:first-child) .morphology-subrow-body .morphology-subrow .morphology-head-column {
+    display: none;
+}
+
+.morphology-row:not(:first-child) .morphology-subrow-body .morphology-subrow  {
+    grid-template-columns: auto;
+}
+
+@media only screen and (max-width: 700px){
+    .morphology-row:not(:first-child) .morphology-subrow-body .morphology-subrow .morphology-head-column {
+        display: block !important;
+    }
+    .morphology-row{
+        display: grid;
+        grid-template-columns: 20% 80% !important;
+    }
+    .morphology-table{
+        grid-template-columns: auto !important;
+    }
+    .morphology-head-column.gap{
+        display: none;
+    }
+    .template-personilized .morphology-subrow.head-subrow{
+        grid-template-columns: auto !important;
+    }
+    .template-personilized .morphology-subrow{
+        grid-template-columns: 30% 70% !important;
+    }
+
+}

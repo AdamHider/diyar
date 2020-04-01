@@ -1,0 +1,163 @@
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.user-dashboard{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    height: 45vh;
+    box-shadow: inset 1px -15px 13px #0000003d;
+}
+
+.user-dashboard .user-info-block{
+    position: relative;
+}
+
+.user-dashboard .user-info-block .username{
+    position: absolute;
+    bottom: 0;
+    padding: 2em;
+    margin: 1em;
+}
+
+.user-dashboard .user-info-block .username h4{
+    font-weight: bold;
+    padding: 0 1em;
+    background: linear-gradient(#31303842, #313038c9);
+    color: white;
+}
+
+.user-dashboard .background-image{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.user-dashboard .avatar-image{
+    border-radius: 100%;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #312f38;
+}
+
+.user-avatar-block{
+    display: block;
+    width: 10vw;
+    height: 10vw;
+    margin: 2em;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border: 2px solid #312f38;
+    background-color: #312f38;
+    overflow: hidden;
+}
+.user-avatar-block:hover .edit-block{
+    opacity: 1;
+}
+.user-avatar-block .edit-block{
+    border: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    background-color: #312f38a8;
+    height: 30%;
+    opacity: 0;
+    transition: 0.5s all;
+}
+.user-avatar-block .edit-block button{
+    background: transparent;
+}
+
+
+#avatarToUpload, #backgroundToUpload{
+    
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.modal-custom form{
+    color: #424753;
+}
+
+.modal-custom form input{
+    display: block;
+}
+
+ /* The Modal (background) */
+.modal-custom {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    height: auto;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    padding: 1em;
+}
+
+.upload-avatar-block,
+.upload-background-block{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 1em;
+    border-bottom: 1px solid gray;
+    padding: 1em;
+}
+
+.mini-avatar,
+.mini-background{
+    display: block;
+    width: 4em;
+    height: 4em;
+    background-size: cover;
+    background-position: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px !important;
+    margin: 0.5em !important;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 

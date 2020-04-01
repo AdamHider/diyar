@@ -2,10 +2,10 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:/iSell/www/diyar/templates/g5_helium/custom/config/17/index.yaml',
-    'modified' => 1568372954,
+    'modified' => 1584946676,
     'data' => [
-        'name' => '17',
-        'timestamp' => 1568372954,
+        'name' => 17,
+        'timestamp' => 1584945590,
         'version' => 7,
         'preset' => [
             'image' => 'gantry-admin://images/layouts/default.png',
@@ -32,21 +32,7 @@ return [
             'offcanvas' => 'Offcanvas'
         ],
         'particles' => [
-            'messages' => [
-                'system-messages-7444' => 'System Messages'
-            ],
-            'logo' => [
-                'logo-2290' => 'Logo / Image',
-                'logo-5017' => 'Logo / Image'
-            ],
-            'menu' => [
-                'menu-9312' => 'Menu'
-            ],
-            'social' => [
-                'social-9457' => 'Social'
-            ],
             'module' => [
-                'position-module-5220' => 'Module Instance',
                 'position-module-2635' => 'Module Instance'
             ],
             'position' => [
@@ -56,36 +42,48 @@ return [
             'content' => [
                 'system-content-1587' => 'Page Content'
             ],
+            'messages' => [
+                'system-messages-7440' => 'System Messages'
+            ],
+            'logo' => [
+                'logo-2166' => 'Logo / Image',
+                'logo-3529' => 'Logo / Image'
+            ],
+            'menu' => [
+                'menu-5576' => 'Menu'
+            ],
             'custom' => [
-                'custom-9538' => 'Custom HTML'
+                'custom-1650' => 'Social',
+                'custom-7502' => 'Logo And Descrıptıon',
+                'custom-7334' => 'Footer Menu',
+                'custom-9225' => 'Contact',
+                'custom-9538' => 'Copyright and Policies'
             ],
-            'horizontalmenu' => [
-                'horizontalmenu-5881' => 'Horizontal Menu'
-            ],
-            'totop' => [
-                'totop-5261' => 'To Top'
+            'spacer' => [
+                'spacer-8681' => 'Spacer',
+                'spacer-2859' => 'Spacer'
             ],
             'mobile-menu' => [
-                'mobile-menu-2777' => 'Mobile-menu'
+                'mobile-menu-3078' => 'Mobile-menu'
             ]
         ],
         'inherit' => [
             9 => [
                 'navigation' => 'navigation',
-                'system-messages-7444' => 'system-messages-8776',
-                'logo-2290' => 'logo-9531',
-                'menu-9312' => 'menu-4597',
-                'social-9457' => 'social-6902',
-                'position-module-5220' => 'position-module-5240',
                 'footer' => 'footer',
-                'logo-5017' => 'logo-1144',
-                'custom-9538' => 'custom-3748',
-                'horizontalmenu-5881' => 'horizontalmenu-5487',
-                'totop-5261' => 'totop-3746'
-            ],
-            'default' => [
                 'offcanvas' => 'offcanvas',
-                'mobile-menu-2777' => 'mobile-menu-9030'
+                'system-messages-7440' => 'system-messages-8776',
+                'logo-2166' => 'logo-9531',
+                'menu-5576' => 'menu-4597',
+                'custom-1650' => 'custom-2297',
+                'custom-7502' => 'custom-7183',
+                'spacer-8681' => 'spacer-5222',
+                'custom-7334' => 'custom-3360',
+                'spacer-2859' => 'spacer-4416',
+                'custom-9225' => 'custom-7504',
+                'custom-9538' => 'custom-3748',
+                'logo-3529' => 'logo-9504',
+                'mobile-menu-3078' => 'mobile-menu-9030'
             ]
         ]
     ]

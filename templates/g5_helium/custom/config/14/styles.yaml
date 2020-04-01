@@ -6,7 +6,8 @@ accent:
   color-1: '#5dad45'
   color-2: '#37536a'
 font:
-  family-title: 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+  family-default: 'family=Open+Sans:300,700,400'
+  family-title: 'family=Open+Sans:300,700,400'
 link:
   regular: '#5dad45'
   hover: '#424753'

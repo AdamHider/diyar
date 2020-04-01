@@ -1,0 +1,233 @@
+
+.suggest-block{
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    border: 2px solid green;
+    position: absolute;
+    top: 40px;
+}
+.search-row #search-input:hover{
+   box-shadow: none;
+   border: inherit;
+}
+.search-row #search-input:focus{
+   box-shadow: none;
+   border: inherit;
+}
+#search-button:hover  {
+     background-color: #529312 !important;
+}
+
+.add-word-block{
+    position: relative;
+    width: 25%;
+    margin: 10px 1em 10px 0em;
+}
+
+.add-word-block .button{
+    height: 40px;
+}
+
+.add-word-block #add-word-group{
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #66d92d;
+    box-shadow: 1px 1px 7px #00000075;
+    border-radius: 1px 10px 10px 10px;
+}
+
+.add-word-block #add-word-group input{
+    display: inline-block;
+    width: 81%;
+    margin: 0px;
+}
+.add-word-block #add-word-group .button{
+    display: inline-block;
+    width: 17% !important;
+    padding: 0 12px !important;
+    margin: 0px;
+}
+
+
+.part-of-speech-list, .denotations-list, .referents-list, .part-of-speech-block, .example_list{
+    margin: 0% 2%;
+    white-space: nowrap;
+}
+.part-of-speech-block{
+    margin-top: 2%;
+}
+
+.referent-name{
+    font-weight: bold;
+    color: #45822f;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+
+
+.referent-name:hover, .suggestion:hover{
+    text-decoration: underline;
+}
+.referent-clarification, .toponymy_link{
+    display: inline-block;
+}
+
+.toponymy_link{
+    margin-left: 0.5em;
+}
+
+.to-map{
+    text-decoration: underline dashed;
+    font-style: italic;
+}
+
+.referent-block{
+    border-bottom: 1px solid #eaeaea;
+    padding: 0.5vw 0.5vw;
+    border-left: 1px solid white;
+}
+
+.referent-block:hover{
+    border-left: 1px solid #20a5d5;
+}
+
+.denotation-description{
+    margin-left: 0.3em;
+}
+
+.denotation-etymology{
+    
+}
+
+.denotation-info{
+    
+}
+
+.denotation-number{
+    font-weight: bold;
+}
+
+.part-of-speech-name{
+    color: #3c81c8;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.query-word_block{
+border-bottom: 1px solid #424753;
+padding-bottom: 0.8em;
+}
+
+.query-word-row{
+    
+}
+
+.query-word-row .button{
+    float: right;
+}
+
+.query-word{
+    font-size: 30px;
+    line-height: inherit;
+    font-weight: bold;
+    display:inline-block;
+}
+
+.query-word-transcription{
+    color: #737373;
+    font-size: 22px;
+    font-weight: lighter;
+    line-height: initial;
+}
+
+.query-word-transcription b{
+    color: #5d6654;
+}
+
+.attribute-block{
+    margin-top: 10px;
+}
+
+.tag{
+    position: relative;
+    padding: 5px 8px;
+    border-radius: 6px;
+    color:  #737373;
+    font-size: 13px;
+    border: 1px solid  #737373;
+    margin-right: 10px;
+    cursor: help;
+    display: ruby-base;
+}
+.referent-details.tag{
+    padding: 3px 5px !important;
+    margin: 0 0.4em !important; 
+}
+
+.tag-description{
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: max-content;
+    background-color: white;
+    padding: 3px 12px;
+    border: 1px solid #5ea1e3;
+    border-radius: 6px;
+    font-weight: initial;
+    color: #2b2b2b;
+    text-shadow: none;
+    box-shadow: 2px 2px 5px gray;
+    z-index: 50;
+}
+
+.tag:hover .tag-description{
+    display: block !important;
+}
+
+.referent-suggestions{
+    margin: 0% 2%;
+}
+
+.suggestion{
+    color: #5dad45;
+    cursor: pointer;
+    
+}
+
+.example_list{
+    
+}
+
+.example_list .example{
+    color: #686868;
+    font-style: italic;
+    white-space: break-spaces;
+    border-bottom: 1px dashed lightgray;
+}
+
+.relevance{
+    display: inline-block;
+    float: inline-end;
+    margin-top: 13px;
+}
+
+.relevance-container{
+    height: 7px;
+    width: 50px;
+    border: 1px solid #26949d;
+    float: right;
+    display: inline-block;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.relevance-content{
+   height: 5px;
+   background: linear-gradient(to right, rgb(63, 133, 208) 0%, rgb(102, 174, 244) 100%);
+   border-right: 1px solid #138d91;
+   min-width: 5px;
+}

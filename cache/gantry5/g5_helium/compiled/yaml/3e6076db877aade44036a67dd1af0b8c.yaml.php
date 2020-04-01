@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:/iSell/www/diyar/media/gantry5/engines/nucleus/blueprints/page/assets.yaml',
-    'modified' => 1563522746,
+    'modified' => 1584945592,
     'data' => [
         'name' => 'Assets',
         'description' => 'Assets such as JS and CSS that can be globally loaded',

@@ -1,0 +1,182 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1563522857
+layout:
+  /navigation/: {  }
+  /header/:
+    -
+      - contentarray-4072
+  /intro/:
+    -
+      - system-content-4747
+  features: {  }
+  utility: {  }
+  above: {  }
+  testimonials: {  }
+  expanded: {  }
+  /container-main/:
+    -
+      -
+        'aside 25': {  }
+      -
+        'mainbar 50': {  }
+      -
+        'sidebar 25': {  }
+  footer: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+      class: diyar-main-navigation
+      variations: ''
+    inherit:
+      outline: '14'
+      include:
+        - children
+  header:
+    attributes:
+      boxed: ''
+      class: 'background-image-section article-header'
+      variations: ''
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+      class: 'article-container info-article'
+      variations: ''
+  features:
+    type: section
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+  utility:
+    type: section
+    inherit:
+      outline: '18'
+      include:
+        - attributes
+        - block
+        - children
+  above:
+    type: section
+    inherit:
+      outline: '18'
+      include:
+        - attributes
+        - block
+        - children
+  testimonials:
+    type: section
+    inherit:
+      outline: '18'
+      include:
+        - attributes
+        - block
+        - children
+  expanded:
+    type: section
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+  aside:
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+    block:
+      fixed: '1'
+  mainbar:
+    type: section
+    subtype: main
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+  sidebar:
+    type: section
+    subtype: aside
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+    block:
+      fixed: '1'
+  container-main:
+    attributes:
+      boxed: ''
+      class: ''
+      extra: {  }
+  footer:
+    inherit:
+      outline: '14'
+      include:
+        - children
+        - attributes
+  offcanvas:
+    inherit:
+      outline: '14'
+      include:
+        - attributes
+        - children
+content:
+  contentarray-4072:
+    title: 'Joomla Articles'
+    attributes:
+      article:
+        filter:
+          categories: '12'
+          articles: '8'
+          featured: include
+        limit:
+          total: '1'
+          columns: '1'
+          start: '0'
+        display:
+          pagination_buttons: ''
+          image:
+            enabled: ''
+          text:
+            type: intro
+          edit: '0'
+          title:
+            enabled: show
+          date:
+            enabled: ''
+          read_more:
+            enabled: show
+            label: Подробнее
+            css: ''
+          author:
+            enabled: ''
+          category:
+            enabled: ''
+          hits:
+            enabled: ''
+        sort:
+          orderby: publish_up
+          ordering: ASC
+      css:
+        class: header-article
+  system-content-4747:
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+      particle: system-content-4867

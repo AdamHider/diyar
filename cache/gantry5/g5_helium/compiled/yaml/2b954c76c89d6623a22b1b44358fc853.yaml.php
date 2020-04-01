@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:\\iSell\\www\\diyar/media/gantry5/engines/nucleus/particles/assets.yaml',
-    'modified' => 1563522746,
+    'modified' => 1584945592,
     'data' => [
         'name' => 'Custom CSS / JS',
         'description' => 'Configure custom CSS and Javascript.',

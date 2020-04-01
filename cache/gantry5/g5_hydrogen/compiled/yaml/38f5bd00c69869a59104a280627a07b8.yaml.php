@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:/iSell/www/diyar/templates/g5_hydrogen/gantry/theme.yaml',
-    'modified' => 1563527832,
+    'modified' => 1584945590,
     'data' => [
         'details' => [
             'name' => 'Hydrogen',

@@ -1,0 +1,86 @@
+name: 30
+timestamp: 1585403616
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1563522857
+positions: {  }
+sections:
+  navigation: Navigation
+  intro: Intro
+  features: Features
+  utility: Utility
+  above: Above
+  testimonials: Testimonials
+  expanded: Expanded
+  header: Header
+  aside: Aside
+  sidebar: Sidebar
+  mainbar: Mainbar
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  custom:
+    custom-6394: 'Header Text'
+    custom-4640: Social
+    custom-3942: 'Logo And Descrıptıon'
+    custom-2864: 'Footer Menu'
+    custom-3840: Contact
+    custom-8004: 'Copyright and Policies'
+    custom-6101: 'Develop CMS themes quickly'
+    custom-4413: 'Social Share'
+  module:
+    position-module-1327: Breadcrumb
+    position-module-2292: 'Latest Articles'
+  content:
+    system-content-8976: 'Page Content'
+  messages:
+    system-messages-4839: 'System Messages'
+  logo:
+    logo-9385: 'Logo / Image'
+    logo-5681: 'Logo / Image'
+  menu:
+    menu-8927: Menu
+  spacer:
+    spacer-6932: Spacer
+    spacer-5545: Spacer
+  mobile-menu:
+    mobile-menu-6994: Mobile-menu
+  contenttabs:
+    contenttabs-2006: 'Content Tabs'
+  contentcubes:
+    contentcubes-6644: 'Content Cubes'
+inherit:
+  9:
+    navigation: navigation
+    footer: footer
+    offcanvas: offcanvas
+    system-messages-4839: system-messages-8776
+    logo-9385: logo-9531
+    menu-8927: menu-4597
+    custom-4640: custom-2297
+    custom-3942: custom-7183
+    spacer-6932: spacer-5222
+    custom-2864: custom-3360
+    spacer-5545: spacer-4416
+    custom-3840: custom-7504
+    custom-8004: custom-3748
+    logo-5681: logo-9504
+    mobile-menu-6994: mobile-menu-9030
+  25:
+    position-module-1327: position-module-3745
+    system-content-8976: system-content-4867
+    position-module-2292: position-module-3531
+    aside: aside
+    mainbar: mainbar
+    sidebar: sidebar
+  default:
+    utility: utility
+    above: above
+    testimonials: testimonials
+    expanded: expanded
+    contenttabs-2006: contenttabs-3854
+    contentcubes-6644: contentcubes-7850
+    custom-6101: custom-6355
+    custom-4413: custom-6291

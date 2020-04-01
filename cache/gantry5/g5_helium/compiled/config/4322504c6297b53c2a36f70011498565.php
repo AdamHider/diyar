@@ -1,52 +1,724 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1568405032,
-    'checksum' => '09dd44e89382f5d0103cde068a16c63d',
+    'timestamp' => 1585405637,
+    'checksum' => 'bc6f0d79e3d4950e96c1327eed822b33',
     'files' => [
         'templates/g5_helium/custom/config/default' => [
             'index' => [
                 'file' => 'templates/g5_helium/custom/config/default/index.yaml',
-                'modified' => 1568401154
+                'modified' => 1584946675
             ],
             'layout' => [
                 'file' => 'templates/g5_helium/custom/config/default/layout.yaml',
-                'modified' => 1568401154
+                'modified' => 1584945590
+            ],
+            'page/assets' => [
+                'file' => 'templates/g5_helium/custom/config/default/page/assets.yaml',
+                'modified' => 1584945590
+            ],
+            'page/body' => [
+                'file' => 'templates/g5_helium/custom/config/default/page/body.yaml',
+                'modified' => 1584945590
+            ],
+            'page/head' => [
+                'file' => 'templates/g5_helium/custom/config/default/page/head.yaml',
+                'modified' => 1584945590
             ],
             'styles' => [
                 'file' => 'templates/g5_helium/custom/config/default/styles.yaml',
-                'modified' => 1568398046
+                'modified' => 1585405637
             ]
         ],
         'templates/g5_helium/config/default' => [
             'page/body' => [
                 'file' => 'templates/g5_helium/config/default/page/body.yaml',
-                'modified' => 1568398045
+                'modified' => 1584945590
             ],
             'particles/branding' => [
                 'file' => 'templates/g5_helium/config/default/particles/branding.yaml',
-                'modified' => 1568398045
+                'modified' => 1584945590
             ],
             'particles/copyright' => [
                 'file' => 'templates/g5_helium/config/default/particles/copyright.yaml',
-                'modified' => 1568398045
+                'modified' => 1584945590
             ],
             'particles/logo' => [
                 'file' => 'templates/g5_helium/config/default/particles/logo.yaml',
-                'modified' => 1568398046
+                'modified' => 1584945590
             ],
             'particles/social' => [
                 'file' => 'templates/g5_helium/config/default/particles/social.yaml',
-                'modified' => 1568398046
+                'modified' => 1584945590
             ],
             'particles/totop' => [
                 'file' => 'templates/g5_helium/config/default/particles/totop.yaml',
-                'modified' => 1568398046
+                'modified' => 1584945590
             ]
         ]
     ],
     'data' => [
         'particles' => [
+            'jlaccordion' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'multiple' => false,
+                'closed' => true,
+                'title_text_transform' => '',
+                'content_text_transform' => '',
+                'remove_spacing' => false,
+                'content_margin_top' => 'default',
+                'border' => 'none',
+                'image_alignment' => 'bottom',
+                'box_shadow' => 'none',
+                'image_margin_top' => 'default',
+                'buttontarget' => '_self',
+                'buttonclass' => 'default',
+                'link_button_size' => 'default',
+                'link_margin_top' => 'default',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'delay_element_animations' => false,
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlalert' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'alertstyle' => 'default',
+                'large_padding' => false,
+                'closebutton' => false,
+                'content_style' => 'default',
+                'content_margin_top' => 'remove',
+                'title_text_transform' => '',
+                'content_text_transform' => '',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlanimatedtext' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'headlines' => 'rotate-1',
+                'style' => 'default',
+                'title_text_transform' => '',
+                'titletag' => 'h3',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlblockreveal' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true
+            ],
+            'jlcode' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlcontactinfo' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'subnav_style' => 'default',
+                'title_text_transform' => '',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled'
+            ],
+            'jlcountdown' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'days' => 'Days',
+                'hours' => 'Hours',
+                'minutes' => 'Minutes',
+                'seconds' => 'Seconds',
+                'gutter' => 'small',
+                'separators' => true,
+                'label_margin' => 'small',
+                'subtitle_text_transform' => '',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jldivider' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'divider_style' => 'default',
+                'divider_element' => 'hr',
+                'divider_align' => 'inherit',
+                'divider_breakpoint' => 'always',
+                'divider_fallback' => 'inherit',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlfacebookembed' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'embed_types' => 'video',
+                'full_post' => false,
+                'autoplay' => false,
+                'allowfullscreen' => false,
+                'show_captions' => false,
+                'locales' => 'en_US',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled'
+            ],
+            'jlheading' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'title_link' => false,
+                'title_link_target' => '_self',
+                'style' => 'h1',
+                'decoration' => '',
+                'heading_color' => '',
+                'title_text_transform' => '',
+                'titletag' => 'h3',
+                'description_style' => 'default',
+                'description_color' => 'default',
+                'content_text_transform' => '',
+                'description_margin_top' => 'default',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => '',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => '',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => '',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlheadroom' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'custombg' => '#ffffff',
+                'style' => 'slide'
+            ],
+            'jlimage' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'target' => '_self',
+                'border' => 'none',
+                'box_shadow' => 'none',
+                'box_shadow_hover' => 'none',
+                'extra_shadow' => false,
+                'image_transition' => '',
+                'modal' => false,
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jllogo' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'link' => true,
+                'target' => '_self',
+                'logo_type' => 'image',
+                'style' => 'blank',
+                'cardsize' => 'default',
+                'description_position' => 'bottom-justify',
+                'description_grid_width' => '33%',
+                'description_grid_breakpoint' => 'm',
+                'description_animation' => 'inherit'
+            ],
+            'jlopenstreetmap' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'map_style' => 'streets',
+                'map_height' => 300,
+                'map_zoom' => 11,
+                'map_maxzoom' => 18,
+                'zoom_control' => false,
+                'scroll_wheel' => false,
+                'popup' => false,
+                'double_click_zoom' => false,
+                'dragg' => false,
+                'accesstoken' => 'pk.eyJ1Ijoiam9vbWxlYWQiLCJhIjoiY2ptMWV4ZXh3MWhxbjNwbXRkbHd4MGJxbyJ9.6YlGbRxyQTs9XXw8fbGrMw',
+                'box_shadow' => 'none',
+                'box_shadow_hover' => 'none',
+                'contributors' => true,
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jloverlay' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'target' => '_self',
+                'overlay_mode' => 'cover',
+                'overlay_hover' => false,
+                'overlay_style' => 'jl-overlay-primary',
+                'overlay_color' => 'light',
+                'overlay_padding' => 'default',
+                'overlay_position' => 'center',
+                'overlay_margin' => 'none',
+                'overlay_maxwidth' => 'none',
+                'overlay_transition' => 'fade',
+                'image_transition' => 'none',
+                'box_shadow' => 'none',
+                'box_shadow_hover' => 'none',
+                'title_transition' => 'none',
+                'title_style' => 'h3',
+                'title_decoration' => 'none',
+                'predefined_title_color' => 'default',
+                'title_text_transform' => '',
+                'title_element' => 'h3',
+                'title_margin' => 'default',
+                'meta_transition' => 'none',
+                'meta_style' => 'text-meta',
+                'pre_meta_color' => 'default',
+                'meta_text_transform' => '',
+                'meta_alignment' => 'bottom',
+                'meta_margin' => 'default',
+                'content_transition' => 'none',
+                'content_style' => 'default',
+                'content_text_color' => 'default',
+                'content_text_transform' => '',
+                'content_margin_top' => 'default',
+                'link_transition' => 'none',
+                'link_type' => 'button',
+                'buttontarget' => '_self',
+                'buttonclass' => 'default',
+                'link_button_size' => 'default',
+                'link_margin_top' => 'default',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlquotation' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'link_target' => '_self',
+                'dropcap' => false,
+                'quote_icon' => false,
+                'text_style' => 'default',
+                'text_size' => 'default',
+                'text_color' => 'default',
+                'link_style' => 'default',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlsocialshare' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'button_style' => 'default',
+                'icon_style' => 'default',
+                'tooltip' => false,
+                'hover_animation' => 'inherit',
+                'hover_position' => 'right-center',
+                'button' => true,
+                'vertical_button' => false,
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled'
+            ],
+            'jltext' => [
+                'caching' => [
+                    'type' => 'static'
+                ],
+                'enabled' => true,
+                'dropcap' => false,
+                'text_columns' => 'none',
+                'column_divider' => false,
+                'column_breakpoint' => 'm',
+                'text_color' => 'default',
+                'text_style' => 'default',
+                'text_size' => 'default',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
             'contentcubes' => [
                 'caching' => [
                     'type' => 'static'
@@ -200,6 +872,239 @@ return [
                 'icon' => 'fa fa-chevron-up fa-fw',
                 'content' => 'Back to top'
             ],
+            'jlbacktotop' => [
+                'enabled' => true,
+                'icon' => 'arrow-up',
+                'background' => '#1c1c1c',
+                'color' => '#ffffff',
+                'backgroundhover' => '#439a86',
+                'icon_color' => '#1c1c1c'
+            ],
+            'jlcookieconsent' => [
+                'enabled' => true,
+                'message' => 'This website uses cookies to ensure you get the best experience on our website.',
+                'dismiss' => 'Got it!',
+                'readmore' => 'More info',
+                'position' => 'bottom-left',
+                'layout' => 'default'
+            ],
+            'jlfacebookbutton' => [
+                'enabled' => true,
+                'layout_settings' => 'standard',
+                'action_settings' => 'like',
+                'showface' => false,
+                'button_settings' => 'small',
+                'sharebutton' => false,
+                'color_settings' => 'light',
+                'locales' => 'en_US',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled'
+            ],
+            'jlfacebookpage' => [
+                'enabled' => true,
+                'tabs_settings' => 'timeline',
+                'hide_cover' => false,
+                'show_facepile' => true,
+                'hide_cta' => false,
+                'small_header' => false,
+                'adapt_container_width' => true,
+                'color_settings' => 'light',
+                'locales' => 'en_US',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled'
+            ],
+            'jlimagecompare' => [
+                'enabled' => true,
+                'mode' => 0,
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlinlinesvg' => [
+                'enabled' => true,
+                'svg_color' => 'default',
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlpaypaldonate' => [
+                'enabled' => true,
+                'currency' => 'USD',
+                'donate_button' => 'Donate Now',
+                'buttonclass' => 'default',
+                'form_style' => 'default',
+                'button_size' => 'default',
+                'button_left' => false,
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlpreloader' => [
+                'enabled' => true
+            ],
+            'jltwitter' => [
+                'enabled' => true
+            ],
+            'jluikit' => [
+                'enabled' => true,
+                'jslocation' => 'head'
+            ],
+            'jlvideo' => [
+                'enabled' => true,
+                'source' => 'local',
+                'controls' => 'enabled',
+                'loop' => 'disabled',
+                'muted' => 'disabled',
+                'play_inline' => 'disabled',
+                'lazy_video' => 'disabled',
+                'autoplay' => 'off',
+                'video_box_shadow' => 'none',
+                'border' => 'none',
+                'box_shadow' => 'none',
+                'box_shadow_hover' => 'none',
+                'close' => 'outside',
+                'centermodal' => true,
+                'particle_title_style' => 'h3',
+                'particle_title_decoration' => 'none',
+                'particle_title_align' => 'inherit',
+                'particle_predefined_color' => 'default',
+                'particle_title_element' => 'h3',
+                'align' => 'inherit',
+                'breakpoint' => 'always',
+                'fallback' => 'inherit',
+                'g_maxwidth' => 'inherit',
+                'g_maxwidth_alignment' => 'left',
+                'g_maxwidth_breakpoint' => 'always',
+                'margin' => 'inherit',
+                'visibility' => 'inherit',
+                'animation' => 'inherit',
+                'animation_repeat' => 'disabled',
+                'pa_breakpoint' => 'always',
+                'background_image_size' => 'auto',
+                'background_image_position' => 'center-center',
+                'parallax_bg_breakpoint' => 'always',
+                'parallax_bg_visibility' => 'always',
+                'blendmode' => 'inherit',
+                'horizontal_start' => 0,
+                'horizontal_end' => 0,
+                'vertical_start' => 0,
+                'vertical_end' => 0,
+                'container' => false,
+                'viewport_height' => 'none',
+                'padding' => 'default',
+                'vertical_alignment' => 'none',
+                'parallax_text_color' => 'default'
+            ],
+            'jlvideobackground' => [
+                'enabled' => true
+            ],
             'example_particle' => [
                 'enabled' => true
             ],
@@ -317,8 +1222,8 @@ return [
                 'text-color' => '#424753'
             ],
             'breakpoints' => [
-                'large-desktop-container' => '75rem',
-                'desktop-container' => '60rem',
+                'large-desktop-container' => '1200px',
+                'desktop-container' => '1200px',
                 'tablet-container' => '48rem',
                 'large-mobile-container' => '30rem',
                 'mobile-menu-breakpoint' => '48rem'
@@ -332,8 +1237,8 @@ return [
                 'text-color' => '#424753'
             ],
             'font' => [
-                'family-default' => 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif',
-                'family-title' => 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+                'family-default' => 'family=Open+Sans:300,700,400',
+                'family-title' => 'family=Open+Sans:300,700,400'
             ],
             'footer' => [
                 'background' => '#312f38',
@@ -341,7 +1246,7 @@ return [
             ],
             'header' => [
                 'background' => '#312f38',
-                'background-image' => 'gantry-media://header/img01.jpg',
+                'background-image' => '',
                 'background-overlay' => 'enabled',
                 'text-color' => '#eceeef'
             ],
@@ -355,18 +1260,19 @@ return [
             ],
             'menu' => [
                 'col-width' => '180px',
-                'animation' => 'g-fade'
+                'animation' => 'g-fade',
+                'hide-on-mobile' => '0'
             ],
             'navigation' => [
-                'background' => '#312f38',
+                'background' => 'rgba(49, 47, 56, 0)',
                 'text-color' => '#ffffff'
             ],
             'offcanvas' => [
-                'background' => '#4db2b3',
-                'text-color' => '#eceeef',
-                'toggle-color' => '#4db2b3',
-                'toggle-visibility' => '1',
-                'width' => '12rem'
+                'background' => '#ffffff',
+                'text-color' => '#424753',
+                'toggle-color' => '#66ad4c',
+                'toggle-visibility' => '2',
+                'width' => '15rem'
             ],
             'testimonials' => [
                 'background' => '#66ad4c',
@@ -395,11 +1301,181 @@ return [
                 'doctype' => 'html',
                 'body_top' => '',
                 'body_bottom' => ''
+            ],
+            'assets' => [
+                'favicon' => 'gantry-media://icons/diyar_favicon.png',
+                'touchicon' => 'gantry-media://logos/square_black.png',
+                'css' => [
+                    0 => [
+                        'location' => 'gantry-assets://css/diyar-custom.css',
+                        'inline' => '',
+                        'extra' => [
+                            
+                        ],
+                        'priority' => '0',
+                        'name' => 'diyar-custom'
+                    ]
+                ],
+                'javascript' => [
+                    0 => [
+                        'location' => '',
+                        'inline' => 'var vw = jQuery(window).width();
+if(vw > 750){
+jQuery(\'.g-offcanvas-toggle\').remove();
+}',
+                        'in_footer' => '1',
+                        'extra' => [
+                            
+                        ],
+                        'priority' => '1',
+                        'name' => 'Home menu'
+                    ],
+                    1 => [
+                        'location' => 'gantry-assets://js/background_mousemovement.js',
+                        'inline' => '',
+                        'in_footer' => '0',
+                        'extra' => [
+                            
+                        ],
+                        'priority' => '0',
+                        'name' => 'BackGroundMovement'
+                    ]
+                ]
+            ],
+            'head' => [
+                'meta' => [
+                    
+                ],
+                'head_bottom' => '',
+                'atoms' => [
+                    0 => [
+                        'id' => 'assets-4435',
+                        'type' => 'assets',
+                        'title' => 'Custom CSS / JS',
+                        'attributes' => [
+                            'enabled' => '1',
+                            'css' => [
+                                0 => [
+                                    'location' => '',
+                                    'inline' => '',
+                                    'extra' => [
+                                        
+                                    ],
+                                    'priority' => '1',
+                                    'name' => 'CustomCss1'
+                                ],
+                                1 => [
+                                    'location' => '',
+                                    'inline' => '.social-share-home  .social-btns .btn,
+.social-share-home  .social-btns .btn:before,
+.social-share-home  .social-btns .btn .fa {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-share-home  .social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-share-home  .social-btns .btn .fa {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.social-share-home  .social-btns .btn.facebook:before {
+  background-color: #3b5998;
+}
+.social-share-home  .social-btns .btn.facebook .fa {
+  color: #3b5998;
+}
+.social-share-home  .social-btns .btn.twitter:before {
+  background-color: #3cf;
+}
+.social-share-home  .social-btns .btn.twitter .fa {
+  color: #3cf;
+}
+.social-share-home  .social-btns .btn.google:before {
+  background-color: #dc4a38;
+}
+.social-share-home  .social-btns .btn.google .fa {
+  color: #dc4a38;
+}
+.social-share-home  .social-btns .btn.dribbble:before {
+  background-color: #f26798;
+}
+.social-share-home  .social-btns .btn.dribbble .fa {
+  color: #f26798;
+}
+.social-share-home  .social-btns .btn.skype:before {
+  background-color: #00aff0;
+}
+.social-share-home  .social-btns .btn.skype .fa {
+  color: #00aff0;
+}
+.social-share-home  .social-btns .btn:focus:before,
+.social-share-home  .social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-share-home  .social-btns .btn:focus .fa,
+.social-share-home  .social-btns .btn:hover .fa {
+  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.social-btns {
+  height: 90px;
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.social-share-home  .social-btns .btn {
+  display: inline-block;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  opacity: 0.99;
+}
+.social-share-home  .social-btns .btn:before {
+  content: \'\';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.social-share-home .social-btns .btn .fa {
+  font-size: 38px;
+  vertical-align: middle;
+}',
+                                    'extra' => [
+                                        
+                                    ],
+                                    'priority' => '2',
+                                    'name' => 'Social'
+                                ]
+                            ],
+                            'javascript' => [
+                                
+                            ]
+                        ]
+                    ]
+                ]
             ]
         ],
         'index' => [
             'name' => 'default',
-            'timestamp' => 1568401154,
+            'timestamp' => 1584945590,
             'version' => 7,
             'preset' => [
                 'image' => 'gantry-admin://images/layouts/default.png',
@@ -429,7 +1505,8 @@ return [
                 ],
                 'logo' => [
                     'logo-8554' => 'Logo / Image',
-                    'logo-7150' => 'Footer Logo'
+                    'logo-7150' => 'Footer Logo',
+                    'logo-9504' => 'Logo / Image'
                 ],
                 'menu' => [
                     'menu-4076' => 'Menu'
@@ -441,13 +1518,10 @@ return [
                     'position-module-5422' => 'Module Instance',
                     'position-module-2306' => 'Module Instance'
                 ],
-                'owlcarousel' => [
-                    'owlcarousel-5183' => 'Owl Carousel'
-                ],
                 'custom' => [
                     'custom-3119' => 'Features',
-                    'custom-7658' => 'Customer Testimonials',
-                    'custom-6355' => 'Develop CMS themes quickly'
+                    'custom-6355' => 'Develop CMS themes quickly',
+                    'custom-6291' => 'Social Share'
                 ],
                 'contenttabs' => [
                     'contenttabs-3854' => 'Content Tabs'
@@ -485,25 +1559,24 @@ return [
                         0 => 'system-messages-4409'
                     ],
                     1 => [
-                        0 => 'logo-8554 25',
-                        1 => 'menu-4076 36',
-                        2 => 'social-5236 15',
-                        3 => 'position-module-5422 24'
+                        0 => 'logo-8554 23',
+                        1 => 'menu-4076 41',
+                        2 => 'social-5236 18',
+                        3 => 'position-module-5422 18'
                     ]
                 ],
                 '/header/' => [
-                    0 => [
-                        0 => 'owlcarousel-5183'
-                    ]
+                    
                 ],
                 '/intro/' => [
-                    0 => [
-                        0 => 'position-module-2306'
-                    ]
+                    
                 ],
                 '/features/' => [
                     0 => [
                         0 => 'custom-3119'
+                    ],
+                    1 => [
+                        0 => 'position-module-2306'
                     ]
                 ],
                 '/utility/' => [
@@ -517,13 +1590,14 @@ return [
                     ]
                 ],
                 '/testimonials/' => [
-                    0 => [
-                        0 => 'custom-7658'
-                    ]
+                    
                 ],
                 '/expanded/' => [
                     0 => [
                         0 => 'custom-6355'
+                    ],
+                    1 => [
+                        0 => 'custom-6291'
                     ]
                 ],
                 '/container-main/' => [
@@ -548,8 +1622,11 @@ return [
                         3 => 'totop-7498 15'
                     ]
                 ],
-                '/offcanvas/' => [
+                'offcanvas' => [
                     0 => [
+                        0 => 'logo-9504'
+                    ],
+                    1 => [
                         0 => 'mobile-menu-9030'
                     ]
                 ]
@@ -566,20 +1643,24 @@ return [
                 'header' => [
                     'attributes' => [
                         'boxed' => '',
-                        'class' => '',
+                        'class' => 'g-flushed',
                         'variations' => ''
                     ]
                 ],
                 'intro' => [
                     'type' => 'section',
                     'attributes' => [
-                        'boxed' => ''
+                        'boxed' => '',
+                        'class' => '',
+                        'variations' => ''
                     ]
                 ],
                 'features' => [
                     'type' => 'section',
                     'attributes' => [
-                        'boxed' => ''
+                        'boxed' => '',
+                        'class' => 'lugat-container',
+                        'variations' => ''
                     ]
                 ],
                 'utility' => [
@@ -627,7 +1708,13 @@ return [
                 ],
                 'offcanvas' => [
                     'attributes' => [
-                        'boxed' => ''
+                        'position' => 'g-offcanvas-left',
+                        'class' => '',
+                        'extra' => [
+                            
+                        ],
+                        'swipe' => '1',
+                        'css3animation' => '1'
                     ]
                 ]
             ],
@@ -655,45 +1742,15 @@ return [
                     'attributes' => [
                         'module_id' => '95',
                         'key' => 'module-instance'
-                    ]
-                ],
-                'owlcarousel-5183' => [
-                    'title' => 'Owl Carousel',
-                    'attributes' => [
-                        'class' => '',
-                        'title' => 'asd',
-                        'nav' => 'disable',
-                        'dots' => 'enable',
-                        'imageOverlay' => 'enable',
-                        'items' => [
-                            0 => [
-                                'class' => '',
-                                'image' => '',
-                                'title' => 'sad',
-                                'desc' => 'sadasd',
-                                'link' => '',
-                                'linktext' => '',
-                                'buttonclass' => 'button-outline',
-                                'disable' => '0',
-                                'name' => 'New item'
-                            ]
-                        ]
-                    ]
-                ],
-                'position-module-2306' => [
-                    'title' => 'Module Instance',
-                    'attributes' => [
-                        'enabled' => 0,
-                        'module_id' => '93',
-                        'chrome' => ''
                     ],
                     'block' => [
-                        'variations' => 'center'
+                        'class' => 'language-switcher'
                     ]
                 ],
                 'custom-3119' => [
                     'title' => 'Features',
                     'attributes' => [
+                        'enabled' => 0,
                         'html' => '<div class="fp-features">
     <div class="g-grid">
         <div class="g-block size-33-3">
@@ -730,9 +1787,18 @@ return [
                         'variations' => 'center'
                     ]
                 ],
+                'position-module-2306' => [
+                    'title' => 'Module Instance',
+                    'attributes' => [
+                        'module_id' => '98',
+                        'chrome' => '',
+                        'key' => 'module-instance'
+                    ]
+                ],
                 'contenttabs-3854' => [
                     'title' => 'Content Tabs',
                     'attributes' => [
+                        'enabled' => 0,
                         'items' => [
                             0 => [
                                 'content' => '<p>Gantry 5 includes a new, powerful Menu editor that makes menu organization,
@@ -824,6 +1890,7 @@ a handful of things you can do with Gantry 5’s powerful Menu Editor.</p>
                 'contentcubes-7850' => [
                     'title' => 'Content Cubes',
                     'attributes' => [
+                        'enabled' => 0,
                         'items' => [
                             0 => [
                                 'image' => 'gantry-media://above/img01.jpeg',
@@ -878,24 +1945,10 @@ a handful of things you can do with Gantry 5’s powerful Menu Editor.</p>
                         ]
                     ]
                 ],
-                'custom-7658' => [
-                    'title' => 'Customer Testimonials',
-                    'attributes' => [
-                        'html' => '<div class="fp-testimonials">
-    <blockquote>
-        <img src="gantry-media://testimonials/face.jpg" alt="Avatar" class="g-img-circle" height="80" width="80">
-        <p class="h3">"Helium is a beautiful, free theme made by the RocketTheme team in appreciation of the incredible Gantry community."</p>
-        <footer>Andy Miller</footer>
-    </blockquote>
-</div>'
-                    ],
-                    'block' => [
-                        'variations' => 'center'
-                    ]
-                ],
                 'custom-6355' => [
                     'title' => 'Develop CMS themes quickly',
                     'attributes' => [
+                        'enabled' => 0,
                         'html' => '<div class="fp-multi-column-text">
     <h2 class="g-title">Develop CMS themes quickly and efficiently</h2>
     <div class="g-grid">
@@ -916,10 +1969,21 @@ a handful of things you can do with Gantry 5’s powerful Menu Editor.</p>
                         'variations' => 'title-center'
                     ]
                 ],
+                'custom-6291' => [
+                    'title' => 'Social Share',
+                    'attributes' => [
+                        'enabled' => 0,
+                        'html' => '<div class="social-btns"><a class="btn facebook" href="#"><i class="fa fa-facebook"></i></a><a class="btn twitter" href="#"><i class="fa fa-twitter"></i></a><a class="btn google" href="#"><i class="fa fa-google"></i></a><a class="btn dribbble" href="#"><i class="fa fa-dribbble"></i></a><a class="btn skype" href="#"><i class="fa fa-skype"></i></a>
+</div>'
+                    ],
+                    'block' => [
+                        'class' => 'social-share-home'
+                    ]
+                ],
                 'logo-7150' => [
                     'title' => 'Footer Logo',
                     'attributes' => [
-                        'image' => 'gantry-media://diyar_logo.png',
+                        'image' => 'gantry-media://logos/square_white.png',
                         'svg' => ''
                     ]
                 ],
@@ -947,6 +2011,22 @@ a handful of things you can do with Gantry 5’s powerful Menu Editor.</p>
                 ],
                 'totop-7498' => [
                     'title' => 'To Top'
+                ],
+                'logo-9504' => [
+                    'title' => 'Logo / Image',
+                    'attributes' => [
+                        'image' => 'gantry-media://header/SIDEBAR BACKGROUND.jpg',
+                        'svg' => '',
+                        'class' => ''
+                    ],
+                    'block' => [
+                        'class' => 'offcanvas-image'
+                    ]
+                ],
+                'mobile-menu-9030' => [
+                    'attributes' => [
+                        'enabled' => 0
+                    ]
                 ]
             ]
         ]

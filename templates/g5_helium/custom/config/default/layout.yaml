@@ -13,21 +13,19 @@ layout:
       - 'social-5236 18'
       - 'position-module-5422 18'
   /header/: {  }
-  /intro/:
-    -
-      - position-module-2306
+  /intro/: {  }
   /features/:
     -
       - custom-3119
+    -
+      - position-module-2306
   /utility/:
     -
       - contenttabs-3854
   /above/:
     -
       - contentcubes-7850
-  /testimonials/:
-    -
-      - custom-7658
+  /testimonials/: {  }
   /expanded/:
     -
       - custom-6355
@@ -66,12 +64,14 @@ structure:
     type: section
     attributes:
       boxed: ''
-      class: lugat-container
+      class: ''
       variations: ''
   features:
     type: section
     attributes:
       boxed: ''
+      class: lugat-container
+      variations: ''
   utility:
     type: section
     attributes:
@@ -128,12 +128,6 @@ content:
       key: module-instance
     block:
       class: language-switcher
-  position-module-2306:
-    title: 'Module Instance'
-    attributes:
-      module_id: '98'
-      chrome: ''
-      key: module-instance
   custom-3119:
     title: Features
     attributes:
@@ -141,6 +135,12 @@ content:
       html: "<div class=\"fp-features\">\n    <div class=\"g-grid\">\n        <div class=\"g-block size-33-3\">\n            <div class=\"card\">\n                <div class=\"card-block\">\n                    <i class=\"fa fa-joomla\"></i>\n                    <h4 class=\"card-title\">Joomla</h4>\n                    <p class=\"card-text\">Bring your website to life with one of the most powerful and popular theming frameworks for Joomla.</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"g-block size-33-3\">\n            <div class=\"card\">\n                <div class=\"card-block\">\n                    <i class=\"fa fa-wordpress\"></i>\n                    <h4 class=\"card-title\">WordPress</h4>\n                    <p class=\"card-text\">Gantry extends WordPress' native functionality, empowering users to manipulate virtually every aspect of their visitors' experience.</p>\n                </div>\n            </div>\n        </div>\n        <div class=\"g-block size-33-3\">\n            <div class=\"card\">\n                <div class=\"card-block\">\n                    <i class=\"fa fa-grav\"></i>\n                    <h4 class=\"card-title\">Grav</h4>\n                    <p class=\"card-text\">Gantry 5 is the first theming framework for Grav, designed by members of the same team that developed the CMS.</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
     block:
       variations: center
+  position-module-2306:
+    title: 'Module Instance'
+    attributes:
+      module_id: '98'
+      chrome: ''
+      key: module-instance
   contenttabs-3854:
     title: 'Content Tabs'
     attributes:
@@ -199,13 +199,6 @@ content:
           buttonclass: ''
           buttontarget: _self
           name: 'Item 2'
-  custom-7658:
-    title: 'Customer Testimonials'
-    attributes:
-      enabled: 0
-      html: "<div class=\"fp-testimonials\">\n    <blockquote>\n        <img src=\"gantry-media://testimonials/face.jpg\" alt=\"Avatar\" class=\"g-img-circle\" height=\"80\" width=\"80\">\n        <p class=\"h3\">\"Helium is a beautiful, free theme made by the RocketTheme team in appreciation of the incredible Gantry community.\"</p>\n        <footer>Andy Miller</footer>\n    </blockquote>\n</div>"
-    block:
-      variations: center
   custom-6355:
     title: 'Develop CMS themes quickly'
     attributes:

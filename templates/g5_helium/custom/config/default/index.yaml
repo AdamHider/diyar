@@ -1,5 +1,5 @@
 name: default
-timestamp: 1571223658
+timestamp: 1584945590
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -18,7 +18,7 @@ sections:
   mainbar: Mainbar
   sidebar: Sidebar
   footer: Footer
-  offcanvas: Untitled
+  offcanvas: Offcanvas
 particles:
   messages:
     system-messages-4409: 'System Messages'
@@ -35,7 +35,6 @@ particles:
     position-module-2306: 'Module Instance'
   custom:
     custom-3119: Features
-    custom-7658: 'Customer Testimonials'
     custom-6355: 'Develop CMS themes quickly'
     custom-6291: 'Social Share'
   contenttabs:

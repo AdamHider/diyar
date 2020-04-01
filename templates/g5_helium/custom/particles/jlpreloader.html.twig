@@ -1,0 +1,63 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+<style>
+.preloader-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: {{particle.background|default('#2d4059')|e}};
+  color: {{particle.color|default('#ffffff')|e}};
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+}
+.preloader-wrapper .preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  transform: translate(-50%, -50%)
+}
+</style>
+{% endblock %}
+
+{% set imagewidth %}
+		{% if particle.image_width != '' %}
+    width = "{{particle.image_width}}"
+    {% endif %}
+{% endset %}
+
+{% set imageheight %}
+		{% if particle.image_height != '' %}
+    height = "{{particle.image_height}}"
+    {% endif %}
+{% endset %}
+
+{% pageblock body_top %}
+<div class="preloader-wrapper">
+  <div class="preloader">
+    {% if particle.image %}
+    <img {{imagewidth}} {{imageheight}} class="tm-image" data-src="{{ url(particle.image)|e }}" jl-img>
+    {% else %}
+    <div jl-spinner="ratio: 2"></div>
+    {% endif %}
+  </div>
+</div>
+
+{% endpageblock %}
+{% block javascript_footer %}
+{% do gantry.load('jquery') %}
+<script type="text/javascript">
+jQuery(function ($) {
+  $(document).ready(function($) {
+    var body = $('body');
+    body.addClass('preloader-site');
+  });
+  $(window).load(function() {
+    $('.preloader-wrapper').fadeOut({{particle.fadeout|default('500')|e}});
+    $('body').removeClass('preloader-site');
+  });
+});
+</script>
+{% endblock %}

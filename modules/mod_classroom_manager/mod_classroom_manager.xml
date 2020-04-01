@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<extension type = "module" version = "3.1.0" client = "site" method="upgrade">
+
+    <name>Classroom Manager</name>
+    <author>Adam Hider</author>
+    <version>1.0.0</version>
+    <description>A classroom organization module.</description>
+
+    <media folder="css-compiled" destination="mod_classroom_manager">
+        <folder>./media/gantry5/engines/nucleus/css-compiled</folder>
+    </media>
+    <files>
+        <filename>mod_classroom_manager.xml</filename>
+        <filename module = "mod_classroom_manager">mod_classroom_manager.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+	<folder>language</folder>
+        <folder>mysql</folder>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+    </files>
+   
+    <config>
+        
+    </config>
+    
+    <languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.mod_classroom_manager.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_classroom_manager.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_classroom_manager.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_classroom_manager.ini</language>
+    </languages>
+    <install>
+         <sql>
+             <file driver="mysql" charset="utf8">mysql/install.mysql.utf8.sql</file>
+         </sql>
+    </install>
+
+    <uninstall>
+         <sql>
+             <file driver="mysql" charset="utf8">mysql/uninstall.mysql.utf8.sql</file>
+         </sql>
+    </uninstall>
+
+    <update> 
+        <schemas>
+            <schemapath type="mysql">mysql/updates</schemapath> 
+        </schemas> 
+    </update>
+</extension>

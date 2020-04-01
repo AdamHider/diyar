@@ -1,0 +1,19 @@
+atoms:
+  -
+    id: assets-9330
+    type: assets
+    title: 'Custom CSS / JS'
+    inherit:
+      outline: default
+      atom: assets-4435
+      include:
+        - attributes
+  -
+    id: assets-3010
+    type: assets
+    title: 'Custom CSS / JS'
+    attributes:
+      enabled: '1'
+      css:
+        - { location: '', inline: "#g-page-surround #g-navigation.diyar-main-navigation{\n background-color: #312f38 !important;\n}\n\n.g-menu-item .g-dropdown .g-block{\nz-index: 200;\n}", extra: {  }, priority: '1', name: 'New item' }
+      javascript: {  }

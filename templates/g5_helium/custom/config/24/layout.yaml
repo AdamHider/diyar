@@ -4,7 +4,7 @@ preset:
   name: default
   timestamp: 1563522857
 layout:
-  navigation: {  }
+  /navigation/: {  }
   header: {  }
   /intro/:
     -
@@ -27,10 +27,13 @@ layout:
 structure:
   navigation:
     type: section
+    attributes:
+      boxed: ''
+      class: diyar-main-navigation
+      variations: ''
     inherit:
       outline: '14'
       include:
-        - attributes
         - children
   header:
     inherit:
@@ -43,7 +46,7 @@ structure:
     type: section
     attributes:
       boxed: ''
-      class: lugat-container
+      class: contact-us-container
       variations: ''
   features:
     type: section

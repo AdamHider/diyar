@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:/iSell/www/diyar/templates/g5_helium/custom/config/18/layout.yaml',
-    'modified' => 1568379058,
+    'modified' => 1584945590,
     'data' => [
         'version' => 2,
         'preset' => [
@@ -11,7 +11,7 @@ return [
             'timestamp' => 1563522857
         ],
         'layout' => [
-            'navigation' => [
+            '/navigation/' => [
                 
             ],
             '/header/' => [
@@ -66,11 +66,15 @@ return [
         'structure' => [
             'navigation' => [
                 'type' => 'section',
+                'attributes' => [
+                    'boxed' => '',
+                    'class' => 'diyar-main-navigation',
+                    'variations' => ''
+                ],
                 'inherit' => [
                     'outline' => '14',
                     'include' => [
-                        0 => 'attributes',
-                        1 => 'children'
+                        0 => 'children'
                     ]
                 ]
             ],
@@ -85,7 +89,7 @@ return [
                 'type' => 'section',
                 'attributes' => [
                     'boxed' => '',
-                    'class' => '',
+                    'class' => 'lugat-container',
                     'variations' => ''
                 ]
             ],
@@ -189,7 +193,7 @@ return [
             ],
             'offcanvas' => [
                 'inherit' => [
-                    'outline' => 'default',
+                    'outline' => '14',
                     'include' => [
                         0 => 'attributes',
                         1 => 'children'
@@ -201,7 +205,8 @@ return [
             'position-module-2671' => [
                 'title' => 'Module Instance',
                 'attributes' => [
-                    'module_id' => '93'
+                    'module_id' => '93',
+                    'key' => 'module-instance'
                 ]
             ]
         ]

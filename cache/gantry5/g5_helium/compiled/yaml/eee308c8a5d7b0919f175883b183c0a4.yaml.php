@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:\\iSell\\www\\diyar/templates/g5_helium/custom/config/default/styles.yaml',
-    'modified' => 1568011348,
+    'modified' => 1585405637,
     'data' => [
         'preset' => 'preset1',
         'base' => [
@@ -14,20 +14,20 @@ return [
             'color-2' => '#66ad4c'
         ],
         'font' => [
-            'family-default' => 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif',
-            'family-title' => 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+            'family-default' => 'family=Open+Sans:300,700,400',
+            'family-title' => 'family=Open+Sans:300,700,400'
         ],
         'link' => [
             'regular' => '#4db2b3',
             'hover' => '#424753'
         ],
         'navigation' => [
-            'background' => '#312f38',
+            'background' => 'rgba(49, 47, 56, 0)',
             'text-color' => '#ffffff'
         ],
         'header' => [
             'background' => '#312f38',
-            'background-image' => 'gantry-media://header/img01.jpg',
+            'background-image' => '',
             'background-overlay' => 'enabled',
             'text-color' => '#eceeef'
         ],
@@ -62,22 +62,23 @@ return [
             'text-color' => '#ffffff'
         ],
         'offcanvas' => [
-            'background' => '#4db2b3',
-            'text-color' => '#eceeef',
-            'toggle-color' => '#4db2b3',
-            'toggle-visibility' => '1',
-            'width' => '12rem'
+            'background' => '#ffffff',
+            'text-color' => '#424753',
+            'toggle-color' => '#66ad4c',
+            'toggle-visibility' => '2',
+            'width' => '15rem'
         ],
         'breakpoints' => [
-            'large-desktop-container' => '75rem',
-            'desktop-container' => '60rem',
+            'large-desktop-container' => '1200px',
+            'desktop-container' => '1200px',
             'tablet-container' => '48rem',
             'large-mobile-container' => '30rem',
             'mobile-menu-breakpoint' => '48rem'
         ],
         'menu' => [
             'col-width' => '180px',
-            'animation' => 'g-fade'
+            'animation' => 'g-fade',
+            'hide-on-mobile' => '0'
         ]
     ]
 ];

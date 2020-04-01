@@ -1,0 +1,52 @@
+name: JL Headroom
+description: Make elements remain at the top of the viewport, like a sticky navigation.
+type: atom
+
+configuration:
+  caching:
+    type: static
+
+form:
+  overrideable: false
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable particle.
+      default: true
+    section:
+      type: input.text
+      label: Section
+      description: Define the ID or class of the section that you want to set as fixed.
+      placeholder: '#g-navigation'
+    custombg:
+      type: input.colorpicker
+      label: Custom Background
+      default: "#ffffff"
+    style:
+      type: select.selectize
+      label: Style
+      description: Select an animated headroom styling.
+      default: slide
+      options:
+        slide: Slide
+        swing: Swing
+        flip: Flip
+        bounce: Bounce
+    offset:
+      type: input.number
+      label: Offset
+      description: Vertical offset in px before element is first unpinned
+      min: 0
+      placeholder: 0
+
+    tolerance:
+      type: input.number
+      label: Tolerance
+      description: Scroll tolerance in px before state changes
+      min: 0
+      placeholder: 0
+    copyright:
+      type: separator.note
+      class: alert alert-info
+      content: 'JL Headroom Atom <strong>Version: 1.0.3</strong> Copyright (C) <a href="https://joomlead.com/" target="_blank">JoomLead</a>.'

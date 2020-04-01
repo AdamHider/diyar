@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<extension type = "module" version = "3.1.0" client = "site" method="upgrade">
+
+    <name>Hello, World!</name>
+    <author>Adam Hider</author>
+    <version>1.0.0</version>
+    <description>A simple lugat manager module.</description>
+
+    <media folder="css-compiled" destination="mod_lugat_manager">
+        <folder>./media/gantry5/engines/nucleus/css-compiled</folder>
+    </media>
+    <files>
+        <filename>mod_lugat_manager.xml</filename>
+        <filename module = "mod_lugat_manager">mod_lugat_manager.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+		<folder>language</folder>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+    </files>
+   
+    <config>
+        
+    </config>
+    
+    <languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.mod_lugat_manager.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_lugat_manager.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_lugat_manager.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_lugat_manager.ini</language>
+    </languages>
+</extension>

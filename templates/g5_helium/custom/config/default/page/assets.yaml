@@ -1,24 +1,12 @@
-favicon: 'gantry-media://icons/favicon.png'
-touchicon: ''
+favicon: 'gantry-media://icons/diyar_favicon.png'
+touchicon: 'gantry-media://logos/square_black.png'
 css:
   -
-    location: ''
-    inline: "#g-header::before{\nbackground-image: linear-gradient(40deg,#38572f, #37536a);\n}"
+    location: 'gantry-assets://css/diyar-custom.css'
+    inline: ''
     extra: {  }
     priority: '0'
-    name: Custom2
-  -
-    location: ''
-    inline: ".diyar-main-header{\n  margin-top: -9.5em !important;\npadding-top: 9.5em !important;\noverflow: hidden;\n}\n\n.home-lang-switcher .lang-inline{\nfont-weight: 700;\nfont-size: 14px;\nline-height: 3.5;\n}\n.home-lang-switcher .lang-inline a{\ncolor: white;\n}\n.home-header-image{\n  position: absolute;\n  top:0; left: 0; \n  width: 100vw; height: inherit; overflow: hidden;z-index: -1;\n}\n.home-header-image .owl-item.cloned{\nwidth: 100vw !important;\n}\n.home-header-image .owl-item .g-owlcarousel-item-img::after{\nopacity: 0.7 !important;\nbackground: linear-gradient(hsl(127.5, 17.4%, 18%) 30%,hsl(130,18%,26%) 50%) !important;\n}\n.home-header-image .owl-item .g-owlcarousel-item-img img{\n  max-width: 300%;\n min-width: 50%;\n width: inherit !important;\n}\n.g-menu-item-type-particle{\n position: absolute !important;\ntop: 1.5em;\n right: 7em;\n}\n.g-menu-item-180,  \n.g-menu-item-181,\n.g-menu-item-182,  \n.g-menu-item-183\n{\n position: absolute !important;\n top: 2em;\n right: 0em;\npadding: 0.3em 1em;\nborder: 1px solid white;\nborder-radius: 0.5em;\n}"
-    extra: {  }
-    priority: '0'
-    name: Custom1
-  -
-    location: ''
-    inline: ".g-offcanvas-toggle{\nwidth: 20%;\nheight: auto;\ntop: 0px;\nleft: 0px;\npadding: 1rem;\n}\n#g-offcanvas{\nborder-right: 1px solid #5fb16a;\n}\n\n#g-offcanvas .offcanvas-image .g-content.g-particle{\nmargin: 0px;\npadding: 0px;\nborder-bottom: 1px solid lightgray;\n}\n.g-offcanvas-open #g-page-surround .g-nav-overlay{\nopacity: 0.5 !important;\nbackground-color: black;\ntransition: 0.5s ease-in;\n}\n#g-offcanvas #g-mobilemenu-container ul > li:not(.g-menu-item-type-particle):not(.g-menu-item-type-module).active{\nborder-right: 4px solid #5e9f46;\nbackground-color: #dbf7e1;\n\n}\n\n#g-offcanvas #g-mobilemenu-container ul > li.g-menu-item-link-parent > .g-menu-item-container > .g-menu-parent-indicator{\nbackground: none !important;\nborder: none !important;\nwidth: 30%;\n}\n\n#g-mobilemenu-container .g-toplevel li.g-parent .g-menu-parent-indicator::after{\nfont-size: 13px !important;\nwidth: 30%;\ntext-align: right;\n}\n#g-offcanvas #g-mobilemenu-container ul > li.g-menu-item-link-parent > .g-menu-item-container > .g-menu-parent-indicator:hover{\ncolor: black;\n}\n#g-offcanvas .g-menu-item{\nborder-bottom: 1px solid lightgray;\nborder-radius: 0px;\npadding: inherit;\nfont-weight: bold;\n}\n#g-offcanvas .lang-inline li{\ndisplay: inline-block;\n}\n#g-offcanvas #g-mobilemenu-container ul > li:not(.g-menu-item-type-particle):not(.g-menu-item-type-module):hover{\nbackground: #84848424;\n}"
-    extra: {  }
-    priority: '0'
-    name: Offcanvas
+    name: diyar-custom
 javascript:
   -
     location: ''
@@ -27,3 +15,10 @@ javascript:
     extra: {  }
     priority: '1'
     name: 'Home menu'
+  -
+    location: 'gantry-assets://js/background_mousemovement.js'
+    inline: ''
+    in_footer: '0'
+    extra: {  }
+    priority: '0'
+    name: BackGroundMovement

@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<extension type = "module" version = "3.1.0" client = "site" method="upgrade">
+
+    <name>Exercise Statistic</name>
+    <author>Adam Hider</author>
+    <version>1.0.0</version>
+    <description>A exercise statistic module.</description>
+
+    <media folder="css-compiled" destination="mod_exercise_statistic">
+        <folder>./media/gantry5/engines/nucleus/css-compiled</folder>
+    </media>
+    <files>
+        <filename>mod_exercise_statistic.xml</filename>
+        <filename module = "mod_exercise_statistic">mod_exercise_statistic.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+	<folder>language</folder>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+    </files>
+   
+    <config>
+        
+    </config>
+    
+    <languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.mod_exercise_statistic.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_exercise_statistic.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_exercise_statistic.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_exercise_statistic.ini</language>
+    </languages>
+</extension>

@@ -2,10 +2,10 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:/iSell/www/diyar/templates/g5_helium/custom/config/_body_only/index.yaml',
-    'modified' => 1563522858,
+    'modified' => 1584946675,
     'data' => [
         'name' => '_body_only',
-        'timestamp' => 1563522858,
+        'timestamp' => 1584945590,
         'version' => 7,
         'preset' => [
             'image' => 'gantry-admin://images/layouts/body-only.png',

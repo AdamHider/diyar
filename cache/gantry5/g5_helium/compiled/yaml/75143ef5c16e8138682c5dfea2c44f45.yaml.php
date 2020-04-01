@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:\\iSell\\www\\diyar/templates/g5_helium/blueprints/styles/intro.yaml',
-    'modified' => 1563522857,
+    'modified' => 1584945590,
     'data' => [
         'name' => 'Intro Styles',
         'description' => 'Intro section styles for the Helium theme',

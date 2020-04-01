@@ -45,17 +45,22 @@ class ModLugatSearchbarHelper {
 
 
     public static function autocompleteAjax() {
-        $input = JRequest::getVar('word', '', 'post');
+        $input = mb_strtolower(JRequest::getVar('word', '', 'post'));
         $db = JFactory::getDbo();
+        $strict_search = '';
+        $find_letters = ['â','ı','ü','ö','ğ','ş','ç','ñ'];
+        if(str_replace($find_letters, '', $input) != $input){
+            $strict_search = ' BINARY ';
+        }
         // Retrieve the shout
         $query = "
-                SELECT 
-                   word 
+                SELECT DISTINCT
+                    word 
                 FROM 
-                   word_list
+                   lgt_word_list
                 WHERE 
-                   word LIKE '$input%'
-                GROUP BY word
+                   $strict_search LOWER(word) LIKE '$input%'
+                ORDER BY language_id ASC
                 LIMIT 7
                ";
         $db->setQuery($query);

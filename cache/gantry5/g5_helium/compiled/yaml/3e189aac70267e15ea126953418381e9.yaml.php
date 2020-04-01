@@ -2,10 +2,10 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:\\iSell\\www\\diyar/templates/g5_helium/custom/config/default/index.yaml',
-    'modified' => 1568362021,
+    'modified' => 1584946675,
     'data' => [
         'name' => 'default',
-        'timestamp' => 1568362021,
+        'timestamp' => 1584945590,
         'version' => 7,
         'preset' => [
             'image' => 'gantry-admin://images/layouts/default.png',
@@ -35,7 +35,8 @@ return [
             ],
             'logo' => [
                 'logo-8554' => 'Logo / Image',
-                'logo-7150' => 'Footer Logo'
+                'logo-7150' => 'Footer Logo',
+                'logo-9504' => 'Logo / Image'
             ],
             'menu' => [
                 'menu-4076' => 'Menu'
@@ -47,13 +48,10 @@ return [
                 'position-module-5422' => 'Module Instance',
                 'position-module-2306' => 'Module Instance'
             ],
-            'owlcarousel' => [
-                'owlcarousel-5183' => 'Owl Carousel'
-            ],
             'custom' => [
                 'custom-3119' => 'Features',
-                'custom-7658' => 'Customer Testimonials',
-                'custom-6355' => 'Develop CMS themes quickly'
+                'custom-6355' => 'Develop CMS themes quickly',
+                'custom-6291' => 'Social Share'
             ],
             'contenttabs' => [
                 'contenttabs-3854' => 'Content Tabs'

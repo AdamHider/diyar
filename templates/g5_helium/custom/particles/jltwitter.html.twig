@@ -1,0 +1,48 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+
+{% block javascript %}
+{% do gantry.load('jquery') %}
+<script src="https://platform.twitter.com/widgets.js"></script>
+  <script>
+  jQuery(document).ready(function() {
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+      t._e.push(f);
+      };
+
+      return t;
+      }(document, "script", "twitter-wjs"));
+      setTimeout(function(){
+        twttr.widgets.createTimeline(
+          {
+            sourceType: 'profile',
+            screenName: '{{particle.name}}',
+          },
+
+          document.getElementById('twitter-timeline-{{id}}'),
+          {
+            {% if particle.height != "" %}height: {{particle.height}}, {% endif %}
+            {% if particle.limit != "" %}tweetLimit: {{particle.limit}},{% endif %}
+          }
+        );
+      }, 1000);
+
+    });
+    </script>
+{% endblock %}
+
+{% block particle %}
+    {% if particle.enabled %}
+    <div id="twitter-timeline-{{id}}" class="{{particle.class}}"></div>
+    {% endif %}
+{% endblock %}

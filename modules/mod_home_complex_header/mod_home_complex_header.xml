@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<extension type = "module" version = "3.1.0" client = "site" method="upgrade">
+
+    <name>Hello, World!</name>
+    <author>Adam Hider</author>
+    <version>1.0.0</version>
+    <description>A simple lugat module.</description>
+
+    <media folder="css-compiled" destination="mod_home_complex_header">
+        <folder>./media/gantry5/engines/nucleus/css-compiled</folder>
+    </media>
+    <files>
+        <filename>mod_home_complex_header.xml</filename>
+        <filename module = "mod_home_complex_header">mod_home_complex_header.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+	<folder>language</folder>
+        <folder>images</folder>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.mod_home_complex_header.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_home_complex_header.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_home_complex_header.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.mod_home_complex_header.ini</language>
+    </languages>
+</extension>

@@ -1,0 +1,152 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1563522857
+layout:
+  navigation: {  }
+  /header/:
+    -
+      - custom-5431
+  /intro/:
+    -
+      - 'system-content-1986 71'
+      - 'menu-7685 29'
+  features: {  }
+  utility: {  }
+  above: {  }
+  testimonials: {  }
+  expanded: {  }
+  /container-main/:
+    -
+      -
+        'aside 25': {  }
+      -
+        'mainbar 50': {  }
+      -
+        'sidebar 25': {  }
+  footer: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: '14'
+      include:
+        - children
+        - attributes
+  header:
+    attributes:
+      boxed: ''
+      class: 'background-image-section article-header parallax-background'
+      variations: ''
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+      class: article-container
+      variations: ''
+  features:
+    type: section
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+  utility:
+    type: section
+    inherit:
+      outline: '18'
+      include:
+        - attributes
+        - block
+        - children
+  above:
+    type: section
+    inherit:
+      outline: '31'
+      include:
+        - attributes
+        - block
+        - children
+  testimonials:
+    type: section
+    inherit:
+      outline: '18'
+      include:
+        - attributes
+        - block
+        - children
+  expanded:
+    type: section
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+  aside:
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+    block:
+      fixed: '1'
+  mainbar:
+    type: section
+    subtype: main
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+  sidebar:
+    type: section
+    subtype: aside
+    inherit:
+      outline: '25'
+      include:
+        - attributes
+        - block
+        - children
+    block:
+      fixed: '1'
+  container-main:
+    attributes:
+      boxed: ''
+      class: ''
+      extra: {  }
+  footer:
+    inherit:
+      outline: '14'
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: '14'
+      include:
+        - attributes
+        - children
+content:
+  custom-5431:
+    title: 'Header Text'
+    attributes:
+      html: "<h2>Мой профиль</h2>\n<div class=\"additional-text\"></div>"
+    block:
+      class: header-text
+  system-content-1986:
+    block:
+      class: block-page-content
+      variations: nopaddingall
+  menu-7685:
+    inherit:
+      outline: '31'
+      include:
+        - attributes
+        - block
+      particle: menu-5639

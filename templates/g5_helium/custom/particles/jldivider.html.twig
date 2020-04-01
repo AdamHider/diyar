@@ -1,0 +1,143 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+{% if particle.particle_title_color or particle.particle_title_fontsize or particle.title_color or particle.title_fontsize or particle.customize_content_color or particle.customize_content_fontsize or particle.meta_color or particle.meta_fontsize %}
+<style>
+{% if particle.particle_title_color or particle.particle_title_fontsize %}
+#{{ id }}.g5-particle-title { {% if particle.particle_title_color %}color: {{ particle.particle_title_color }};{% endif %}{% if particle.particle_title_fontsize %}font-size: {{particle.particle_title_fontsize}}px;{% endif %} }
+{% endif %}
+</style>
+{% endif %}
+{% endblock %}
+
+{# set Viewport Height #}
+{% set viewport_height %}
+{% if particle.viewport_height == 'none' %}
+{% elseif particle.viewport_height == 'full' %}
+jl-height-viewport="offset-top: true"
+{% elseif particle.viewport_height == 'percent' %}
+jl-height-viewport="offset-top: true;offset-bottom: 20"
+{% elseif particle.viewport_height == 'section' %}
+jl-height-viewport="offset-top: true;offset-bottom: 50"
+{% elseif particle.viewport_height == 'expand' %}
+jl-height-viewport="expand: true"
+{% endif %}
+{% endset %}
+
+{# set padding #}
+{% set padding %}
+{% if particle.viewport_height == 'full' %}
+{% else %}
+{% if particle.padding == 'default' %}{% else %} jl-section-{{particle.padding|e}}{% endif %}
+{% endif %}
+{% endset %}
+
+{# set Container #}
+{% set container %}
+{% if particle.container == '1' %}
+<div class="jl-container"><div class="g5-content g5-particle">{% endif %}
+{% endset %}
+
+{# set End Container #}
+{% set endcontainer %}
+{% if particle.container == '1' %}
+</div></div>{% endif %}
+{% endset %}
+
+{# set Background color #}
+{% set parallax_bg_color %}
+{% if particle.parallax_bg_color %}
+style="background-color: {{particle.parallax_bg_color}};"{% endif %}
+{% endset %}
+
+{# Set Max-Width Content #}
+{% set content_maxwidth %}
+{% if particle.g_maxwidth != 'inherit' %} jl-width-{{particle.g_maxwidth}}{% if particle.g_maxwidth_breakpoint != 'always' %}@{{particle.g_maxwidth_breakpoint}}{% endif %}{% if particle.g_maxwidth_alignment == 'left' %}{% elseif particle.g_maxwidth_alignment == 'center' %} jl-margin-auto{% else %} jl-margin-auto-left{% endif %}{% endif %}
+{% endset %}
+
+{# set Parallax Background #}
+{% set parallaxbackground %}
+{% if particle.parallax_image %}
+<div data-src="{{ url(particle.parallax_image)|e }}" class="{{id}} jl-background-norepeat{{padding}}{{content_maxwidth}} jl-background-{{particle.background_image_position|e}}{% if particle.background_image_size != 'auto' %} jl-background-{{particle.background_image_size|e}}{% endif %}{% if particle.parallax_bg_visibility != 'always' %} jl-background-image@{{particle.parallax_bg_visibility|e}}{% endif %}{% if particle.vertical_alignment != 'none' %} jl-flex jl-flex-{{particle.vertical_alignment|e}}{% endif %}{% if particle.parallax_text_color != 'default' %} jl-{{particle.parallax_text_color|e}}{% endif %}{% if particle.blendmode != 'inherit' %} jl-background-blend-{{particle.blendmode|e}}{% endif %}" {{parallax_bg_color}}{% if particle.horizontal_start or particle.horizontal_end or particle.vertical_start or particle.vertical_end %} jl-parallax="{% if particle.horizontal_start or particle.horizontal_end %}bgx: {{particle.horizontal_start|e}},{{particle.horizontal_end|e}};{% endif %}{% if particle.vertical_start or particle.vertical_end %}bgy: {{particle.vertical_start|e}},{{particle.vertical_end|e}};{% endif %}{% if particle.parallax_bg_breakpoint != 'always' %} media: @{{particle.parallax_bg_breakpoint|e}}{% endif %}" {% endif %} jl-img {{viewport_height}}>
+{{container}}
+{% endif %}
+{% endset %}
+
+{# End Parallax Background #}
+{% set endparallaxbackground %}
+{% if particle.parallax_image %}
+{{endcontainer}}
+</div>
+{% endif %}
+{% endset %}
+
+{# Set Horizontal #}
+{% set pahorizontal %}
+{% if particle.pa_horizontal_start or particle.pa_horizontal_end %}x: {% if particle.pa_horizontal_start == '' %}0{% else %}{{particle.pa_horizontal_start }}{% endif %},{% if particle.pa_horizontal_end == '' %}0{% else %}{{particle.pa_horizontal_end }}{% endif %};{% endif %}
+{% endset %}
+
+{# Set Vertical #}
+{% set pavertical %}
+{% if particle.pa_vertical_start or particle.pa_vertical_end %}y: {% if particle.pa_vertical_start == '' %}0{% else %}{{particle.pa_vertical_start }}{% endif %},{% if particle.pa_vertical_end == '' %}0{% else %}{{particle.pa_vertical_end }}{% endif %};{% endif %}
+{% endset %}
+
+{# Set Scale #}
+{% set scale %}
+{% if particle.scale_start or particle.scale_end %}scale: {% if particle.scale_start == '' %}1{% else %}{{particle.scale_start / 100 }}{% endif %},{% if particle.scale_end == '' %}1{% else %} {{particle.scale_end / 100 }}{% endif %};{% endif %}
+{% endset %}
+
+{# Set Rotate #}
+{% set rotate %}{% if particle.rotate_start or particle.rotate_end %}
+rotate: {% if particle.rotate_start == '' %}0{% else %}{{particle.rotate_start}}{% endif %},{% if particle.rotate_end == '' %}0{% else %}{{particle.rotate_end}}{% endif %};{% endif %}
+{% endset %}
+
+{# Set Opacity #}
+{% set opacity %}
+{% if particle.opacity_start or particle.opacity_end %}opacity: {% if particle.opacity_start == '' %}1{% else %}{{particle.opacity_start / 100 }}{% endif %},{% if particle.opacity_end == '' %}1{% else %}{{particle.opacity_end / 100 }}{% endif %};{% endif %}
+{% endset %}
+
+{# set Animation #}
+{% set animation %}
+{% if particle.animation == 'parallax' %}
+{% if particle.pa_horizontal_start or particle.pa_horizontal_end or particle.pa_vertical_start or particle.pa_vertical_end or particle.scale_start or particle.scale_end or particle.rotate_start or particle.rotate_end or particle.opacity_start or particle.opacity_end or particle.easing or particle.pa_viewport or particle.pa_breakpoint %} jl-parallax="{{pahorizontal}}{{pavertical}}{{scale}}{{rotate}}{{opacity}}{% if particle.easing == '' %}{% else %}easing: {{ particle.easing / 100 }};{% endif %}{% if particle.pa_viewport != '' %}viewport:{{ particle.pa_viewport / 100 }};{% endif %}{% if particle.pa_breakpoint != 'always' %}media: @{{particle.pa_breakpoint|e}}{% endif %}"{% endif %}
+{% else %}
+{% if particle.animation != 'inherit' %} jl-scrollspy="cls:jl-animation-{{particle.animation|e}}{% if particle.animation_repeat != 'disabled' %}; repeat: true{% endif %}{% if particle.animation_delay != '' %}; delay: {{particle.animation_delay|e}}{% endif %}"{% endif %}
+{% endif %}
+{% endset %}
+
+{# Set Particle Alignment #}
+{% set particle_alignment %}
+{% if particle.align != 'inherit' %} jl-text-{{particle.align|e}}{% if particle.breakpoint != 'always' %}@{{particle.breakpoint|e}}{% endif %}{% endif %}{% if particle.align != 'inherit' and particle.breakpoint != 'always' %}{% if particle.fallback != 'inherit' %} jl-text-{{particle.fallback|e}}{% endif %}{% endif %}
+{% endset %}
+
+{# set Particle Title Style #}
+{% set particle_title_style %}
+{% if particle.particle_title %}
+<{{particle.particle_title_element|e}} id="{{ id }}" class="g5-particle-title{% if particle.particle_title_align != 'inherit' %} jl-text-{{particle.particle_title_align|e}}{% endif %}{% if particle.particle_predefined_color != 'default' %} jl-text-{{particle.particle_predefined_color|e}}{% endif %}{% if particle.particle_title_style != 'default' %} jl-{{particle.particle_title_style|e}}{% endif %}{% if particle.particle_title_decoration != 'none' %} jl-heading-{{particle.particle_title_decoration|e}}{% endif %}">
+{% if particle.particle_title_decoration == 'line' %} <span>{{particle.particle_title|raw}}</span>
+{% else %} {{particle.particle_title|raw}}
+{% endif %}
+</{{particle.particle_title_element|e}}>
+{% endif %}
+{% endset %}
+
+{# Set Divider Style #}
+{% set dividerstyle %}
+{% if particle.divider_style == 'default' %} class="jl-hr"{% elseif particle.divider_style == 'icon' %} class="jl-divider-icon"{% elseif particle.divider_style == 'vertical' %} class="jl-divider-vertical"{% else %} class="jl-divider-small{% if particle.divider_align != 'inherit' %} jl-text-{{particle.divider_align|e}}{% if particle.divider_breakpoint != 'always' %}@{{particle.divider_breakpoint|e}}{% endif %}{% endif %}{% if particle.divider_fallback != 'inherit' %} jl-text-{{particle.divider_fallback|e}}{% endif %}"
+{% endif %}
+{% endset %}
+
+{% block particle %}
+{% if particle.enabled %}
+{{parallaxbackground}}
+{{particle_title_style}}
+<div class="tm-divider-wrapper{{content_maxwidth}}{% if particle.class %} {{ particle.class }}{% endif %}{{particle_alignment}}{% if particle.margin == 'inherit' %}{% elseif particle.margin == 'default' %} jl-margin{% else %} jl-margin-{{particle.margin|e}}{% endif %}{% if particle.visibility != 'inherit' %} jl-visible@{{particle.visibility|e}}{% endif %}"{{animation}}>
+{% if particle.divider_element == 'hr' %}
+<hr{{dividerstyle}}>
+{% else %}
+<div{{dividerstyle}}></div>
+{% endif %}
+</div>
+{{endparallaxbackground}}
+{% endif %}
+{% endblock %}

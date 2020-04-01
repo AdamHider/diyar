@@ -2,10 +2,10 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:\\iSell\\www\\diyar/templates/g5_helium/custom/config/18/index.yaml',
-    'modified' => 1568379058,
+    'modified' => 1584946676,
     'data' => [
-        'name' => '18',
-        'timestamp' => 1568379058,
+        'name' => 18,
+        'timestamp' => 1584945590,
         'version' => 7,
         'preset' => [
             'image' => 'gantry-admin://images/layouts/default.png',
@@ -32,22 +32,32 @@ return [
             'offcanvas' => 'Offcanvas'
         ],
         'particles' => [
+            'module' => [
+                'position-module-2671' => 'Module Instance'
+            ],
             'messages' => [
-                'system-messages-7611' => 'System Messages'
+                'system-messages-4970' => 'System Messages'
             ],
             'logo' => [
-                'logo-5979' => 'Logo / Image',
-                'logo-1710' => 'Logo / Image'
+                'logo-2393' => 'Logo / Image',
+                'logo-4730' => 'Logo / Image'
             ],
             'menu' => [
-                'menu-9340' => 'Menu'
+                'menu-8638' => 'Menu'
             ],
-            'social' => [
-                'social-9867' => 'Social'
+            'custom' => [
+                'custom-7369' => 'Social',
+                'custom-8978' => 'Logo And Descrıptıon',
+                'custom-2794' => 'Footer Menu',
+                'custom-2336' => 'Contact',
+                'custom-8946' => 'Copyright and Policies'
             ],
-            'module' => [
-                'position-module-7524' => 'Module Instance',
-                'position-module-2671' => 'Module Instance'
+            'spacer' => [
+                'spacer-1838' => 'Spacer',
+                'spacer-3649' => 'Spacer'
+            ],
+            'mobile-menu' => [
+                'mobile-menu-7073' => 'Mobile-menu'
             ],
             'position' => [
                 'position-position-2726' => 'Aside',
@@ -55,45 +65,33 @@ return [
             ],
             'content' => [
                 'system-content-8360' => 'Page Content'
-            ],
-            'custom' => [
-                'custom-9547' => 'Custom HTML'
-            ],
-            'horizontalmenu' => [
-                'horizontalmenu-4161' => 'Horizontal Menu'
-            ],
-            'totop' => [
-                'totop-3095' => 'To Top'
-            ],
-            'mobile-menu' => [
-                'mobile-menu-2243' => 'Mobile-menu'
             ]
         ],
         'inherit' => [
             14 => [
                 'navigation' => 'navigation',
-                'system-messages-7611' => 'system-messages-1962',
-                'logo-5979' => 'logo-5571',
-                'menu-9340' => 'menu-6097',
-                'social-9867' => 'social-2035',
-                'position-module-7524' => 'position-module-6835',
                 'footer' => 'footer',
-                'logo-1710' => 'logo-1144',
-                'custom-9547' => 'custom-3748',
-                'horizontalmenu-4161' => 'horizontalmenu-5487',
-                'totop-3095' => 'totop-3746'
+                'offcanvas' => 'offcanvas',
+                'system-messages-4970' => 'system-messages-1962',
+                'logo-2393' => 'logo-5571',
+                'menu-8638' => 'menu-6097',
+                'custom-7369' => 'custom-2297',
+                'custom-8978' => 'custom-7183',
+                'spacer-1838' => 'spacer-5222',
+                'custom-2794' => 'custom-3360',
+                'spacer-3649' => 'spacer-4416',
+                'custom-2336' => 'custom-7504',
+                'custom-8946' => 'custom-3748',
+                'logo-4730' => 'logo-2999',
+                'mobile-menu-7073' => 'mobile-menu-7896'
             ],
             17 => [
                 'aside' => 'aside',
-                'position-position-2726' => 'position-position-4734',
                 'mainbar' => 'mainbar',
-                'system-content-8360' => 'system-content-1587',
                 'sidebar' => 'sidebar',
+                'position-position-2726' => 'position-position-4734',
+                'system-content-8360' => 'system-content-1587',
                 'position-position-2457' => 'position-position-3949'
-            ],
-            'default' => [
-                'offcanvas' => 'offcanvas',
-                'mobile-menu-2243' => 'mobile-menu-9030'
             ]
         ]
     ]

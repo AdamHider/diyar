@@ -1,0 +1,9 @@
+preset: preset1
+accent:
+  color-1: '#66ad4c'
+  color-2: '#66ad4c'
+link:
+  regular: '#66ad4c'
+header:
+  background-image: 'gantry-media://header/crimean-1.jpg'
+  background-overlay: disabled

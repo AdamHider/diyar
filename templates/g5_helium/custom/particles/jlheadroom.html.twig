@@ -1,0 +1,66 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ url('gantry-theme://css/headroom.css') }}">
+<style>
+  {% if particle.custombg %}
+  {{ particle.section|default('#g-navigation') }} {
+    background: {{ particle.custombg }} !important;
+  }
+  {% endif %}
+  .headroom--not-top {
+    position: fixed !important;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+</style>
+{% endblock %}
+
+{% block javascript_footer %}
+    {% do gantry.document.addScript(url('gantry-theme://js/headroom.min.js')) %}
+    <script>
+        // User Section
+        var myElement = document.querySelector("{{ particle.section|default('#g-navigation') }}");
+        var headroom  = new Headroom(myElement, {
+            "offset": {{ particle.offset|default(0) }},
+            "tolerance": {{ particle.tolerance|default(0) }},
+            // Custom CSS Classes
+            classes : {
+              // when element is initialised
+              "initial":"animated",
+              {% if particle.style == 'slide' %}
+              // when scrolling up
+              "pinned":"slideDown",
+                // when scrolling down
+              "unpinned":"slideUp",
+              {% elseif particle.style == 'swing' %}
+              // when scrolling up
+              "pinned":"swingInX",
+                // when scrolling down
+              "unpinned":"swingOutX",
+              {% elseif particle.style == 'flip' %}
+              // when scrolling up
+              "pinned":"flipInX",
+                // when scrolling down
+              "unpinned":"flipOutX",
+              {% elseif particle.style == 'bounce' %}
+              // when scrolling up
+              "pinned":"bounceInDown",
+                // when scrolling down
+              "unpinned":"bounceOutUp",
+              {% endif %}
+              // when above offset
+              top : "headroom--top",
+              // when below offset
+              notTop : "headroom--not-top",
+              // when at bottom of scoll area
+              bottom : "headroom--bottom",
+              // when not at bottom of scroll area
+              notBottom : "headroom--not-bottom"
+            }
+        });
+        headroom.init();
+    </script>
+{% endblock %}

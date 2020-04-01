@@ -1,0 +1,71 @@
+name: 31
+timestamp: 1585403616
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1563522857
+positions: {  }
+sections:
+  navigation: Navigation
+  intro: Intro
+  features: Features
+  utility: Utility
+  above: Above
+  testimonials: Testimonials
+  expanded: Expanded
+  header: Header
+  aside: Aside
+  sidebar: Sidebar
+  mainbar: Mainbar
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  custom:
+    custom-2955: 'Header Text'
+    custom-8684: Social
+    custom-6953: 'Logo And Descrıptıon'
+    custom-7709: 'Footer Menu'
+    custom-8760: Contact
+    custom-4740: 'Copyright and Policies'
+  module:
+    position-module-8620: 'Module Instance'
+  menu:
+    menu-5639: Menu
+    menu-2728: Menu
+  messages:
+    system-messages-7971: 'System Messages'
+  logo:
+    logo-4843: 'Logo / Image'
+    logo-4730: 'Logo / Image'
+  spacer:
+    spacer-6334: Spacer
+    spacer-6396: Spacer
+  mobile-menu:
+    mobile-menu-7073: Mobile-menu
+inherit:
+  14:
+    navigation: navigation
+    footer: footer
+    offcanvas: offcanvas
+    system-messages-7971: system-messages-1962
+    logo-4843: logo-5571
+    menu-2728: menu-6097
+    custom-8684: custom-2297
+    custom-6953: custom-7183
+    spacer-6334: spacer-5222
+    custom-7709: custom-3360
+    spacer-6396: spacer-4416
+    custom-8760: custom-7504
+    custom-4740: custom-3748
+    logo-4730: logo-2999
+    mobile-menu-7073: mobile-menu-7896
+  25:
+    features: features
+    expanded: expanded
+    aside: aside
+    mainbar: mainbar
+    sidebar: sidebar
+  18:
+    utility: utility
+    testimonials: testimonials

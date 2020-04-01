@@ -1,0 +1,8 @@
+touchicon: ''
+css:
+  -
+    location: 'gantry-assets://css/diyar-custom.css'
+    inline: "p, div, span{\nfont-size: 15px;\n}"
+    extra: {  }
+    priority: '0'
+    name: diyar-custom

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:\\iSell\\www\\diyar/templates/g5_helium/particles/example_particle.yaml',
-    'modified' => 1568104058,
+    'modified' => 1584945590,
     'data' => [
         'name' => 'Example',
         'description' => 'Displays a Title, Image, and Text on the front end.',

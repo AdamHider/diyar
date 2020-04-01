@@ -1,0 +1,160 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1563522857
+layout:
+  navigation: {  }
+  /header/:
+    -
+      - custom-6394
+  /intro/:
+    -
+      - position-module-3745
+    -
+      - 'position-module-1082 20'
+      - 'system-content-4867 47'
+      - 'position-module-3531 33'
+  /features/: {  }
+  utility: {  }
+  /above/:
+    -
+      - position-module-7453
+  testimonials: {  }
+  /expanded/: {  }
+  /container-main/:
+    -
+      -
+        'aside 25': {  }
+      -
+        'mainbar 50': {  }
+      -
+        'sidebar 25': {  }
+  footer: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: '14'
+      include:
+        - children
+        - attributes
+  header:
+    attributes:
+      boxed: ''
+      class: 'background-image-section article-header parallax-background'
+      variations: ''
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+      class: article-container
+      variations: ''
+  features:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  utility:
+    type: section
+    inherit:
+      outline: '18'
+      include:
+        - attributes
+        - block
+        - children
+  above:
+    type: section
+    attributes:
+      boxed: ''
+      class: related-articles-section
+      variations: nomarginall
+  testimonials:
+    type: section
+    inherit:
+      outline: '18'
+      include:
+        - attributes
+        - block
+        - children
+  expanded:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+      variations: ''
+  aside:
+    attributes:
+      class: ''
+      variations: ''
+    block:
+      fixed: '1'
+  mainbar:
+    type: section
+    subtype: main
+    attributes:
+      class: ''
+      variations: ''
+  sidebar:
+    type: section
+    subtype: aside
+    attributes:
+      class: ''
+      variations: ''
+    block:
+      fixed: '1'
+  container-main:
+    attributes:
+      boxed: ''
+      class: ''
+      extra: {  }
+  footer:
+    inherit:
+      outline: '14'
+      include:
+        - attributes
+        - children
+  offcanvas:
+    inherit:
+      outline: '14'
+      include:
+        - attributes
+        - children
+content:
+  custom-6394:
+    title: 'Header Text'
+    attributes:
+      html: "<h2>Традиции</h2>\n<div class=\"additional-text\">Традиции крымскотатарского народа берут своё начало из времен существований их общей родины - Крымского Ханства. С тех пор их культура и быт приобретала и мусульманский, и европейский оттенок. Однако, при этом, они сумели сохранить самобытность и неповторимость.</div>"
+    block:
+      class: header-text
+  position-module-3745:
+    title: Breadcrumb
+    attributes:
+      enabled: 0
+      module_id: '17'
+    block:
+      class: breadcrumb-block
+  position-module-1082:
+    title: 'Module Instance'
+    attributes:
+      module_id: '118'
+  system-content-4867:
+    block:
+      class: block-page-content
+      variations: nopaddingall
+  position-module-3531:
+    title: 'Latest Articles'
+    attributes:
+      enabled: 0
+      module_id: '106'
+    block:
+      class: latest-articles-block
+  position-module-7453:
+    title: 'Related Articles'
+    attributes:
+      module_id: '105'
+      key: related-articles
+    block:
+      class: related-articles-block

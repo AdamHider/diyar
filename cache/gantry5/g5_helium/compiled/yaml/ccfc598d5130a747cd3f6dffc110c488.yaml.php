@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:\\iSell\\www\\diyar/templates/g5_helium/custom/config/9/styles.yaml',
-    'modified' => 1568185203,
+    'modified' => 1584945590,
     'data' => [
         'preset' => 'preset3',
         'base' => [
@@ -14,15 +14,15 @@ return [
             'color-2' => '#37536a'
         ],
         'font' => [
-            'family-default' => 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif',
-            'family-title' => 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+            'family-default' => 'family=Open+Sans:300,700,400',
+            'family-title' => 'family=Open+Sans:300,700,400'
         ],
         'link' => [
             'regular' => '#5dad45',
             'hover' => '#424753'
         ],
         'header' => [
-            'background' => '#37536a'
+            'background' => '#312f38'
         ],
         'features' => [
             'background' => '#ffffff'
@@ -34,11 +34,7 @@ return [
             'background' => '#5dad45'
         ],
         'footer' => [
-            'background' => '#37536a'
-        ],
-        'offcanvas' => [
-            'background' => '#37536a',
-            'toggle-color' => '#5dad45'
+            'background' => '#312f38'
         ]
     ]
 ];

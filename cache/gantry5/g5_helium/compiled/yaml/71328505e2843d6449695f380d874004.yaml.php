@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => 'W:/iSell/www/diyar/templates/g5_helium/custom/config/default/layout.yaml',
-    'modified' => 1568362021,
+    'modified' => 1584945590,
     'data' => [
         'version' => 2,
         'preset' => [
@@ -16,25 +16,24 @@ return [
                     0 => 'system-messages-4409'
                 ],
                 1 => [
-                    0 => 'logo-8554 25',
-                    1 => 'menu-4076 36',
-                    2 => 'social-5236 15',
-                    3 => 'position-module-5422 24'
+                    0 => 'logo-8554 23',
+                    1 => 'menu-4076 41',
+                    2 => 'social-5236 18',
+                    3 => 'position-module-5422 18'
                 ]
             ],
             '/header/' => [
-                0 => [
-                    0 => 'owlcarousel-5183'
-                ]
+                
             ],
             '/intro/' => [
-                0 => [
-                    0 => 'position-module-2306'
-                ]
+                
             ],
             '/features/' => [
                 0 => [
                     0 => 'custom-3119'
+                ],
+                1 => [
+                    0 => 'position-module-2306'
                 ]
             ],
             '/utility/' => [
@@ -48,13 +47,14 @@ return [
                 ]
             ],
             '/testimonials/' => [
-                0 => [
-                    0 => 'custom-7658'
-                ]
+                
             ],
             '/expanded/' => [
                 0 => [
                     0 => 'custom-6355'
+                ],
+                1 => [
+                    0 => 'custom-6291'
                 ]
             ],
             '/container-main/' => [
@@ -79,8 +79,11 @@ return [
                     3 => 'totop-7498 15'
                 ]
             ],
-            '/offcanvas/' => [
+            'offcanvas' => [
                 0 => [
+                    0 => 'logo-9504'
+                ],
+                1 => [
                     0 => 'mobile-menu-9030'
                 ]
             ]
@@ -97,20 +100,24 @@ return [
             'header' => [
                 'attributes' => [
                     'boxed' => '',
-                    'class' => '',
+                    'class' => 'g-flushed',
                     'variations' => ''
                 ]
             ],
             'intro' => [
                 'type' => 'section',
                 'attributes' => [
-                    'boxed' => ''
+                    'boxed' => '',
+                    'class' => '',
+                    'variations' => ''
                 ]
             ],
             'features' => [
                 'type' => 'section',
                 'attributes' => [
-                    'boxed' => ''
+                    'boxed' => '',
+                    'class' => 'lugat-container',
+                    'variations' => ''
                 ]
             ],
             'utility' => [
@@ -158,7 +165,13 @@ return [
             ],
             'offcanvas' => [
                 'attributes' => [
-                    'boxed' => ''
+                    'position' => 'g-offcanvas-left',
+                    'class' => '',
+                    'extra' => [
+                        
+                    ],
+                    'swipe' => '1',
+                    'css3animation' => '1'
                 ]
             ]
         ],
@@ -186,45 +199,15 @@ return [
                 'attributes' => [
                     'module_id' => '95',
                     'key' => 'module-instance'
-                ]
-            ],
-            'owlcarousel-5183' => [
-                'title' => 'Owl Carousel',
-                'attributes' => [
-                    'class' => '',
-                    'title' => 'asd',
-                    'nav' => 'disable',
-                    'dots' => 'enable',
-                    'imageOverlay' => 'enable',
-                    'items' => [
-                        0 => [
-                            'class' => '',
-                            'image' => '',
-                            'title' => 'sad',
-                            'desc' => 'sadasd',
-                            'link' => '',
-                            'linktext' => '',
-                            'buttonclass' => 'button-outline',
-                            'disable' => '0',
-                            'name' => 'New item'
-                        ]
-                    ]
-                ]
-            ],
-            'position-module-2306' => [
-                'title' => 'Module Instance',
-                'attributes' => [
-                    'module_id' => '93',
-                    'chrome' => '',
-                    'key' => 'module-instance'
                 ],
                 'block' => [
-                    'variations' => 'center'
+                    'class' => 'language-switcher'
                 ]
             ],
             'custom-3119' => [
                 'title' => 'Features',
                 'attributes' => [
+                    'enabled' => 0,
                     'html' => '<div class="fp-features">
     <div class="g-grid">
         <div class="g-block size-33-3">
@@ -261,9 +244,18 @@ return [
                     'variations' => 'center'
                 ]
             ],
+            'position-module-2306' => [
+                'title' => 'Module Instance',
+                'attributes' => [
+                    'module_id' => '98',
+                    'chrome' => '',
+                    'key' => 'module-instance'
+                ]
+            ],
             'contenttabs-3854' => [
                 'title' => 'Content Tabs',
                 'attributes' => [
+                    'enabled' => 0,
                     'items' => [
                         0 => [
                             'content' => '<p>Gantry 5 includes a new, powerful Menu editor that makes menu organization,
@@ -355,6 +347,7 @@ a handful of things you can do with Gantry 5’s powerful Menu Editor.</p>
             'contentcubes-7850' => [
                 'title' => 'Content Cubes',
                 'attributes' => [
+                    'enabled' => 0,
                     'items' => [
                         0 => [
                             'image' => 'gantry-media://above/img01.jpeg',
@@ -409,24 +402,10 @@ a handful of things you can do with Gantry 5’s powerful Menu Editor.</p>
                     ]
                 ]
             ],
-            'custom-7658' => [
-                'title' => 'Customer Testimonials',
-                'attributes' => [
-                    'html' => '<div class="fp-testimonials">
-    <blockquote>
-        <img src="gantry-media://testimonials/face.jpg" alt="Avatar" class="g-img-circle" height="80" width="80">
-        <p class="h3">"Helium is a beautiful, free theme made by the RocketTheme team in appreciation of the incredible Gantry community."</p>
-        <footer>Andy Miller</footer>
-    </blockquote>
-</div>'
-                ],
-                'block' => [
-                    'variations' => 'center'
-                ]
-            ],
             'custom-6355' => [
                 'title' => 'Develop CMS themes quickly',
                 'attributes' => [
+                    'enabled' => 0,
                     'html' => '<div class="fp-multi-column-text">
     <h2 class="g-title">Develop CMS themes quickly and efficiently</h2>
     <div class="g-grid">
@@ -447,10 +426,21 @@ a handful of things you can do with Gantry 5’s powerful Menu Editor.</p>
                     'variations' => 'title-center'
                 ]
             ],
+            'custom-6291' => [
+                'title' => 'Social Share',
+                'attributes' => [
+                    'enabled' => 0,
+                    'html' => '<div class="social-btns"><a class="btn facebook" href="#"><i class="fa fa-facebook"></i></a><a class="btn twitter" href="#"><i class="fa fa-twitter"></i></a><a class="btn google" href="#"><i class="fa fa-google"></i></a><a class="btn dribbble" href="#"><i class="fa fa-dribbble"></i></a><a class="btn skype" href="#"><i class="fa fa-skype"></i></a>
+</div>'
+                ],
+                'block' => [
+                    'class' => 'social-share-home'
+                ]
+            ],
             'logo-7150' => [
                 'title' => 'Footer Logo',
                 'attributes' => [
-                    'image' => 'gantry-media://diyar_logo.png',
+                    'image' => 'gantry-media://logos/square_white.png',
                     'svg' => ''
                 ]
             ],
@@ -478,6 +468,22 @@ a handful of things you can do with Gantry 5’s powerful Menu Editor.</p>
             ],
             'totop-7498' => [
                 'title' => 'To Top'
+            ],
+            'logo-9504' => [
+                'title' => 'Logo / Image',
+                'attributes' => [
+                    'image' => 'gantry-media://header/SIDEBAR BACKGROUND.jpg',
+                    'svg' => '',
+                    'class' => ''
+                ],
+                'block' => [
+                    'class' => 'offcanvas-image'
+                ]
+            ],
+            'mobile-menu-9030' => [
+                'attributes' => [
+                    'enabled' => 0
+                ]
             ]
         ]
     ]

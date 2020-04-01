@@ -1,5 +1,5 @@
-name: '24'
-timestamp: 1571225387
+name: 24
+timestamp: 1584945590
 version: 7
 preset:
   image: 'gantry-admin://images/layouts/default.png'
@@ -21,36 +21,38 @@ sections:
   sidebar: Sidebar
   mainbar: Mainbar
   footer: Footer
-  offcanvas: Untitled
+  offcanvas: Offcanvas
 particles:
-  messages:
-    system-messages-4415: 'System Messages'
-  logo:
-    logo-8679: 'Logo / Image'
-    logo-4002: 'Logo / Image'
-    logo-7346: 'Logo / Image'
-  menu:
-    menu-2298: Menu
   content:
     system-content-4409: 'Page Content'
+  messages:
+    system-messages-7245: 'System Messages'
+  logo:
+    logo-2683: 'Logo / Image'
+    logo-7346: 'Logo / Image'
+  menu:
+    menu-6068: Menu
+  mobile-menu:
+    mobile-menu-3971: Mobile-menu
   position:
     position-position-3875: Aside
     position-position-2216: Sidebar
   custom:
-    custom-4857: 'Custom HTML'
-  horizontalmenu:
-    horizontalmenu-7913: 'Horizontal Menu'
-  totop:
-    totop-1642: 'To Top'
-  mobile-menu:
-    mobile-menu-3971: Mobile-menu
+    custom-1930: Social
+    custom-1603: 'Logo And Descrıptıon'
+    custom-6010: 'Footer Menu'
+    custom-5427: Contact
+    custom-4857: 'Copyright and Policies'
+  spacer:
+    spacer-7741: Spacer
+    spacer-6162: Spacer
 inherit:
   14:
     navigation: navigation
-    system-messages-4415: system-messages-1962
-    logo-8679: logo-5571
-    menu-2298: menu-6097
     offcanvas: offcanvas
+    system-messages-7245: system-messages-1962
+    logo-2683: logo-5571
+    menu-6068: menu-6097
     logo-7346: logo-2999
     mobile-menu-3971: mobile-menu-7896
   17:
@@ -61,14 +63,17 @@ inherit:
     testimonials: testimonials
     expanded: expanded
     aside: aside
-    position-position-3875: position-position-4734
     sidebar: sidebar
+    position-position-3875: position-position-4734
     position-position-2216: position-position-3949
   23:
     mainbar: mainbar
   9:
     footer: footer
-    logo-4002: logo-1144
+    custom-1930: custom-2297
+    custom-1603: custom-7183
+    spacer-7741: spacer-5222
+    custom-6010: custom-3360
+    spacer-6162: spacer-4416
+    custom-5427: custom-7504
     custom-4857: custom-3748
-    horizontalmenu-7913: horizontalmenu-5487
-    totop-1642: totop-3746

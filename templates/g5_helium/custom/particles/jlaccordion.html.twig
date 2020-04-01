@@ -1,0 +1,199 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+{% if particle.particle_title_color or particle.particle_title_fontsize or particle.title_color or particle.title_fontsize or particle.subtitle_color or particle.subtitle_fontsize or particle.title_padding or particle.title_background_color or particle.content_background_color or particle.content_padding %}
+<style>
+{% if particle.particle_title_color or particle.particle_title_fontsize %}
+#{{ id }}.g5-particle-title { {% if particle.particle_title_color %}color: {{ particle.particle_title_color }};{% endif %}{% if particle.particle_title_fontsize %}font-size: {{particle.particle_title_fontsize}}px;{% endif %} }
+{% endif %}
+{% if particle.title_color or particle.title_background_color or particle.title_fontsize %}
+#{{ id }} .tm-title { {% if particle.title_color %}color: {{particle.title_color}}; {% endif %}{% if particle.title_fontsize %}font-size: {{particle.title_fontsize}}px;{% endif %}{% if particle.title_background_color %}background-color: {{particle.title_background_color}}; {% endif %}{% if particle.title_padding %}padding: {{particle.title_padding}}px; {% endif %} }
+{% endif %}
+{% if particle.subtitle_color or particle.subtitle_fontsize or particle.content_background_color %}
+#{{ id }} .jl-accordion-content { {% if particle.subtitle_color %}color: {{particle.subtitle_color}}; {% endif %}{% if particle.subtitle_fontsize %}font-size: {{particle.subtitle_fontsize}}px;{% endif %}{% if particle.content_background_color %}background-color: {{particle.content_background_color}}; {% endif %}{% if particle.content_padding %}padding: {{particle.content_padding}}px;{% endif %} }
+{% if particle.remove_spacing == '1' %}#{{ id }} .jl-accordion-content { margin-top: 0;}{% endif %}
+{% endif %}
+</style>
+{% endif %}
+{% endblock %}
+
+{# set Viewport Height #}
+{% set viewport_height %}
+{% if particle.viewport_height == 'none' %}
+{% elseif particle.viewport_height == 'full' %}
+jl-height-viewport="offset-top: true"
+{% elseif particle.viewport_height == 'percent' %}
+jl-height-viewport="offset-top: true;offset-bottom: 20"
+{% elseif particle.viewport_height == 'section' %}
+jl-height-viewport="offset-top: true;offset-bottom: 50"
+{% elseif particle.viewport_height == 'expand' %}
+jl-height-viewport="expand: true"
+{% endif %}
+{% endset %}
+
+{# Set Title Text Transform #}
+{% set title_text_transform %}
+{% if particle.title_text_transform %} jl-text-{{particle.title_text_transform|e}}{% endif %}
+{% endset %}
+
+{# Set Content Text Transform #}
+{% set content_text_transform %}
+{% if particle.content_text_transform %} jl-text-{{particle.content_text_transform|e}}{% endif %}
+{% endset %}
+
+{# set padding #}
+{% set padding %}
+{% if particle.viewport_height == 'full' %}
+{% else %}
+{% if particle.padding == 'default' %}{% else %} jl-section-{{particle.padding|e}}{% endif %}
+{% endif %}
+{% endset %}
+
+{# set Container #}
+{% set container %}
+{% if particle.container == '1' %}
+<div class="jl-container"><div class="g5-content g5-particle">{% endif %}
+{% endset %}
+
+{# set End Container #}
+{% set endcontainer %}
+{% if particle.container == '1' %}
+</div></div>{% endif %}
+{% endset %}
+
+{# set Background color #}
+{% set parallax_bg_color %}
+{% if particle.parallax_bg_color %}
+style="background-color: {{particle.parallax_bg_color}};"{% endif %}
+{% endset %}
+
+{# Set Max-Width Content #}
+{% set content_maxwidth %}
+{% if particle.g_maxwidth != 'inherit' %} jl-width-{{particle.g_maxwidth}}{% if particle.g_maxwidth_breakpoint != 'always' %}@{{particle.g_maxwidth_breakpoint}}{% endif %}{% if particle.g_maxwidth_alignment == 'left' %}{% elseif particle.g_maxwidth_alignment == 'center' %} jl-margin-auto{% else %} jl-margin-auto-left{% endif %}{% endif %}
+{% endset %}
+
+{# set Parallax Background #}
+{% set parallaxbackground %}
+{% if particle.parallax_image %}
+<div data-src="{{ url(particle.parallax_image)|e }}" class="{{id}} jl-background-norepeat{{padding}}{{content_maxwidth}} jl-background-{{particle.background_image_position|e}}{% if particle.background_image_size != 'auto' %} jl-background-{{particle.background_image_size|e}}{% endif %}{% if particle.parallax_bg_visibility != 'always' %} jl-background-image@{{particle.parallax_bg_visibility|e}}{% endif %}{% if particle.vertical_alignment != 'none' %} jl-flex jl-flex-{{particle.vertical_alignment|e}}{% endif %}{% if particle.parallax_text_color != 'default' %} jl-{{particle.parallax_text_color|e}}{% endif %}{% if particle.blendmode != 'inherit' %} jl-background-blend-{{particle.blendmode|e}}{% endif %}" {{parallax_bg_color}}{% if particle.horizontal_start or particle.horizontal_end or particle.vertical_start or particle.vertical_end %} jl-parallax="{% if particle.horizontal_start or particle.horizontal_end %}bgx: {{particle.horizontal_start|e}},{{particle.horizontal_end|e}};{% endif %}{% if particle.vertical_start or particle.vertical_end %}bgy: {{particle.vertical_start|e}},{{particle.vertical_end|e}};{% endif %}{% if particle.parallax_bg_breakpoint == 'always' %}{% else %} media: @{{particle.parallax_bg_breakpoint|e}}{% endif %}" {% endif %} jl-img {{viewport_height}}>
+{{container}}
+{% endif %}
+{% endset %}
+
+{# End Parallax Background #}
+{% set endparallaxbackground %}
+{% if particle.parallax_image %}
+{{endcontainer}}
+</div>
+{% endif %}
+{% endset %}
+
+{# Set Horizontal #}
+{% set pahorizontal %}
+{% if particle.pa_horizontal_start or particle.pa_horizontal_end %}x: {% if particle.pa_horizontal_start == '' %}0{% else %}{{particle.pa_horizontal_start }}{% endif %},{% if particle.pa_horizontal_end == '' %}0{% else %}{{particle.pa_horizontal_end }}{% endif %};{% endif %}
+{% endset %}
+
+{# Set Vertical #}
+{% set pavertical %}
+{% if particle.pa_vertical_start or particle.pa_vertical_end %}y: {% if particle.pa_vertical_start == '' %}0{% else %}{{particle.pa_vertical_start }}{% endif %},{% if particle.pa_vertical_end == '' %}0{% else %}{{particle.pa_vertical_end }}{% endif %};{% endif %}
+{% endset %}
+
+{# Set Scale #}
+{% set scale %}
+{% if particle.scale_start or particle.scale_end %}scale: {% if particle.scale_start == '' %}1{% else %}{{particle.scale_start / 100 }}{% endif %},{% if particle.scale_end == '' %}1{% else %} {{particle.scale_end / 100 }}{% endif %};{% endif %}
+{% endset %}
+
+{# Set Rotate #}
+{% set rotate %}{% if particle.rotate_start or particle.rotate_end %}
+rotate: {% if particle.rotate_start == '' %}0{% else %}{{particle.rotate_start}}{% endif %},{% if particle.rotate_end == '' %}0{% else %}{{particle.rotate_end}}{% endif %};{% endif %}
+{% endset %}
+
+{# Set Opacity #}
+{% set opacity %}
+{% if particle.opacity_start or particle.opacity_end %}opacity: {% if particle.opacity_start == '' %}1{% else %}{{particle.opacity_start / 100 }}{% endif %},{% if particle.opacity_end == '' %}1{% else %}{{particle.opacity_end / 100 }}{% endif %};{% endif %}
+{% endset %}
+
+{# set Scrollspy Animation #}
+{% set scrollspy_cls %}
+{% if particle.delay_element_animations == '1' %} jl-scrollspy-class{% endif %}
+{% endset %}
+
+{# set Animation #}
+{% set animation %}
+{% if particle.animation == 'parallax' %}
+{% if particle.pa_horizontal_start or particle.pa_horizontal_end or particle.pa_vertical_start or particle.pa_vertical_end or particle.scale_start or particle.scale_end or particle.rotate_start or particle.rotate_end or particle.opacity_start or particle.opacity_end or particle.easing or particle.pa_viewport or particle.pa_breakpoint %} jl-parallax="{{pahorizontal}}{{pavertical}}{{scale}}{{rotate}}{{opacity}}{% if particle.easing == '' %}{% else %}easing: {{ particle.easing / 100 }};{% endif %}{% if particle.pa_viewport != '' %}viewport:{{ particle.pa_viewport / 100 }};{% endif %}{% if particle.pa_breakpoint != 'always' %}media: @{{particle.pa_breakpoint|e}}{% endif %}"{% endif %}
+{% else %}
+{% if particle.animation != 'inherit' %}
+{% if particle.delay_element_animations == '1' %} jl-scrollspy="target: [jl-scrollspy-class]; cls: jl-animation-{{particle.animation|e}};{% if particle.animation_repeat != 'disabled' %} repeat: true;{% endif %}{% if particle.animation_delay != '' %} delay: {{particle.animation_delay|e}};{% else %} delay: 200;{% endif %}"{% else %} jl-scrollspy="cls: jl-animation-{{particle.animation|e}};{% if particle.animation_repeat != 'disabled' %} repeat: true;{% endif %}{% if particle.animation_delay != '' %} delay: {{particle.animation_delay|e}};{% endif %}"{% endif %}
+{% endif %}
+{% endif %}
+{% endset %}
+
+{# Set Particle Alignment #}
+{% set particle_alignment %}
+{% if particle.align != 'inherit' %} jl-text-{{particle.align|e}}{% if particle.breakpoint != 'always' %}@{{particle.breakpoint|e}}{% endif %}{% endif %}{% if particle.align != 'inherit' and particle.breakpoint != 'always' %}{% if particle.fallback != 'inherit' %} jl-text-{{particle.fallback|e}}{% endif %}{% endif %}
+{% endset %}
+
+{# set Particle Title Style #}
+{% set particle_title_style %}
+{% if particle.particle_title %}
+<{{particle.particle_title_element|e}} id="{{ id }}" class="g5-particle-title{% if particle.particle_title_align != 'inherit' %} jl-text-{{particle.particle_title_align|e}}{% endif %}{% if particle.particle_predefined_color != 'default' %} jl-text-{{particle.particle_predefined_color|e}}{% endif %}{% if particle.particle_title_style != 'default' %} jl-{{particle.particle_title_style|e}}{% endif %}{% if particle.particle_title_decoration != 'none' %} jl-heading-{{particle.particle_title_decoration|e}}{% endif %}">
+{% if particle.particle_title_decoration == 'line' %} <span>{{particle.particle_title|raw}}</span>
+{% else %} {{particle.particle_title|raw}}
+{% endif %}
+</{{particle.particle_title_element|e}}>
+{% endif %}
+{% endset %}
+
+{% set collapsible %}
+{% if particle.closed == '1' %}collapsible: true;{% else %}collapsible: false;{% endif %}
+{% endset %}
+
+{% set multiple %}
+{% if particle.multiple == '1' %}multiple: true;{% endif %}
+{% endset %}
+
+{# Set Button Class #}
+{% set button_cls %}
+{% if particle.buttonclass == 'link' %}jl-link{% elseif particle.buttonclass == 'link-muted' or particle.buttonclass == 'link-text' %}jl-{{particle.buttonclass|e}}{% else %}jl-button jl-button-{{particle.buttonclass|e}}{% endif %}
+{% endset %}
+
+{# Set Button Size #}
+{% set button_size %}
+{% if particle.buttonclass == 'link' or particle.buttonclass == 'link-muted' or particle.buttonclass == 'link-text' or particle.buttonclass == 'text' %}{% else %}{% if particle.link_button_size != 'default' %} jl-button-{{particle.link_button_size|e}}{% endif %}{% endif %}
+{% endset %}
+
+{% block particle %}
+{% if particle.enabled %}
+{{parallaxbackground}}
+{{particle_title_style}}
+<div id="{{ id }}" class="tm-content-wrapper{{content_maxwidth}}{% if particle.class %} {{ particle.class }}{% endif %}{{particle_alignment}}{% if particle.margin == 'inherit' %}{% elseif particle.margin == 'default' %} jl-margin{% else %} jl-margin-{{particle.margin|e}}{% endif %}{% if particle.visibility != 'inherit' %} jl-visible@{{particle.visibility|e}}{% endif %}"{{animation}} jl-accordion="{{collapsible}}{{multiple}}">
+{% for item in particle.accordion %}
+{% set linkscroll %}
+{% if item.buttonlink|e matches '/#/' %} jl-scroll{% endif %}
+{% endset %}
+<div class="tm-item"{{scrollspy_cls}}>
+  <a class="tm-title jl-accordion-title{{title_text_transform}}" href="#">{{item.title|raw}}</a>
+  <div class="jl-accordion-content jl-margin-remove-first-child">
+    {% if particle.image_alignment == 'top' %}
+    {% if item.image %}<img class="tm-image{% if particle.border != 'none' %} jl-border-{{particle.border|e}}{% endif %}{% if particle.box_shadow != 'none' %} jl-box-shadow-{{particle.box_shadow|e}}{% endif %}" src="{{ url(item.image)|e }}"{% if item.image_alt %} alt="{{item.image_alt|e}}"{% else %}{% endif %}>{% endif %}
+    {% endif %}
+
+    <div class="tm-content jl-panel{{content_text_transform}}{% if particle.content_margin_top == 'default' %} jl-margin-top{% else %} jl-margin-{{ particle.content_margin_top|e }}-top{% endif %}">
+      {{item.content|raw}}
+    </div>
+
+    {% if particle.image_alignment == 'bottom' %}
+    {% if item.image %}<img class="tm-image{% if particle.image_margin_top == 'default' %} jl-margin-top{% else %} jl-margin-{{ particle.image_margin_top|e }}-top{% endif %}{% if particle.border != 'none' %} jl-border-{{particle.border|e}}{% endif %}{% if particle.box_shadow != 'none' %} jl-box-shadow-{{particle.box_shadow|e}}{% endif %}" src="{{ url(item.image)|e }}"{% if item.image_alt %} alt="{{item.image_alt|e}}"{% else %}{% endif %}>{% endif %}
+    {% endif %}
+
+    {% if item.buttontext %}
+    <div class="{% if particle.link_margin_top == 'default' %}jl-margin-top{% else %}jl-margin-{{ particle.link_margin_top|e }}-top{% endif %}"><a target="{{ particle.buttontarget|default('_self')|e }}" href="{{ item.buttonlink|e }}" title="{{ item.buttontext|e }}" class="{{button_cls}}{{button_size}}"{{linkscroll}}>{{ item.buttontext|e }}</a></div>
+    {% endif %}
+  </div>
+</div>
+{% endfor %}
+</div>
+{{endparallaxbackground}}
+{% endif %}
+{% endblock %}

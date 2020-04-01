@@ -6,17 +6,17 @@ accent:
   color-1: '#4db2b3'
   color-2: '#66ad4c'
 font:
-  family-default: 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif'
-  family-title: 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+  family-default: 'family=Open+Sans:300,700,400'
+  family-title: 'family=Open+Sans:300,700,400'
 link:
   regular: '#4db2b3'
   hover: '#424753'
 navigation:
-  background: 'rgba(49, 47, 56, 0.27)'
+  background: 'rgba(49, 47, 56, 0)'
   text-color: '#ffffff'
 header:
   background: '#312f38'
-  background-image: 'gantry-media://headers/1598836_original.jpg'
+  background-image: ''
   background-overlay: enabled
   text-color: '#eceeef'
 intro:
@@ -49,11 +49,12 @@ offcanvas:
   toggle-visibility: '2'
   width: 15rem
 breakpoints:
-  large-desktop-container: 75rem
-  desktop-container: 60rem
+  large-desktop-container: 1200px
+  desktop-container: 1200px
   tablet-container: 48rem
   large-mobile-container: 30rem
   mobile-menu-breakpoint: 48rem
 menu:
   col-width: 180px
   animation: g-fade
+  hide-on-mobile: '0'
